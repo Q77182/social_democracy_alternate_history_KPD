@@ -10,7 +10,7 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The KPD has few allies but many enemies. Even just making the other parties ambivalent towards us may make our growth easier.
+The KPD has few allies but many enemies. Even just making the other parties ambivalent towards us may make our growth easier. How the SPD may react to us reaching out to them may be interesting
 
 - @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
 - @center: Strengthen our bonds with the Catholic Center Party.
@@ -41,6 +41,8 @@ For further improvements in KPD relations, it is  necessary for the SPD to expel
 - @no_history: No, we have no need to apologize.
 
 @yes_history
+choose-if: spd_relation < 50
+unavailable-subtitle: Hah, as if their leadership actually likes us that much.
 on-arrival: marxist_leninist_dissent -= 6; reformist_strength -= 2; left_opposition_dissent += 5; conciliators_dissent -= 6; conciliators_strength += 5; kpd_rectified_history = 1; spd_relation += 8*(1-dissent)
 
 As part of normalizing relations with the us, the SPD have to acknowledge the wrongdoings of the past. They have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
@@ -92,7 +94,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; ddp_relation += 3*(1 - dissent)
 go-to:  dvp_loss if year <= 1930; dvp_moribund if year > 1930
 
-The [+ ddp_name +]'s only use is for passing progressive social legislation, little else.
+The [+ ddp_name +]'s only use is for passing progressive social legislation.
 
 @dvp_loss
 on-arrival: dvp_relation += 0*(1 - dissent)
