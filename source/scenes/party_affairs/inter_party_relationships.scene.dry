@@ -38,7 +38,7 @@ One stumbling block for our relations with the SPD is our history of conflict, d
 For further improvements in KPD relations, it is  necessary for the SPD to expel Noske, and hold some sort of commemoration for Luxemburg and Liebknecht.
 
 - @yes_history: Yes, they've must apologize for our past actions.
-- @no_history: No, we have no need to apologize.
+- @no_history: No, they have no need to apologize.
 
 @yes_history
 choose-if: spd_relation < 50
