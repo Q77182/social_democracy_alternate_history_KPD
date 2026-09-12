@@ -43,7 +43,7 @@ Our Reichsbanner can learn much in paramilitary organization and training from t
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: ; workers_nsdap -= 4*(1 - dissent)
+on-arrival: ; workers_nsdap -= 4*(1 - dissent); nazi_urgency -=1
 
 The Italian Communist Party can educate us on fascism in their own country aswell as helping us agitate among workers to drive them away from the nazis .
 
