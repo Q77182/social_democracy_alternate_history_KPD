@@ -2,7 +2,7 @@ title: Cabinet
 is-pinned-card: true
 tags: advisor
 card-image: img/muller_cabinet.jpg
-view-if: difficulty < 0 and spd_in_government and chancellor_party = "KPD"
+view-if: difficulty < 0 and kpd_in_government and chancellor_party = "KPD"
 on-arrival: last_cabinet_action = 1
 new-page: true 
 
