@@ -1,0 +1,26 @@
+title: 6th International Congress of the Comintern
+subtitle: Maintain the united front?
+tags: event, govt_affairs
+is-card: true
+on-arrival: 
+view-if:  year = 1928 and month >= 9
+new-page: true
+face-image: img/panzerkreuzer.jpg
+
+= 6th International Congress
+
+The major debate during this meeting is the matter of the united front. Many believe it to be unecessary as we are in a "third period" of capitalism where its collapse is imminent, as shown by the economic crises of the last few years. 
+
+- @maintain_united_front: Keep the united front.
+- @vote_no: Adopt the Third Period thesis.
+
+@vote_yes
+on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_dissent -= 5; right_opposition += 5;
+view-if: united_front_support >=3
+
+Through our influence, the united front is retained.
+
+@vote_no
+on-arrival: spd_relation -=15; united_front_maintained -=1
+
+Capitalism's collaspe is imminent, the Third Period thesis will be adopted. Any further cooperation with the SPD will be criticised by our party and the Comintern.
