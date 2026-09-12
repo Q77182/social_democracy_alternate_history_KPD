@@ -1137,7 +1137,7 @@ title: Otto Wels for Chancellor
 view-if: muller_dead = 1
 subtitle: Otto Wels is a party leader, but can he also be chancellor?
 on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
-go-to: ministries
+go-to: root
 
 @braun
 title: Otto Braun for Chancellor
