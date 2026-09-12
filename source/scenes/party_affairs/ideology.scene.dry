@@ -10,13 +10,13 @@ max-visits: 3
 
 = Questions of Ideology
 
-The KPD is domintated by Marxist Leninist, considered the "center" of the party, but this can change. Will new problems require us to change tactics?
+The KPD is dominatated by Marxist Leninist, considered the "center" of the party, but this can change. Will new problems require us to change tactics?
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
 - @left_opposition: A focus on immediate revolution and distancing ourselves from Stalin is the best path.
 - @marxist_leninist: The Marxism-Leninism of espoused by our current leadership and the Comintern will remain.
-- @right_opposition: Work councils and a non-authoritarian socialist government will be more effectiv ethat our vanguard party.
+- @right_opposition: Work councils and a non-authoritarian socialist government will be more effective that our vanguard party.
 - @councilitators: It is necessary to work with trade unions and the SPD to stop fascism.
 - @easy_discard
 

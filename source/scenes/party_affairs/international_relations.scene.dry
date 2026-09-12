@@ -8,13 +8,13 @@ card-image: img/international.jpg
 max-visits: 4
 #subtitle: Building ties with our fraternal socialist parties.
 
-At the Labor and Socialist International, we can forge contacts with our fraternal socialist parties in Europe and across the world.
+At the Comintern, we can forge contacts with our fraternal socialist parties in Europe and across the world.
 
 - @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
 - @austria: Learn organization and street fighting from the Austrian SDAPÖ.
-- @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
-- @comintern: Forget the second international - embed a spy in the Comintern's conference.
-- @america: Contact the Socialist party of America.
+- @italy: Learn from the experince of the Italian communists with the fascists.
+- @soviet: Expand relations with the Comintern's biggest country, the Soviet Union.
+- @lsi: Embed a spy in the labor and socialist international.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -39,29 +39,29 @@ Our Reichsbanner can learn much in paramilitary organization and training from t
 [? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
 
 
-@scandi
+@Italy
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: reformist_strength += 8; wtb_support += 1; resources -= 1; moderate_plan_support += 1
+on-arrival: nazi_urgency +=1 workers_nsdap -=6(1-dissent)
 
-The programs of the Nordic socialists involve active government intervention in the economy. We can learn from their economic strategies, and how they moved beyond their working-class base to attract a broader set of constituents.
+The Italian Communist Party can educate us on fascism in their own country aswell as helping us agitate among workers to drive them away from the nazis .
 
-@comintern
+@soviet
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
+on-arrival: resources += 1; marxist_leninist_strength +=10; rfb_militancy +=0.3
 
-The Stalinists of the KPD insists on calling us "social fascists", suggesting that we social democrats are as bad or worse than actual fascists. Needless to say, this is not good for our relationship with the Communists. By observing the Comintern, we can better understand the KPD, enabling us to potentially improve relations, or counter the KPD if it may come to that.
+The soviets offer money and weapons to us, anticipating a revolution soon.
 
-@america
+@lsi
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1
+on-arrival: resources -= 1 ; spd_relation += 5*(1-dissent)
 
-The Socialist Party of America is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+By observing the moderate socialists, we can understand them better and possibly argue for cooperation in the Comintern if we beleive it to be reasonable. 
 
 @reduce
 
