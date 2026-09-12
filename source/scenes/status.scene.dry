@@ -88,7 +88,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
-= Internal Factions of the SPD
+= Internal Factions of the KPD
 
 {!<span class="tooltip-text" title="The Left Opposition favor radical methods and government that are considered "idealist" or "adventurist" by the rest of the party.">Left Opposition</span>!} strength: [+ left_opposition_strength : strength +], dissent: [+ left_opposition_dissent : dissent +]
 
