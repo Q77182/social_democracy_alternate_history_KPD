@@ -96,7 +96,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Right Opposition opposes that it sees as "authoritarianism" in Soviet style government and KPD leadership.>Right Opposition</span>!} strength: [+ right_opposition_strength : strength +], dissent: [+ right_opposition_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Councilitarors prefer cooperation with the SPD compared with our current possition of the SPD's "social fascism".">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Councilitarors prefer cooperation with the SPD compared with our current possition of the SPD's "social fascism".">Conciliators</span>!} strength: [+conciliators_strength : strength +], dissent: [+ conciliators_dissent : dissent +]
 
 
 @paramilitaries

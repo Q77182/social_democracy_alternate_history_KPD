@@ -316,9 +316,9 @@ Dissent: [+ right_opposition_dissent : dissent +]
 
 The Conciliators oppose the Third Period thesis and favor cooperation with the SPD and were expelled during the Wittorf Affair. 
 
-Strength: [+ .conciliators_strength : strength +]
+Strength: [+ conciliators_strength : strength +]
 
-Dissent: [+ .conciliators_dissent : dissent +]
+Dissent: [+ conciliators_dissent : dissent +]
 
 
 @figures
