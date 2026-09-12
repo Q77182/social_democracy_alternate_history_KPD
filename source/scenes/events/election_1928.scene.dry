@@ -1124,30 +1124,17 @@ As expected, the SPD is the largest party, and this time, we are expected to tak
 Who should be the chancellor?
 
 - @muller
-- @braun
-- @wels
-- @z_chancellor
-- @z_chancellor_wirth
-- @no_govt
 
 
 @muller
 title: Hermann Müller for Chancellor
 view-if: muller_dead = 0
-subtitle: Müller is popular within the party, and is the preferred candidate of the Center and other parties.
+subtitle: Müller is popular within the SPD, and is the preferred candidate of the Center and other parties.
 on-arrival: spd_in_government = 1; chancellor = "Müller"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
-go-to: ministries
+go-to: root
 
-Müller's appointment as chancellor is approved by all our potential allies.
+Müller's appointment as chancellor is approved by all parties.
 
-@wels
-title: Otto Wels for Chancellor
-view-if: muller_dead = 1
-subtitle: Otto Wels is a party leader, but can he also be chancellor?
-on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
-go-to: ministries
-
-Otto Wels's appointment as chancellor is approved by our potential allies.
 
 @braun
 title: Otto Braun for Chancellor
