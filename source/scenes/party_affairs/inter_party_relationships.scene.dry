@@ -55,7 +55,7 @@ on-arrival: spd_relation -= 3
 The SPD refuses to apologize for the actions of Ebert and Noske; claiming is the our fault for launching a violent insurrection.
 
 
-@kpd_2
+@spd_2
 on-arrival: spd_relation += 8*(1 - dissent); communist_coalition += 1 if spd_inter_party_seen <= 1; conciliators_dissent -= 2;
 
 After the success of the coalition government with the SPD, they are much more amenable to us.
