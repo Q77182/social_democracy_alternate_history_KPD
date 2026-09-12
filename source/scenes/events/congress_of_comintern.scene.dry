@@ -12,15 +12,15 @@ face-image: img/panzerkreuzer.jpg
 The major debate during this meeting is the matter of the united front. Many believe it to be unecessary as we are in a "third period" of capitalism where its collapse is imminent, as shown by the economic crises of the last few years. 
 
 - @maintain_united_front: Keep the united front.
-- @vote_no: Adopt the Third Period thesis.
+- @third_period_thesis: Adopt the Third Period thesis.
 
-@vote_yes
+@maintain_united_front
 on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_dissent -= 5; right_opposition += 5;
 view-if: united_front_support >=3
 
 Through our influence, the united front is retained.
 
-@vote_no
+@third_period_thesis
 on-arrival: spd_relation -=15; united_front_maintained -=1
 
 Capitalism's collaspe is imminent, the Third Period thesis will be adopted. Any further cooperation with the SPD will be criticised by our party and the Comintern.
