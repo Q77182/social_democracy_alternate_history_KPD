@@ -125,7 +125,7 @@ Q.leverage = Q.spd_r;
 Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
-Q.kpd_coalition_dissent = 0;
+Q.spd_coalition_dissent = 0;
 Q.spd_in_government = 0;
 Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
