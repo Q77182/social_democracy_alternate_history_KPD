@@ -8,10 +8,12 @@ card-image: img/international.jpg
 max-visits: 4
 #subtitle: Building ties with our fraternal socialist parties.
 
+=Comintern
+
 At the Comintern, we can forge contacts with our fraternal socialist parties in Europe and across the world.
 
 - @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
-- @austria: Learn organization and street fighting from the Austrian SDAPÖ.
+- @oppose_third_period: Despite opsition in the Comintern and our own party, a united front may neccessary in the near future.
 - @italy: Learn from the experince of the Italian communists with the fascists.
 - @soviet: Expand relations with the Comintern's biggest country, the Soviet Union.
 - @lsi: Embed a spy in the labor and socialist international.
@@ -27,14 +29,14 @@ on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifis
 
 The socialists of France and Britain can influence their governments to be friendlier towards Germany. Hopefully they will reduce our reparations burden.
 
-@austria
-subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
+@oppose_third_period
+subtitle: -1 resources [? if year <=1928 and month <=9: - Maintaining the united front will allow a broarder defense. ?]
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
-on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
+on-arrival: left_opposition_strength -= 5; radicalization += 1; spd_relation +=5
 
-Our Reichsbanner can learn much in paramilitary organization and training from the Austrian Republikanischer Schutzbund (Republican Protection Units), the paramilitary branch of the Austrian social democrats.
+Though capitalism has suffered recent crises, its collaspe is not terminal just yet. we must convince the comintern to maintain the united front.
 
 [? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
 
@@ -43,7 +45,7 @@ Our Reichsbanner can learn much in paramilitary organization and training from t
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: workers_nsdap -= 4*(1 - dissent)
+on-arrival: workers_nsdap -= 4*(1 - dissent) nazi_urgency +=1
 
 The Italian Communist Party can educate us on fascism in their own country aswell as helping us agitate among workers to drive them away from the nazis .
 
