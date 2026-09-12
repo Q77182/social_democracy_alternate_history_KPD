@@ -2,8 +2,8 @@ title: 6th International Congress of the Comintern
 subtitle: Maintain the united front?
 tags: event, govt_affairs
 is-card: true
-on-arrival: 
-view-if:  year = 1928 and month = 9
+on-arrival: comintern_seen = 1
+view-if:  year = 1928 and month >= 9 and comintern_seen = 0
 new-page: true
 face-image: img/panzerkreuzer.jpg
 
@@ -17,7 +17,7 @@ The major debate during this meeting is the matter of the united front. Many bel
 @maintain_united_front
 on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_dissent -= 5; right_opposition += 5;
 choose-if: united_front_support >=3
-unavailable-subtitle: if united_front_support <=3: The united front currently lacks support .
+unavailable-subtitle: The united front currently lacks support .
 
 Through our influence, the united front is retained.
 
