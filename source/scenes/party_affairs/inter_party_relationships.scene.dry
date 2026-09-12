@@ -10,24 +10,24 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The KPD has few allies but many enemies. Even just making the other parties ambivalent towards us may make our growth easier. How the SPD may react to us reaching out to them may be interesting
+The KPD has few allies but many enemies. Even just making the other parties ambivalent towards us may make our growth easier. How the SPD may react to us reaching out to them may be interesting...
 
 - @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
 - @center: Strengthen our bonds with the Catholic Center Party.
-- @kpd: Work towards repairing relationships with the social democrats.
+- @spd: Work towards repairing relationships with the social democrats.
 - @kpd_alone: The KPD can stand alone for now.
 - @easy_discard
 
 
-@kpd
+@spd
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0 and (spd_relation < 40 or spd_rectified_history = 1); kpd_rectification_of_history if spd_relation >= 40 and kpd_rectified_history = 0; kpd_2 if kpd_coalition_success = 1 and kpd_rectified_history = 1
+on-arrival: resources -= 1; spd_inter_party_seen += 1
+go-to: kpd_blutmai if blutmai = 1; spd_1 if blutmai = 0 and spd_coalition_success = 0 and (spd_relation < 40 or kpd_rectified_history = 1); kpd_rectification_of_history if spd_relation >= 40 and kpd_rectified_history = 0; spd_2 if spd_coalition_success = 1 and kpd_rectified_history = 1
 
-@kpd_1
-on-arrival: spd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; marxist_leninists_dissent += 2; left_opposition_dissent += 2
+@spd_1
+on-arrival: spd_relation += 6*(1 - dissent); communist_coalition += 1 if spd_inter_party_seen <= 1; marxist_leninists_dissent += 2; left_opposition_dissent += 2
 
 The social democrats and our own party are suspicious of this move, especially the SPD reformists , who persist in calling us "red fascists". However, connections are made at the grassroots and local levels.
 
@@ -50,13 +50,13 @@ As part of normalizing relations with the us, the SPD have to acknowledge the wr
 This was a suprise to everyone in the party and has made even the more hardline "social fascist" beleivers more accepting of temporary cooperation.
 
 @no_history
-on-arrival: kpd_relation -= 3
+on-arrival: spd_relation -= 3
 
 The SPD refuses to apologize for the actions of Ebert and Noske; claiming is the our fault for launching a violent insurrection.
 
 
 @kpd_2
-on-arrival: kpd_relation += 8*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; conciliators_dissent -= 2;
+on-arrival: spd_relation += 8*(1 - dissent); communist_coalition += 1 if spd_inter_party_seen <= 1; conciliators_dissent -= 2;
 
 After the success of the coalition government with the SPD, they are much more amenable to us.
 
@@ -73,7 +73,7 @@ on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
 go-to: center_op if z_in_government = 1 and spd_in_government = 0 and chancellor != "Brüning"; center_coalition if kpd_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
 
 @center_op
-on-arrival: z_relation += 1*(1 - dissent)
+on-arrival: z_relation += 3*(1 - dissent)
 
 Why did we do this? Of course they're still not going to like us.
 
@@ -85,7 +85,7 @@ Though normally opposed, we have decided to mutually quiet our discontent for ea
 @center_bruning
 on-arrival: z_relation += 0*(1 - dissent)
 
-What, why? You though Brüning is suddenly going to like us now?
+What, why? You think Brüning is suddenly going to like us now?
 
 @liberals
 subtitle: -1 resources
