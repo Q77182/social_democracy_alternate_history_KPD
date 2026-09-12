@@ -935,10 +935,10 @@ Who should be the chancellor?
 
 @breitscheid_coalition_chancellor
 title: Rudolf Breitscheid for Chancellor
-subtitle: Breitscheid is viewed as friendlier towards the left of the SPD.
+subtitle: Breitscheid is viewed as friendlier towards the left of the SPD and, too a less extent, us.
 view-if: year >= 1930
 on-arrival: chancellor = "Breitscheid"; chancellor_party = "SPD";
-go-to: ministries
+go-to: root
 
 Rudolf Breitscheid has been appointed chancellor.
 
@@ -1121,7 +1121,7 @@ As expected, the SPD is the largest party, and this time, we are expected to tak
 Who should be the chancellor?
 
 - @muller
-
+- @wels
 
 @muller
 title: Hermann Müller for Chancellor
@@ -1132,6 +1132,12 @@ go-to: root
 
 Müller's appointment as chancellor is approved by all parties.
 
+@wels
+title: Otto Wels for Chancellor
+view-if: muller_dead = 1
+subtitle: Otto Wels is a party leader, but can he also be chancellor?
+on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
+go-to: ministries
 
 @braun
 title: Otto Braun for Chancellor
