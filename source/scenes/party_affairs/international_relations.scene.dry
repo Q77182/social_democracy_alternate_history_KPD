@@ -39,7 +39,7 @@ Our Reichsbanner can learn much in paramilitary organization and training from t
 [? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
 
 
-@Italy
+@italy
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
