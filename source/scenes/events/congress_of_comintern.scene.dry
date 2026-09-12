@@ -3,7 +3,7 @@ subtitle: Maintain the united front?
 tags: event, govt_affairs
 is-card: true
 on-arrival: comintern_seen = 1
-view-if:  year = 1928 and month >= 9 and comintern_seen = 0
+view-if: comintern_seen = 0 and year = 1928 and month >= 9
 new-page: true
 face-image: img/panzerkreuzer.jpg
 
