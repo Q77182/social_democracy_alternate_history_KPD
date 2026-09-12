@@ -16,7 +16,8 @@ The major debate during this meeting is the matter of the united front. Many bel
 
 @maintain_united_front
 on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_dissent -= 5; right_opposition += 5;
-view-if: united_front_support >=3
+choose-if: united_front_support >=3
+unavailable-subtitle: if united_front_support <=3: The united front currently lacks support .
 
 Through our influence, the united front is retained.
 
