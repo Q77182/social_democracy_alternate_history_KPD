@@ -4,6 +4,7 @@ on-arrival: month_actions += 1
 max-visits: 36
 is-card: true
 card-image: img/ruralselling.jpg
+on-arrival: rural_party_timer +=6
 frequency: 100
 tags: party_affairs
 
@@ -13,8 +14,8 @@ We have previously neglected our rural base, leading to them to supports parties
 
 - @buy_from_farmers: We can use party resources to buy directly from small farmers.
 - @hold_meetings_and_rallies: We can listen to the grievences of the rural population, and posibly push thei opinion against the junkers.
-- @root: We either don't want to or cannot expand our influence in rural areas.
 - @forced_land_seizure: Given the growing radicalism of the landvolkbewegung, we should try to direct that radicalism towards progressive action.
+- @root: It's better to fucus on workers.
 - @easy_discard
 
 @buy_from_farmers
