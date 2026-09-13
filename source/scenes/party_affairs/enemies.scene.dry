@@ -22,7 +22,7 @@ In our media and campaign materials, who should we consider as our main opponent
 
 @fascist
 choose-if: united_front_maintained <1
-unavailable-subtitle: The retained united front idea prevents attacking the SPD.
+unavailable-subtitle: Maintaining the united front prevents attacking the SPD.
 on-arrival: enemies = "the fascists and social fascists"; marxist_leninist_strength += 5; right_opposition_strength += 5; conciliator_strength += 5; left_opposition_dissent -= 5; workers_spd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; spd_relation -= 10
 
 We attack the overt fascist and capitalist NSDAP and DNVP along with the SPD, who we accuse of bourgeois opportunism.
@@ -39,7 +39,7 @@ on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; 
 
 @spd
 choose-if: united_front_maintained <1
-unavailable-subtitle: The retained united front idea prevents this.
+unavailable-subtitle: Maintaining united front idea prevents this.
 on-arrival: enemies = "SPD"; left_opposition_strength += 5; left_opposition_dissent -= 8; marxist_leninist_dissent -= 5; spd_relation -= 15; workers_spd -= 4; conciliator_strength -=5; right_opposition_strength -=5
 
 Attacking the social fascists is popular among the center and left of our party, though some would rather focus on the actual fascists
