@@ -50,7 +50,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: rural_kpd += 5*(1-dissent); rural_kpd += 4 if rural_connection >= 3; resources -=1
 
-We have increased our campaigning among farmers. [? if rural_connection <3: We have not historically campaigned much among the farmers, and they do not trust us. ?] [? if rural_connection >= 3 : Our *grass*root connection with the rural population had made campaigning easier. ?]
+We have increased our campaigning among farmers. [? if rural_connection <3: We have not historically campaigned much among the farmers, and they do not trust us. ?] [? if rural_connection >= 3 : Our grassroot connection with the rural population had made campaigning easier. ?]
 
 @unemployed
 subtitle: -1 resources

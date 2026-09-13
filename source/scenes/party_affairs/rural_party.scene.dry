@@ -13,7 +13,7 @@ We have previously neglected our rural base, leading to them to supports parties
 
 - @buy_from_farmers: We can use party resources to buy directly from small farmers.
 - @hold_meetings_and_rallies: We can listen to the grievences of the rural population, and posibly push thei opinion against the junkers.
-- @forced_land_seizure: Given the growing radicalism of the landvolkbewegung, we should try to direct that radicalism towards progressive action.
+- @forced_land_seizure: Given the growing radicalism of the Landvolkbewegung, we should try to direct that radicalism towards progressive action.
 - @root: It's better to focus on workers.
 - @easy_discard
 
@@ -21,17 +21,17 @@ We have previously neglected our rural base, leading to them to supports parties
 subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_kpd += 3; resources -=2; rural_connection +=1
+on-arrival: rural_kpd += 3; resources -=2; rural_connection +=1; socialism +=3
 
 By buying from farmers directly, we can ensure they have a reliable consumer base. This helps the party look better in the eyes of farmers.
 
 @hold_meetings_and_rallies
-on-arrival: rural_kpd += 2; rural_connection +=0.5; rural_kpd -=2 if socialism >= 55
+on-arrival: rural_kpd += 2; rural_connection +=0.5; rural_kpd -=2 if socialism >= 55; socialism +=1
 
 We listen to the concerns of the local population while trying to spread class consciousness. [? if socialism <= 55: Our previous lack of rural action has left them in the hands of conservatives. ?]
 
 @forced_land_seizure
-subtitle: -2 resources
+subtitle:Bourgeois reaction may be intense, however... -2 resources
 view-if: resources >= 2 and rfb_strength >= 200 and rfb_militancy >= 0.649 and rural_connection >=3
 on-arrival: rural_kpd +=5; coup_progress +=3; resources -=2
 
