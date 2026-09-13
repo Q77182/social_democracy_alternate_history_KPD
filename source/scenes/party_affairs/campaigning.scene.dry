@@ -15,7 +15,7 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 - @new_middle: The "new middle class" of government employees and white-collar workers.
 - @old_middle: The "old middle class" of small independent businessmen and artisans, the petty bourgeois.
 - @rural: Rural workers and small farmers, to reconcil town and country.
-- @unemployed: The unemployed. [? if unemployed_kpd >=40: They are currently our strongest support base]
+- @unemployed: The unemployed. [? if unemployed_kpd >=40: They are currently our strongest support base. ?]
 - @catholics: Catholics, who typically support the Center Party.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
