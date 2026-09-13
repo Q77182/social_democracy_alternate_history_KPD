@@ -21,7 +21,7 @@ In our media and campaign materials, who should we consider as our main opponent
 - @easy_discard
 
 @fascist
-choose-if: united_front_maintained >0
+choose-if: united_front_maintained ==0
 unavailable-subtitle: The retained united front idea prevents attacking the SPD.
 on-arrival: enemies = "the fascists and social fascists"; marxist_leninist_strength += 5; right_opposition_strength += 5; conciliator_strength += 5; left_opposition_dissent -= 5; workers_spd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; spd_relation -= 10
 
@@ -38,7 +38,7 @@ on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; 
 [? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
 
 @spd
-choose-if: united_front_maintained >0
+choose-if: united_front_maintained ==0
 unavailable-subtitle: The retained united front idea prevents this.
 on-arrival: enemies = "SPD"; left_opposition_strength += 5; left_opposition_dissent -= 8; marxist_leninist_dissent -= 5; spd_relation -= 15; workers_spd -= 4; conciliator_strength -=5; right_opposition_strength -=5
 
