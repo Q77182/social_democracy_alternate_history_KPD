@@ -48,9 +48,9 @@ Q.dissent_percent = 5;
 // factions
 Q.factions = ['left_opposition', 'marxist_leninist', 'right_opposition', 'conciliator',];
 // should this be normalized to 100%?
-Q.left_opposition_strength = 15;
+Q.left_opposition_strength = 10;
 Q.left_opposition_dissent = 20;
-Q.marxist_leninist_strength = 30;
+Q.marxist_leninist_strength = 60;
 Q.marxist_leninist_dissent = 0;
 Q.right_opposition_strength = 25;
 Q.right_opposition_dissent = 5;
