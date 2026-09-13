@@ -30,9 +30,9 @@ on-arrival: rural_kpd += 2; rural_connection +=0.5; rural_kpd -=2 if socialism >
 
 We listen to the concerns of the local population while trying to spread class consciousness. [? if socialism <= 55: Our previous lack of rural action has left them in the hands of conservatives. ?]
 
-- @forced_land_seizure: Given the growing radicalism of the landvolkbewegung, we should try to direct that radicalism towards progressive action.
+@forced_land_seizure: Given the growing radicalism of the landvolkbewegung, we should try to direct that radicalism towards progressive action.
 subtitle: -2 resources
 view-if: resources >= 2; rfb_strength >= 200; rfb_militancy >= sh_militancy; rural_connection >=3
-in-arrival: rural_kpd +=5; coup_progress +=3;
+in-arrival: rural_kpd +=5; coup_progress +=3; resources -=2
 
 Our forceful land disrtibution to the peasantry and small farmers greatly boosts our image among them. The right and far right are clamoring for our ban. [? if spd_relation <=64.9: Even the SPD is calling for action against us] [? if spd_relation >=64.9: The left of the SPD has seemingly convinced the rest of the party to tolorate our actions. ?]
