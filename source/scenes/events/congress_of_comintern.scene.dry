@@ -15,13 +15,13 @@ The major debate during this meeting is the matter of the united front. Many bel
 - @third_period_thesis: Adopt the Third Period thesis! The social fascists cannot be trusted.
 
 @maintain_united_front
-on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10
+on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10; united_front_maintained =1
 choose-if: united_front_support >=3 
 unavailable-subtitle: The united front currently lacks support.
 
 Through our influence, the united front is retained. Many are opposed to this but democratic centralism puts them in line soon enough.
 
 @third_period_thesis
-on-arrival: spd_relation -=15; united_front_maintained -=1;conciliators_strength -= 10; right_opposition_strength -= 10
+on-arrival: spd_relation -=15; united_front_maintained =0;conciliators_strength -= 10; right_opposition_strength -= 10
 
 Capitalism's collaspe is imminent, the Third Period thesis will be adopted. Any further cooperation with the SPD will be criticised by our party and the Comintern, if not entirely rejected.
