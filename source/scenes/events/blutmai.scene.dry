@@ -13,9 +13,9 @@ Tensions run high in Berlin. The We are planning a demonstration to commemorate 
 Many non-communists are afraid of the possibility of another violent uprising, and the right wing of the Prussian coalition are asking the Prussian Interior Ministry to ban our demonstrations.
 
 - @ban: The SPD bans our demonstrations.
-- @allow_police: Allow the demonstrations to proceed, but maintain a heavy police presence.
-- @allow: Allow the demonstrations to proceed.
-- @join: Join in the demonstrations ourselves.
+- @allow_police: Our demonstrations are allowed to proceed, but only with a heavy police presence.
+- @allow: Our demonstrations proceed, without a police presence.
+- @join: Let the SPD join?
 
 @ban
 on-arrival: blutmai = 1; spd_relation -= 25; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3; strife += 1
@@ -41,23 +41,23 @@ To our suprise, we aren't blamed for this. The RFB has remained untouched but we
 
 
 @allow_police
-choose-if: spd_relation <=30
+choose-if: spd_relation <=25 and spd_relation >15
 on-arrival: spd_relation += 5; workers_kpd += 5; unemployed_kpd += 5
 
 The SPD has choosen to allow the demonstration, perhaps due to our improved relations. Onlookers admire the strength of our workers with some even joining the party.
 
 
 @allow
-choose-if: spd_relation <=40
+choose-if: spd_relation <=35 and spd-relations >25
 on-arrival: workers_kpd += 5; unemployed_kpd += 5; kpd_relation += 10; rfb_strength += 50; z_relation -= 3; dvp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1
 
 The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist workers, and perhaps some of our members have been peeled off. While we remain suspicous, many are thankful for this act of toloration.
 
 
 @join
-choose-if: spd_relation >= 50
-unavailable-subtitle: The Communists do not trust us enough.
-on-arrival: kpd_relation += 15; workers_kpd += 5; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50
+choose-if: spd_relation >= 45 or (united_front_maintained = 1 and spd_relation <=35)
+unavailable-subtitle: The SPD has no reason to join.
+on-arrival: kpd_relation += 15; workers_kpd += 5; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; coalition_dissent += 2; communist_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50; marxist_leninist_dissent +=5; left_opposition_dissent +=10
 achievement: die_rote_fahne
 
-It is difficult to persuade the Communists to let us march with them, given the histories of their party and ours. However, they eventually relent. The display of proletarian unity inspires the workers and terrifies the bourgeoisie and middle class. [? if in_grand_coalition : Our coalition partners in the government are outraged at our display with the communists, and are threatening to break up the government. ?] The far-right paramilitaries increase their recruitment to counter us.
+After some convincing, are leadership accepts the SPD's participation with some grumbling. The display of proletarian unity inspires the workers and terrifies the bourgeoisie and middle class along with the SPD's coalition partners. The far-right paramilitaries increase their recruitment to counter us.
