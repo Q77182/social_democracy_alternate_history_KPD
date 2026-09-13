@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History Mod Test3
+= Social Democracy: An Alternate History
 
 @start_menu_2
 
@@ -46,22 +46,27 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left_opposition', 'marxist_leninists', 'right_opposition', 'conciliators'];
+Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?
-Q.left_opposition_strength = 15;
-Q.left_oppositiont_dissent = 20;
-Q.marxist_leninists_strength = 30;
-Q.marxist_leninists_dissent = 0;
-Q.right_opposition_strength = 25;
-Q.right_opposition_dissent = 5;
-Q.conciliators_strength = 25;
-Q.conciliators_dissent = 5;
+Q.left_strength = 15;
+Q.left_dissent = 20;
+Q.center_strength = 30;
+Q.center_dissent = 0;
+Q.labor_strength = 25;
+Q.labor_dissent = 5;
+Q.reformist_strength = 25;
+Q.reformist_dissent = 5;
+Q.neorevisionist_strength = 5;
+Q.neorevisionist_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
+
+// have we discovered neorevisionism?
+Q.neorevisionism = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -96,14 +101,13 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.spd_relation = 25;
-//Z and DDP should be very difficult to raise
-Q.z_relation = 5;
-Q.ddp_relation = 5;
-// DNVP and NSDAP are invariably hostile(so should DVP)
-Q.DNVP_relation = 0;
+Q.z_relation = 50;
+Q.kpd_relation = 25;
+Q.ddp_relation = 60;
+Q.dvp_relation = 35;
+// DNVP and NSDAP are invariably hostile
+Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
-Q.dvp_relation = 0;
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -112,12 +116,6 @@ Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
-
-// NEW things
-Q.united_front_support = 0
-Q.united_front_maintained = 1
-Q.comintern_seen = 0
-Q.rural_connection = 0
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -132,7 +130,7 @@ Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, Rotfrontkämpferbund
+// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.rb_strength = 2000;
 Q.rb_militancy = 0.01;
 Q.women_in_rb = 0;
@@ -366,10 +364,10 @@ Q.in_minority_government = 0;
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
 // dissent from the KPD, in a popular front or left front government
-Q.spd_coalition_dissent = 0;
+Q.kpd_coalition_dissent = 0;
 
-// does the kpd tolerate the government even if it is not a participant?
-Q.kpd_toleration = 0;
+// does the SPD tolerate the government even if it is not a participant?
+Q.spd_toleration = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
@@ -465,9 +463,9 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
             'iron_front', 'media', 'enemies',
-            'party_organizations', 'rally', 'riechsbanner',
+            'party_organizations', 'rally', 'reichsbanner',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
-            'party_disunity', rural_party
+            'party_disunity',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
@@ -497,8 +495,7 @@ Q.media_timer = 0;
 Q.enemies_timer = 0;
 Q.party_organizations_timer =  0;
 Q.rally_timer = 0;
-Q.riechsbanner_timer = 0;
-Q.rural_party = 0;
+Q.reichsbanner_timer = 0;
 Q.shuffle_leadership_timer = 0;
 Q.streetfighting_timer = 0;
 Q.peoples_party_timer = 0;
@@ -581,7 +578,7 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
-set-bg: img/karlhaus.jpg
+set-bg: img/map_2.jpg
 new-page: true
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
@@ -598,11 +595,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; spd_relation = 29; z_relation = 5; dvp_relation = 0; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; spd_relation = 16; dvp_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -614,11 +611,11 @@ Q.resources = 2;
 Q.dues = 1;
 Q.rb_strength = 2000;
 Q.reformist_dissent = 25;
-Q.left_opposition_dissent = 30;
+Q.left_dissent = 30;
 Q.labor_dissent = 25;
 Q.center_dissent = 25;
-Q.z_relation = 0;
-Q.spd_relation = 16;
+Q.z_relation = 41;
+Q.kpd_relation = 16;
 Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
@@ -635,5 +632,3 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
 
 Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
-
-
