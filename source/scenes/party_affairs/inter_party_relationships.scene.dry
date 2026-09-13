@@ -50,7 +50,9 @@ As part of normalizing relations with the us, the SPD have to acknowledge the wr
 This was a suprise to everyone in the party and has made even the more hardline "social fascist" beleivers more accepting of temporary cooperation.
 
 @no_history
-on-arrival: spd_relation -= 3
+choose-if: spd_relation <= 50
+unavailable-subtitle: Wait, they're actually going to apologize?!.
+on-arrival: spd_relation -= 5
 
 The SPD refuses to apologize for the actions of Ebert and Noske; claiming is the our fault for launching a violent insurrection.
 
