@@ -461,7 +461,7 @@ Q.n_advisors = 3;
 Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
-            'iron_front', 'media', 'enemies',
+            'iron_front', 'media', 'enemies', 'rural_party'
             'party_organizations', 'rally', 'reichsbanner',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
             'party_disunity',
@@ -492,6 +492,7 @@ Q.international_relations_timer = 0;
 Q.iron_front_timer = 0;
 Q.media_timer = 0;
 Q.enemies_timer = 0;
+Q.rural_party = 0;
 Q.party_organizations_timer =  0;
 Q.rally_timer = 0;
 Q.reichsbanner_timer = 0;
