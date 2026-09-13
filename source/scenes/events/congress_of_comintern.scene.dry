@@ -15,7 +15,7 @@ The major debate during this meeting is the matter of the united front. Many bel
 - @third_period_thesis: Adopt the Third Period thesis! The social fascists cannot be trusted.
 
 @maintain_united_front
-on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10; united_front_maintained =1
+on-arrival: left_opposition_dissent += 10; marxist_leninist_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10; united_front_maintained =1
 choose-if: united_front_support >=3 
 unavailable-subtitle: The united front currently lacks support.
 

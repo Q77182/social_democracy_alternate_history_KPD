@@ -17,7 +17,7 @@ The KPD is dominatated by Marxist Leninist, considered the "center" of the party
 - @left_opposition: A focus on immediate revolution and distancing ourselves from Stalin is the best path.
 - @marxist_leninist: The Marxism-Leninism of espoused by our current leadership and the Comintern will remain.
 - @right_opposition: Work councils and a non-authoritarian socialist government will be more effective that our vanguard party.
-- @councilitators: It is necessary to work with trade unions and the SPD to stop fascism.
+- @conciliators: It is necessary to work with trade unions and the SPD to stop fascism.
 - @easy_discard
 
 @left_opposition
@@ -53,18 +53,18 @@ on-departure: ideology = "right_opposition"; right_opposition_strength += 10; ri
 
 The Right Opposition focuses on increasing our influence on work councils and unions to connect to the working class.
 
-@councilitators
+@conciliators
 on-arrival: {!
-if (Q.ideology && Q.ideology != "conciliators") {
+if (Q.ideology && Q.ideology != "conciliator") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "councilitators"; councilitators_strength += 10; democratization += 1; councilitators_dissent -= 5; spd_relation += 8
+on-departure: ideology = "conciliators"; conciliator_strength += 10; democratization += 1; conciliators_dissent -= 5; spd_relation += 8
 
 Fascism is our most immediate threat, working with the SPD and maybe even the bourgeois parties is necessary.
 
 @changed
-on-arrival: left_opposition_dissent += 5; marxist_leninist_dissent += 5; right_opposition_dissent += 5; councilitators_dissent += 5
+on-arrival: left_opposition_dissent += 5; marxist_leninist_dissent += 5; right_opposition_dissent += 5; conciliator_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.

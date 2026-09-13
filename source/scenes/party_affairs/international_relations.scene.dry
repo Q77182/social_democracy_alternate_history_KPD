@@ -25,7 +25,7 @@ At the Comintern, we can forge contacts with our fraternal socialist parties in 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; left_opposition_dissent -=5 ; marxist_leninist_dissent -=5; right_opposition_dissent -=5; conciliators_dissent -=5; workers_kpd +=5
+on-arrival: resources -= 1; left_opposition_dissent -=5 ; marxist_leninist_dissent -=5; right_opposition_dissent -=5; conciliator_dissent -=5; workers_kpd +=5
 
 learning from the counterproductive levels of sectarianism that plagues the CPGB aswell as the labor organizing abilities of the PCF.
 

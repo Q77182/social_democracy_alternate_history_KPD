@@ -301,9 +301,9 @@ Dissent: [+ left_opposition_dissent : dissent +]
 
 Marxist Leninists are the dominant faction of the KPD. Inspired by the October Revolution, they beleive in the creation of a vanguard party to help lead workers to revolution.
 
-Strength: [+ marxist_leninists_strength : strength +]
+Strength: [+ marxist_leninist_strength : strength +]
 
-Dissent: [+ marxist_leninists_dissent : dissent +]
+Dissent: [+ marxist_leninist_dissent : dissent +]
 
 **Right Opposition**
 
