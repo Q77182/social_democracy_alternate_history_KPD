@@ -29,7 +29,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; rural_connection += 0.5; worker_kpd += 4*(1 - dissent); rural_kpd += 3*(1-dissent)
 
-We can reduce the prices of our papers due to subsidizing them, expanding their reach in urban and rural areas.
+Our subsidizations lets us reduce the price of our papers, expanding their reach in urban and rural areas.
 
 @less_paper
 title: We cut funding for Die Rote Fahn.
@@ -41,7 +41,7 @@ For whatever reason, we are forced to cut funding for our newspaper. This reduce
 @ideological
 title: We push the Marxist Leninist party line.
 subtitle: Reduce the influence of the other factions to stay inline with the comintern.
-on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent)
+on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent) comintern_relation +=1
 
 We follow our Comintern comrades ideologically.
 
