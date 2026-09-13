@@ -16,7 +16,7 @@ The major debate during this meeting is the matter of the united front. Many bel
 
 @maintain_united_front
 on-arrival: left_opposition_dissent += 10; marxist_leninists_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10
-choose-if: united_front_support >=3 and comintern_relation >=0
+choose-if: united_front_support >=3 
 unavailable-subtitle: The united front currently lacks support.
 
 Through our influence, the united front is retained. Many are opposed to this but democratic centralism puts them in line soon enough.
