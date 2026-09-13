@@ -41,7 +41,7 @@ For whatever reason, we are forced to cut funding for our newspaper. This reduce
 @ideological
 title: We push the Marxist Leninist party line.
 subtitle: Reduce the influence of the other factions to stay inline with the comintern.
-on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent) comintern_relation +=1
+on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent)
 
 We follow our Comintern comrades ideologically.
 
