@@ -1,11 +1,11 @@
-title: 6th International Congress of the Comintern
+title: 6th World International Congress of the Comintern
 subtitle: Maintain the united front?
 tags: event, govt_affairs
 is-card: true
 on-arrival: comintern_seen = 1
 view-if: comintern_seen = 0 and year = 1928 and month >= 9
 new-page: true
-face-image: img/panzerkreuzer.jpg
+face-image: img/comintern.jpg
 
 = 6th International Congress
 
