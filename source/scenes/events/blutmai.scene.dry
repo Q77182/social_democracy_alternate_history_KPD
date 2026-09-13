@@ -31,6 +31,7 @@ This crushes any hope of reconciliation or cooperation between our party.
 
 @communist_fault
 choose-if: spd_relation <=15
+unavailable-subtitle: The SPD finds this course of action excessive.
 on-arrival: spd_relation -= 10; rfb_strength -= 80; rfb_banned = 1
 
 Claiming that we had acted illegally, The Prussian coalition has banned the RFB. This will make any rallies in Prussia more difficult without the RFB to defend us.
@@ -42,6 +43,7 @@ To our suprise, we aren't blamed for this. The RFB has remained untouched but we
 
 @allow_police
 choose-if: spd_relation <=25 and spd_relation >15
+unavailable-subtitle: Their centrist coalition partners dissuade them from this.
 on-arrival: spd_relation += 5; workers_kpd += 5; unemployed_kpd += 5
 
 The SPD has choosen to allow the demonstration, perhaps due to our improved relations. Onlookers admire the strength of our workers with some even joining the party.
@@ -49,6 +51,7 @@ The SPD has choosen to allow the demonstration, perhaps due to our improved rela
 
 @allow
 choose-if: spd_relation <=35 and spd-relations >25
+unavailable-subtitle: Not even the SPD is willing to go this far.
 on-arrival: workers_kpd += 5; unemployed_kpd += 5; kpd_relation += 10; rfb_strength += 50; z_relation -= 3; dvp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1
 
 The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist workers, and perhaps some of our members have been peeled off. While we remain suspicous, many are thankful for this act of toloration.
