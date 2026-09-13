@@ -9,7 +9,7 @@ new-page: true
 
 = Panzerkreuzer
 
-The Reichswehr Ministry is demanding the construction of a new battlecruiser, as part of Germany's rearmament. Our coalition partners are united in support. While many of our members are vehemently against new military spending, this vote may be necessary to preserve the coalition. 
+The Reichswehr Ministry is demanding the construction of a new battlecruiser, as part of Germany's rearmament. The Grand coalition is united in support. The SPD is less enthusiastic, but may acquiesce to coalition demands. 
 We campaigned on food for children instead of battlecruisers. Will we really betray our campaign promises?
 
 - @vote_yes: Vote yes, for constructing the battlecruiser.
@@ -17,6 +17,8 @@ We campaigned on food for children instead of battlecruisers. Will we really bet
 - @abstain: Abstain from the vote.
 
 @vote_yes
+choose-if : nsdap_relation >=100
+unavailable-subtitle: You would be hung and quartered in the Reichstag if you did this.
 on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformist_dissent += 5; neorevisionist_dissent += 5; panzerkreuzer_funded = 1; kpd_coalition_dissent += 1; kpd_relation -= 6; workers_spd -= 3
 
 Our grassroots party members are shocked by our intransigence! Many party branches have begun agitating against the cabinet, and our Reichstag members even plan a full vote on the proposal, contravening the government's decision.
@@ -38,14 +40,9 @@ Our coalition partners are shocked by our intransigence! However, Chancellor Bra
 @muller
 on-arrival: panzerkreuzer_funded = 1
 
-Our coalition partners are shocked by our intransigence! Despite Chancellor Müller's rejection of the proposal, the other parties bring the matter to a Reichstag vote, which easily passes, with only the SPD and KPD voting against. The ship will be built.
+We obviously vote no and so does the SPD, much to their coalition partners' annoyance. Despite Chancellor Müller's rejection of the proposal, the other parties bring the matter to a Reichstag vote, which easily passes, with only the SPD and KPD voting against. The ship will be built.
 
 @vote_no_pass
 on-arrival: panzerkreuzer_funded = 1
 
-Our coalition partners are shocked by our intransigence! Chancellor [+ chancellor +] brings the matter to a Reichstag vote, which passes with all parties in favor except the SPD and KPD. The ship will be built.
-
-@abstain
-on-arrival: dvp_relation -= 5; z_relation -= 3; left_dissent += 5; labor_dissent += 5; panzerkreuzer_funded = 1; kpd_relation -= 3
-
-Our coalition partners are shocked by our intransigence! Despite our abstention, the vote in the Reichstag goes through, with all parties in favor except the SPD and KPD. The ship will be built.
+The SPD and KPD are the only partires which vote in opposition. The ship will be built regardless of us.
