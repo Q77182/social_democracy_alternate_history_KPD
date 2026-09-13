@@ -22,6 +22,6 @@ unavailable-subtitle: The united front currently lacks support.
 Through our influence, the united front is retained. Many are opposed to this but democratic centralism puts them in line soon enough.
 
 @third_period_thesis
-on-arrival: spd_relation -=15; united_front_maintained =0;conciliators_strength -= 10; right_opposition_strength -= 10
+on-arrival: spd_relation -=15; united_front_maintained -=1; conciliators_strength -= 10; right_opposition_strength -= 10
 
 Capitalism's collaspe is imminent, the Third Period thesis will be adopted. Any further cooperation with the SPD will be criticised by our party and the Comintern, if not entirely rejected.
