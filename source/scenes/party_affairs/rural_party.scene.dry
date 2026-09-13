@@ -30,4 +30,4 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: rural_kpd += 2; resources -=1; rural_policy +=0.5; rural_kpd -=2 if socialism >= 55
-We listen to the concerns of the local population while trying to spread class consciousness. [? if socialism >=50: Our previous lack of rural action has allowed conervatives to dominate rural opinion, making our overtures less effective. ?]
+We listen to the concerns of the local population while trying to spread class consciousness. [? if socialism <= 49: The popular antipathy towards socialism among this group makes our campaign more difficult. ?]
