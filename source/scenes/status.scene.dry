@@ -94,7 +94,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Marxist-Leninist, called Stalinist by their critics, seek a revolution similar to their Soviet counterparts.">Marxist Leninist</span>!} strength: [+ marxist_leninist_strength : strength +], dissent: [+ marxist_leninist_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Right Opposition opposes that it sees as authoritarianism in Soviet style government and KPD leadership.>Right Opposition</span>!} strength: [+ right_opposition_strength : strength +], dissent: [+ right_opposition_dissent : dissent +]
+{!<span class="tooltip-text" title="The Right Opposition opposes that it sees as authoritarianism in Soviet style government and KPD leadership.">Right Opposition</span>!} strength: [+ right_opposition_strength : strength +], dissent: [+ right_opposition_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Conciliators prefer cooperation with the SPD compared with our current possition of the SPD's social fascism.">Conciliator</span>!} strength: [+conciliator_strength : strength +], dissent: [+ conciliator_dissent : dissent +]
 
