@@ -51,7 +51,7 @@ subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
 view-if: radio = 0
-on-arrival: radio += 1; resources -= 2; new_middle_kpd += 4*(1 - dissent); old_middle_s=kpd += 3*(1 - dissent); workers_kpd += 2*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1
+on-arrival: radio += 1; resources -= 2; new_middle_kpd += 4*(1 - dissent); old_middle_kpd += 3*(1 - dissent); workers_kpd += 2*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1
 
 Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our comrades are painfully aware. Still, not taking advantage of this new medium would be a mistake.
 
