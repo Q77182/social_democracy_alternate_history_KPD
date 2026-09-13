@@ -14,7 +14,6 @@ We campaigned on food for children instead of battlecruisers. Will we really bet
 
 - @vote_yes: Vote yes, for constructing the battlecruiser.
 - @vote_no: Vote no, against constructing the battlecruiser.
-- @abstain: Abstain from the vote.
 
 @vote_yes
 choose-if : nsdap_relation >=100
