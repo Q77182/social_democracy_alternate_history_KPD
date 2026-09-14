@@ -28,6 +28,6 @@ title: Include and acknowledge the voices of women within our media and propagan
 subtitle: 
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; women_connection += 1; new_middle_spd -= 2 workers_spd -= 2; new_middle_kpd += 2 workers_spd += 2
+on-arrival: resources -= 1; women_connection += 1; new_middle_spd -= 2 workers_spd -= 2; new_middle_kpd += 2 workers_kpd += 2
 
 We change and create newspapers and posters to adress women specifically. Some of these are even written by women. This attracts leftist women who may be lured to the SPD otherwise.
