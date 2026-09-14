@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Thalmann maxxing: An Alternate History Mod12
+= Thalmann maxxing: An Alternate History Mod123
 
 @start_menu_2
 
