@@ -52,7 +52,7 @@ It is not enough for the SPD to solely be a political party. The Worker Singer's
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; rfb_strength  += 50; rb_militancy += 0.01; rotfrontkampferbund_timer = 0; funded_reichsbanner += 1
+on-arrival: resources -= 1; rfb_strength += 50; rb_militancy += 0.01; rotfrontkampferbund_timer = 0; funded_reichsbanner += 1
 
 We have increased recruiting to the Reichsbanner.
 
@@ -60,7 +60,7 @@ We have increased recruiting to the Reichsbanner.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-on-arrival: resources -= 1; rb_strength += 25; rb_militancy; young_socialists += 1; workers_kpd += 3; new_middle_kpd += 2
+on-arrival: resources -= 1; rb_strength += 25; young_socialists += 1; workers_kpd += 3; new_middle_kpd += 2
 
 Our new youth members flock to the left or neorevisionist wings of the party, and also bring new radicalism to the Reichsbanner.
 
