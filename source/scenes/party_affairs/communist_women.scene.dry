@@ -1,11 +1,11 @@
 title: Feminism
 new-page: true
-on-arrival: month_actions += 1
+on-arrival: month_actions += 1; feminism_timer +=1
 is-card: true
 card-image: img/kpd_women.jpg
 frequency: 100
 tags: party_affairs
-view-if: feminism_timer <=0
+view-if: women_connection
 
 = Feminism
 
