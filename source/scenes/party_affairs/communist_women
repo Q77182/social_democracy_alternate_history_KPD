@@ -1,6 +1,6 @@
 title: Feminism
 new-page: true
-on-arrival: month_actions += 1; feminism_timer += 6
+on-arrival: month_actions += 1
 is-card: true
 card-image: img/kpd_women.jpg
 frequency: 100
@@ -24,7 +24,7 @@ on-arrival: resources -= 1; women_connection += 2; left_opposition_dissent += 6;
 We have increased leadership positions for women. Some of them repalced male leaders, leaving some discontent.
 
 @campaign_women
-title: Include and ackknowledge the voices of women within our media and propaganda
+title: Include and acknowledge the voices of women within our media and propaganda
 subtitle: 
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
