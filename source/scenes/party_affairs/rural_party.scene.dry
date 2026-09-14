@@ -6,7 +6,7 @@ is-card: true
 card-image: img/ruralselling.jpg
 frequency: 50
 tags: party_affairs
-view-if: rural_party_timer = 0
+view-if: rural_party_timer <= 0
 
 = Rural Policies
 
