@@ -5,7 +5,7 @@ is-card: true
 card-image: img/kpd_women.jpg
 frequency: 100
 tags: party_affairs
-view-if: women_connection <=5
+view-if: feminism_timer <=0
 
 = Feminism
 
@@ -13,10 +13,12 @@ A Marxist party that excludes women is no Marxist party at all. Still, the domin
 
 -@leadership
 -@campaign_women
+-@message_change
+-@nothing
 
 @leadership
 title: Push for more women in local and national leadership.
-subtitle: 
+subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; women_connection += 2; left_opposition_dissent += 6; right_opposition_dissent += 6; marxist_leninist_dissent += 6; conciliator_dissent += 6
@@ -25,9 +27,22 @@ We have increased leadership positions for women. Some of them repalced male lea
 
 @campaign_women
 title: Include and acknowledge the voices of women within our media and propaganda
-subtitle: 
+subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; women_connection += 1; new_middle_spd -= 2; workers_spd -= 2; new_middle_kpd += 2; workers_kpd += 2
 
 We change and create newspapers and posters to adress women specifically. Some of these are even written by women. This attracts leftist women who may be lured to the SPD otherwise.
+
+@message_change
+title: Change our rhetoric to appeal to the new women.
+subtitle: This may anger our more hardline communists.
+on-arrival: women_connection += 1; left_opposition_dissent += 10; marxist_leninist_dissent += 10
+
+We have attempt to target the women of the new middle class, also known as "new women". While effective at expanding our base, many belive to be dilluting our class character.
+
+@nothing
+
+We have decided to postpone this matter for later, hopefully it doesn't backfire...
+
+- @return: Continue...
