@@ -1,0 +1,33 @@
+title: Feminism
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: media_timer <= 0
+on-arrival: month_actions += 1; media_timer += 6;
+card-image: img/communist_women.jpg
+#subtitle: Proletariat meens ALL proletariats.
+
+= Feminism
+
+A Marxist party that excludes women is no Marxist party at all. Still, the dominance of men in both leadership and representation alienate women. How will we deal with this?
+
+-@leadership
+-@campaign_women
+
+@leadership
+title: Push for more women in local and national leadership.
+subtitle: 
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; women_connection +=2; left_opposition_dissent += 6; right_opposition_dissent += 6; marxist_leninist_dissent += 6; conciliator_dissent += 6
+
+We have increased leadership positions for women. Some of them repalced male leaders, leaving some discontent.
+
+@campaign_women
+title: Include and ackknowledge the voices of women within our media and propaganda
+subtitle: 
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; women_connection +=1; new_middle_spd -=2 workers_spd -=2; new_middle_kpd +=2 workers_spd +=2
+
+We change and create newspapers and posters to adress women specifically. Some of these are even written by women. This attracts leftist women who may be lured to the SPD otherwise.

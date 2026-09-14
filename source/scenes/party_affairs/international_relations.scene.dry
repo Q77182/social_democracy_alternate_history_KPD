@@ -36,7 +36,7 @@ unavailable-subtitle: Not enough resources.
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: left_opposition_strength -= 5; radicalization += 1; spd_relation +=5; united_front_support +=1
 
-Though capitalism has suffered recent crises, its collaspe is not terminal just yet. we must convince the comintern to maintain the united front.
+Though capitalism has suffered recent crises, its collaspe is not terminal just yet. We must convince the comintern to maintain the united front.
 
 
 

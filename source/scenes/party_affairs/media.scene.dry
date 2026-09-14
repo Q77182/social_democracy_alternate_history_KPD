@@ -24,7 +24,7 @@ The KPD runs Die Rote Fahne. We could use the media for various purposes...
 
 @more_paper
 title: Increase funding for Die Rote Fahne.
-subtitle: By increasing funding, we can have higher quality and more available papers.
+subtitle: By increasing funding, we can have higher quality and more available papers. -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; rural_connection += 0.5; worker_kpd += 4*(1 - dissent); rural_kpd += 3*(1-dissent)
@@ -41,9 +41,9 @@ For whatever reason, we are forced to cut funding for our newspaper. This reduce
 @ideological
 title: We push the Marxist Leninist party line.
 subtitle: Reduce the influence of the other factions to stay inline with the comintern.
-on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent)
+on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_dissent -= 6; conciliator_dissent -= 6;left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent)
 
-We follow our Comintern comrades ideologically.
+We will follow our Comintern comrades ideologically.
 
 @radio
 title: Why not fund a radio station?
@@ -53,7 +53,7 @@ unavailable-subtitle: Not enough resources.
 view-if: radio = 0
 on-arrival: radio += 1; resources -= 2; new_middle_kpd += 4*(1 - dissent); old_middle_kpd += 3*(1 - dissent); workers_kpd += 2*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1
 
-Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our comrades are painfully aware. Still, not taking advantage of this new medium would be a mistake.
+Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the new middle class(the old middle class still opposes us), a fact of which our comrades are painfully aware. Still, not taking advantage of this new medium would be giving the reactionaries who do a free victory.
 
 @radio_2
 title: We must keep on building up our radio network.
@@ -61,15 +61,15 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 view-if: radio > 0 and radio <= 3
-on-arrival: radio += 1; resources -= 1; new_middle_kpd += 5*(1 - dissent); old_middle_kpd += 3*(1 - dissent); workers_kpd += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2;
+on-arrival: radio += 1; resources -= 1; new_middle_kpd += 5*(1 - dissent); workers_kpd += 3*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2;
 
-Our new radio network has a mix of popular and political programming, and is proving a success.
+Our new radio network has a mix of popular and political programming, and is proving a success. The new middle class, previously considered labor aristocrats resistant to socialism, is becoming more receptive.
 
 @radio_3
 title: We must keep on building up our radio network.
 subtitle: It is now financially self-sufficient, and does not require any more resources.
 view-if: radio > 3 and radio <= 5 and year <= 1931
-on-arrival: radio += 1; new_middle_kpd += 5*(1 - dissent); old_middle_kpd += 4*(1 - dissent); workers_kpd += 4*(1 - dissent); rural_kpd += 3*(1 - dissent); unemployed_kpd += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
+on-arrival: radio += 1; new_middle_kpd += 5*(1 - dissent); workers_kpd += 4*(1 - dissent); rural_kpd += 3*(1 - dissent); unemployed_kpd += 2*(1-dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent)*(pacifism-2) if pacifism > 2; pro_republic += 3*(1-dissent)*(democratization-2) if democratization > 2
 
 Our radio network has become a successful tool for spreading our message.
 
