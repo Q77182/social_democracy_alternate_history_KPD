@@ -1,6 +1,6 @@
 title: Feminism
 new-page: true
-on-arrival: month_actions += 1; feminism_timer +=1
+on-arrival: month_actions += 1; feminism_timer +=6
 is-card: true
 card-image: img/kpd_women.jpg
 frequency: 100
@@ -11,10 +11,10 @@ view-if: women_connection
 
 A Marxist party that excludes women is no Marxist party at all. Still, the dominance of men in both leadership and representation alienate women. How will we deal with this?
 
--@leadership
--@campaign_women
--@message_change
--@nothing
+- @leadership
+- @campaign_women
+- @message_change
+- @nothing
 
 @leadership
 title: Push for more women in local and national leadership.
@@ -42,6 +42,7 @@ on-arrival: women_connection += 1; left_opposition_dissent += 10; marxist_lenini
 We have attempt to target the women of the new middle class, also known as "new women". While effective at expanding our base, many belive to be dilluting our class character.
 
 @nothing
+title: We can pospone this matter
 
 We have decided to postpone this matter for later, hopefully it doesn't backfire...
 
