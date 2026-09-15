@@ -12,7 +12,6 @@ tags: party_affairs, govt_affairs
 An economic crisis, worse than any the world has seen, now grips Germany. Millions have lost their jobs and wages across the board are decreasing every day. What should we do?
 
 - @aid: Sponsor mutual aid.
-- @rev_path
 - @support_left: Support nationalizations to escape the crisis.
 - @united_front_building: Build the united front.
 - @defer: Defer making a decision until we have more information.
@@ -22,28 +21,6 @@ subtitle: During these times, we must show workers that we are on their side.
 on-arrival: unemployed_kpd += 2; rural_kpd += 2; socialism += 3
 
 Icreasing funding for the Workers International Relief and other mutual aid groups give much needed relief from the brutal austerity of the current government.
-
-@rev_path
-subtitle: We must prepare for the revolution.
-on-arrival: rfb_strength += 30; rfb_militancy += 0.05
-go-to: revolution if unemployed >=20 and workers_kpd >=40 and unemployed_kpd >=40;
-
-We organize the Rotfrontkämpferbund and factory cells in secret as to avoid bourgeois reprisal. Still, our preperations mean nothing without the support of the workers.
-
-@revolution
-
-We have spent a great deal of time and resources into our fighting capabilities and influence over workers. The crisis continues and civil unrest grows ever greater. Is it time?
-
-- @yes_revolution: Strike while the iron is hot!
-- @no_revolution: Despite everything, we aren't quite ready.
-
-@yes_revolution 
-
-We launch the revolution! May the workers be on our side.(NOT DONE)
-
-@no_revolution
-
-While disappointing, nobody wants a premature revolution. Memories of the failed Sparticist Uprising and March Action remain and nobody wants a third failiure.
 
 @support_left
 subtitle: Call for mass nationalizations and the transformation of the economy.
