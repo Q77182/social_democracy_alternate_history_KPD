@@ -57,7 +57,7 @@ With our hard work, we have finally convinced the majority of the party to adopt
 subtitle: Call for mass nationalizations and the transformation of the economy.
 unavailable-subtitle: The time for working within Bourgeois framework.
 choose-if: year >=1932
-on-arrival; nationalization_support += 2
+on-arrival: nationalization_support += 2
 go-to: adopt_left
 
 @adopt_left
