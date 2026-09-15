@@ -81,7 +81,7 @@ on-arrival: spd_relation +=5; workers_kpd += 2*(1-dissent); workers_spd += 2; un
 
 The Comintern, having maintained the united front in the last world congress supports our action. Conversely, the German bourgeois and far right are terrified.
 
-@comintern_opposition: We have come under fierce criticism and risk expulsion.
+@comintern_opposition
 unavailable-subtitle: Thalmann and Comintern have dissuaded us from this
 choose-if:if united_front_maintained == 0
 on-arrival: marxist_leninist_dissent +=5; left_opposition_dissent +=5
