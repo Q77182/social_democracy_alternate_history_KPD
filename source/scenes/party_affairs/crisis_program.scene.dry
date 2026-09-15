@@ -54,7 +54,7 @@ The Comintern, having maintained the united front in the last world congress sup
 
 @comintern_opposition
 unavailable-subtitle: Thalmann and Comintern have dissuaded us from this
-choose-if:if united_front_maintained == 0
+choose-if: united_front_maintained == 0
 on-arrival: marxist_leninist_dissent +=5; left_opposition_dissent +=5
 
 The Comintern's Third Period thesis does not allow for this type of action, but times are quickly changing. [? if spd_relation >=75: The SPD's shift to its left wing has assuage some of the Comintern's doubt. ?]
