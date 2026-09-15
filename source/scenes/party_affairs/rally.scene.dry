@@ -86,7 +86,7 @@ on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if lef
 Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
 
 @women
-on-arrival: workers_kpd += 3*(1-dissent); workers_kpd += 3*(1-dissent) women_connection >= 3; unemployed_kpd += 3*(1-dissent) ; unemployed_kpd += 3*(1-dissent) if women_connection >= 3
+on-arrival: workers_kpd += 3*(1-dissent); workers_kpd += 3*(1-dissent) if women_connection >= 3; unemployed_kpd += 3*(1-dissent) ; unemployed_kpd += 3*(1-dissent) if women_connection >= 3
 
 We give speeches supporting feminist causes. [? if women_connection > 1 : The increased number of women in our leadership and propaganda have bolstered their support for us. ?]
 
