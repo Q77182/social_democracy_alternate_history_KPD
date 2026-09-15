@@ -38,7 +38,7 @@ This is the consensus choice, even if many beleive it to be impossible under a b
 subtitle: Build support for the united front. 
 on-arrival: marxist_leninist_dissent += 5 if united_front_maintained == 0; left_opposition_dissent +=10
 
-This may be worth wrying, but what does the Comintern think?
+Building a united front has it supporters and detractors within the party, but what does the Comintern think?
 
 -@comintern_support: The Comintern approves!
 -@comintern_opposition: The Comintern disapproves...
@@ -55,7 +55,7 @@ unavailable-subtitle: Thalmann and Comintern have dissuaded us from this
 choose-if: united_front_maintained == 0
 on-arrival: marxist_leninist_dissent +=5; left_opposition_dissent +=5
 
-The Comintern's Third Period thesis does not allow for this type of action, but times are quickly changing. [? if spd_relation >=75: The SPD's shift to its left wing has assuage some of the Comintern's doubt. ?]
+The Comintern's Third Period thesis does not allow for a united front, but times are quickly changing. [? if spd_relation >=75: The SPD's shift to its left wing has assuage some of the Comintern's doubt. ?]
 
 -@build_anyways: Risking expulsion from the Comintern, we build the united front anyways
 -@stop_build: We will tow the Comintern line
