@@ -31,7 +31,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; women_connection += 1; new_middle_kpd += 4*(1-dissent); workers_kpd -= 4*(1-dissent); new_middle_kpd -= 2 if message_change <2; workers_kpd -= 2 if message_change <2; 
 
-We change and create newspapers and posters to address women specifically. Some of these are even written by women. [? if women_connection <2: Our current messaging does not particularly appeal to women, especially those of the new middle class.][? if message_change >=2: Our change in rhetoric attracts even the women of the new middle class.]
+We change and create newspapers and posters to address women specifically. Some of these are even written by women. [? if women_connection <2: Our current messaging does not particularly appeal to women, especially those of the new middle class. ?] [? if message_change >=2: Our change in rhetoric attracts even the women of the new middle class.?]
 
 @message_change
 subtitle: This may anger our more hardline communists.
