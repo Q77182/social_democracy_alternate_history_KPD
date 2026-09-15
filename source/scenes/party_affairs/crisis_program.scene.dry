@@ -70,17 +70,36 @@ subtitle: Build support for the united front.
 on-arrival: marxist_leninist_dissent += 10 if united_front_maintained == 0; left_opposition_dissent +=10
 go-to: comintern_support if united_front_maintained ==1; comintern_opposition if united_front_maintained == 0
 
-@comintern_support: The Comintern approves!
+-@comintern_support: The Comintern approves!
+-comintern_opposition: The Comintern disapproves...
+
+
+@comintern_support
+choose-if: united_front_maintained ==1
 on-arrival: spd_relation +=5; workers_kpd += 2*(1-dissent); workers_spd += 2; unemployed_kpd +=2*(1-dissent); unemployed_spd +=2
 
 The Comintern, having maintained the united front in the last world congress supports our action. Conversely, the German bourgeois and far right are terrified.
 
 comintern_opposition: We have come under fierce criticism and risk expulsion.
 unavailable-subtitle: Thalmann and Comintern have dissuaded us from this
-choose-if: conciliator_strength >= marxist_leninist_strength or nsdap_r <= 20
-on-arrival: 
+choose-if:if united_front_maintained == 0
+on-arrival: marxist_leninist_dissent +=5; left_opposition_dissent +=5
 
 The Comintern's Third Period thesis does not allow for this type of action, but times are quickly changing. [? if spd_relation >=75: The SPD's shift to its left wing has assuage some of the Comintern's doubt. ?]
+
+-@build_anyways: Risking expulsion from the Comintern, we build the united front anyways
+-@stop_build: We will tow the Comintern line
+
+@build_anyways
+choose-if:conciliator_strength >= marxist_leninist_strength or nsdap_r <= 20
+on-arrival: spd_relation +=5;marxist_leninist_dissent +=5; left_opposition_dissent +=10
+
+The Soviets are furious, along with many others for breaking discipline. The SPD is very suprised we did this, but cautiously begin working with us. [? if spd_relation >=75: The SPD's shift to its left wing has assuage some of the Comintern's doubt. ?]
+
+@stop_build
+on-arrival: spd_relation -= 5; right_opposition_dissent +=5; conciliator_dissent +=5
+
+We will not work with the social fascists to defeat the other fascists. We wil continue alone in Germany.
 
 @defer
 
