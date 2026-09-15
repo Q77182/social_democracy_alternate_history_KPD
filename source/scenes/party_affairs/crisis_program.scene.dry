@@ -22,7 +22,27 @@ on-arrival: unemployed_kpd += 2; rural_kpd += 2; socialism += 3
 
 Icreasing funding for the Workers International Relief and other mutual aid groups give much needed relief from the brutal austerity of the current government.
 
-Our policy course is currently that nothing can be done to alleviate the depression.
+@preparation
+subtitle: We must prepare for the revolution.
+on-arrival: rfb_strength += 30; rfb_militancy += 0.05
+go-to: revolution if unemployed >=20 and workers_kpd >=40 and unemployed_kpd >=40;
+
+We organize the Rotfrontkämpferbund and factory cells in secret as to avoid bourgeois reprisal. Still, our preperations mean nothing without the support of the workers.
+
+@revolution
+
+We have spent a great deal of time and resources into our fighting capabilities and influence over workers. The crisis continues and civil unrest grows ever greater. Is it time?
+
+- @yes_revolution: Strike while the iron is hot!
+- @no_revolution: Despite everything, we aren't quite ready.
+
+@yes_revolution 
+
+We launch the revolution! May the workers be on our side.(NOT DONE)
+
+@no_revolution
+
+While disappointing, nobody wants a premature revolution. Memories of the failed Sparticist Uprising and March Action remain and nobody wants a third failiure.
 
 @support_left
 subtitle: Call for mass nationalizations and the transformation of the economy.
