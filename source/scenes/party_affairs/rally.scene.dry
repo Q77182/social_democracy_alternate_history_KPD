@@ -12,7 +12,7 @@ go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not ret
 The Nazi SA has disrupted our rally! Their street troops are preventing us from meeting.
 
 - @police_protect: Call the police to protect our rally.
-- @rb_protect: Use the Reichsbanner to protect our rally.
+- @rfb_protect: Use the Reichsbanner to protect our rally.
 - @both_protect: The police and Reichsbanner should work together to protect our rally.
 - @cancel: Cancel the rally.
 
@@ -31,19 +31,19 @@ on-arrival: strife += 1; workers_nsdap += 3
 
 Unfortunately, the police were unable or unwilling to hold back the SA mob. The Nazis have won this show of strength.
 
-@rb_protect
-on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy; strife += 1
-go-to: rb_protect_win if rb_success >= 0; rb_protect_lose if rb_success < 0
+@rfb_protect
+on-arrival: rfb_success = rfb_strength*rfb_militancy - sa_strength*sa_militancy; strife += 1
+go-to: rfb_protect_win if rb_success >= 0; rfb_protect_lose if rb_success < 0
 
-@rb_protect_win
+@rfb_protect_win
 go-to: main_rally
 
-The Reichsbanner has successfully protected our rally against the SA! Our meeting can go ahead as usual.
+The Rotfrontkämpferbund has successfully protected our rally against the SA! Our meeting can go ahead as usual.
 
-@rb_protect_lose
+@rfb_protect_lose
 on-arrival: workers_nsdap += 3; rb_strength -= 50
 
-Unfortunately, the Reichsbanner was not able to hold back the SA mob. The Nazis have won this show of strength.
+Unfortunately, the Rotfrontkämpferbund was not able to hold back the SA mob. The Nazis have won this show of strength.
 
 @both_protect
 view-if: spd_prussia
@@ -70,28 +70,29 @@ The SA have won this show of strength.
 
 @main_rally
 
-Mass rallies are a common feature of social democratic life, especially in the lead-up to an election. What is the primary theme of this rally?
+Mass rallies are a common feature of political life, especially in the lead-up to an election. What is the primary theme of this rally?
 
 - @class_struggle: The class struggle of the proletariat against the bourgeoisie.
-- @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
-- @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
+- @women: The struggle also expands to women. 
+- @no_austerity: Expanding our nascent democracy and defending it against dictatorship and fascism.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
-- @wtb: Support the WTB plan!
+- @anti_fascist: We must adress the rapid rise of fascism!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
 
 @class_struggle
-on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2;
+on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; old_middle_spd -= 3; new_middle_spd -= 2;
 
 Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
 
-@welfare
-on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
+@women
+on-arrival: workers_kpd += 3*(1-dissent); workers_kpd += 3*(1-dissent) women_connection >= 3; unemployed_kpd += 3*(1-dissent) ; unemployed_kpd += 3*(1-dissent) if women_connection >= 3
 
-The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+We give speeches supporting feminist causes. [? if women_connection > 1 : The increased number of women in our leadership and propaganda have bolstered their support for us. ?]
 
-@democracy
-on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
+@no_austerity
+view-if: welfare <=0
+on-arrival:  unemployed_kpd += 5(1-dissent); unemployed_z -= 2 if z_in_government; unemployed_ddp -= 2 if ddp_in_government; unemployed_spd -= 2 if spd_in_government; unemployed_dvp -= 2 if dvp_in_government
 
 Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
 
@@ -101,13 +102,13 @@ Our speakers defend the republican system and rail against the monarchists and a
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
 
-Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
+Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War. No war but class war after all...
 
 [? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
 
-@wtb
-view-if: wtb_adopted = 1
+@anti_fascist
+view-if: nsdap_r <=20
 choose-if: return_to_normalcy = 0
 unavailable-subtitle: The economic crisis is largely over now, and the public is no longer interested in hearing about it.
 on-arrival: wtb_support += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); rural_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent);
@@ -116,6 +117,6 @@ The WTB plan has become a popular rallying cry for our party. The workers are ea
 
 
 @local
-on-arrival: workers_spd += 3*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent);
+on-arrival: workers_kpd += 3*(1-dissent); old_middle_s=kpd += 1*(1-dissent); new_middle_s=kpd += 2*(1-dissent); unemployed_s=kpd += 3*(1-dissent);
 
 Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
