@@ -19,7 +19,7 @@ An economic crisis, worse than any the world has seen, now grips Germany. Millio
 
 @aid
 subtitle: During these times, we must show workers that we are on their side.
-on-arrival: unemployed_kpd += 2; rural_kpd += 2 socialism += 3
+on-arrival: unemployed_kpd += 2; rural_kpd += 2; socialism += 3
 
 Icreasing funding for the Workers International Relief and other mutual aid groups give much needed relief from the brutal austerity of the current government.
 
@@ -67,11 +67,12 @@ This is the consensus choice, even if many beleive it to be impossible under a b
 
 @united_front_building
 subtitle: Build support for the united front. 
-on-arrival: marxist_leninist_dissent += 10 if united_front_maintained == 0; left_opposition_dissent +=10
-go-to: comintern_support if united_front_maintained ==1; comintern_opposition if united_front_maintained == 0
+on-arrival: marxist_leninist_dissent += 5 if united_front_maintained == 0; left_opposition_dissent +=10
+
+This may be worth wrying, but what does the Comintern think?
 
 -@comintern_support: The Comintern approves!
--comintern_opposition: The Comintern disapproves...
+-@comintern_opposition: The Comintern disapproves...
 
 
 @comintern_support
@@ -80,7 +81,7 @@ on-arrival: spd_relation +=5; workers_kpd += 2*(1-dissent); workers_spd += 2; un
 
 The Comintern, having maintained the united front in the last world congress supports our action. Conversely, the German bourgeois and far right are terrified.
 
-comintern_opposition: We have come under fierce criticism and risk expulsion.
+@comintern_opposition: We have come under fierce criticism and risk expulsion.
 unavailable-subtitle: Thalmann and Comintern have dissuaded us from this
 choose-if:if united_front_maintained == 0
 on-arrival: marxist_leninist_dissent +=5; left_opposition_dissent +=5
