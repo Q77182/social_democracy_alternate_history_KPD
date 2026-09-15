@@ -73,7 +73,7 @@ The SA have won this show of strength.
 Mass rallies are a common feature of political life, especially in the lead-up to an election. What is the primary theme of this rally?
 
 - @class_struggle: The class struggle of the proletariat against the bourgeoisie.
-- @women: The struggle also expands to women. 
+- @women: The struggle also expands to women, their liberation is linked with the proletariat's. 
 - @no_austerity: Expanding our nascent democracy and defending it against dictatorship and fascism.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
 - @anti_fascist: We must adress the rapid rise of fascism!
@@ -108,7 +108,7 @@ Our speakers denounce the military establishment and all the spending entering t
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @anti_fascist
-view-if: nsdap_r <=20
+view-if: nsdap_r >=20
 unavailable-subtitle: Thankfully, the Nazi threat is over for the time being.
 on-arrival: nazi_urgency += 1; workers_nsdap -= 2; unemployed_nsdap -= 2; rural_nsdap += 2; new_middle_nsdap -= 3*(1-dissent); old_middle_spd -= 2; catholics_nsdap -= 2
 
