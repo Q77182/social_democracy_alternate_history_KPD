@@ -12,6 +12,7 @@ tags: party_affairs, govt_affairs
 An economic crisis, worse than any the world has seen, now grips Germany. Millions have lost their jobs and wages across the board are decreasing every day. What should we do?
 
 - @aid: Sponsor mutual aid.
+- @preperations
 - @support_left: Support nationalizations to escape the crisis.
 - @united_front_building: Build the united front.
 - @defer: Defer making a decision until we have more information.
@@ -22,7 +23,7 @@ on-arrival: unemployed_kpd += 2; rural_kpd += 2; socialism += 3
 
 Icreasing funding for the Workers International Relief and other mutual aid groups give much needed relief from the brutal austerity of the current government.
 
-@preparation
+@preparations
 subtitle: We must prepare for the revolution.
 on-arrival: rfb_strength += 30; rfb_militancy += 0.05
 go-to: revolution if unemployed >=20 and workers_kpd >=40 and unemployed_kpd >=40;
