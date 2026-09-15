@@ -109,14 +109,13 @@ Our speakers denounce the military establishment and all the spending entering t
 
 @anti_fascist
 view-if: nsdap_r <=20
-choose-if: return_to_normalcy = 0
-unavailable-subtitle: The economic crisis is largely over now, and the public is no longer interested in hearing about it.
-on-arrival: wtb_support += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); rural_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent);
+unavailable-subtitle: Thankfully, the Nazi threat is over for the time being.
+on-arrival: nazi_urgency += 1; workers_nsdap -= 2; unemployed_nsdap -= 2; rural_nsdap += 2; new_middle_nsdap -= 3*(1-dissent); old_middle_spd -= 2; catholics_nsdap -= 2
 
-The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises.
+We rally hard against the Nazis, attacking them as violet thugs for capitalists.
 
 
 @local
-on-arrival: workers_kpd += 3*(1-dissent); old_middle_s=kpd += 1*(1-dissent); new_middle_s=kpd += 2*(1-dissent); unemployed_s=kpd += 3*(1-dissent);
+on-arrival: workers_kpd += 3*(1-dissent); old_middle_kpd += 1*(1-dissent); new_middle_kpd += 2*(1-dissent); unemployed_kpd += 3*(1-dissent)
 
 Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.
