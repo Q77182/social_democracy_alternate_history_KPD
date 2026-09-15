@@ -92,7 +92,7 @@ We give speeches supporting feminist causes. [? if women_connection > 1 : The in
 
 @no_austerity
 view-if: welfare <=0
-on-arrival:  unemployed_kpd += 5(1-dissent); unemployed_z -= 2 if z_in_government; unemployed_ddp -= 2 if ddp_in_government; unemployed_spd -= 2 if spd_in_government; unemployed_dvp -= 2 if dvp_in_government
+on-arrival:  unemployed_kpd += 5*(1-dissent); unemployed_z -= 2 if z_in_government; unemployed_ddp -= 2 if ddp_in_government; unemployed_spd -= 2 if spd_in_government; unemployed_dvp -= 2 if dvp_in_government; unemployed_dnvp -= 2 if dnvp_in_government
 
 Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
 
