@@ -63,7 +63,7 @@ on-arrival: spd_relation += 8*(1 - dissent); communist_coalition += 1 if spd_int
 After the success of the coalition government with the SPD, they are much more amenable to us.
 
 @kpd_blutmai
-on-arrival: spd_relation += 3*(1 - dissent); marxist_leninist_dissent += 1; left_opposition
+on-arrival: spd_relation += 3*(1 - dissent); marxist_leninist_dissent += 1; left_opposition_dissent +1
 
 After the events of Blütmai, reconciling with the social democrats is near imposible. Still, their leftist faction make relations possible.
 
