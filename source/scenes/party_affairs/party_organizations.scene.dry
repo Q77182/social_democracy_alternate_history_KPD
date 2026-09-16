@@ -13,10 +13,10 @@ max-visits: 6
 In addition to being a political party, KPD has many associated organizations. Many led by Willi Münzenberg and have wide reach even outside the party.
 
 - @newspapers: Fund more newspapers and journalists.
-- @welfare: Fund more mutual aid and welfare programs. Workers International Relie
+- @welfare: Fund more mutual aid and welfare programs.
 - @culture: Fund sports leagues, educational, and cultural programs.
 - @rfb: Fund the Rotfrontkämpferbund, our self-defense organization.
-- @youth: We have the reputation of being a party for old men. Support the youth organizations.
+- @youth: Fund our youth and women organizations.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
 
@@ -62,7 +62,7 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; rfb_strength += 25; young_socialists += 1; workers_kpd += 3; new_middle_kpd += 2
 
-Our new youth members flock to the left or neorevisionist wings of the party, and also bring new radicalism to the Reichsbanner.
+The youth, generally more radical compared to the rest of the population, are quite receptive of our messaging. [? if women_connection <3: Unfourtunately, our propaganda struggles to resonate with women. ?] [? if women_connection >=3: Our changed rhetoric, unpopular in the more orthodox leadership, have been successful in attracting women. ?]
 
 @nothing
 

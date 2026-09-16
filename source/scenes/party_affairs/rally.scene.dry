@@ -11,29 +11,13 @@ go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not ret
 
 The Nazi SA has disrupted our rally! Their street troops are preventing us from meeting.
 
-- @police_protect: Call the police to protect our rally.
 - @rfb_protect: Use the Reichsbanner to protect our rally.
-- @both_protect: The police and Reichsbanner should work together to protect our rally.
 - @cancel: Cancel the rally.
 
-@police_protect
-view-if: spd_prussia == 1
-on-arrival: police_protect_success = prussian_police_loyalty * prussian_police_militancy * prussian_police_strength*2 - sa_militancy*sa_strength;
-go-to: police_protect_win if police_protect_success >= 0; police_protect_lose if police_protect_success < 0
-
-@police_protect_win
-go-to: main_rally
-
-The police successfully protected our rally, so it can go ahead as usual.
-
-@police_protect_lose
-on-arrival: strife += 1; workers_nsdap += 3
-
-Unfortunately, the police were unable or unwilling to hold back the SA mob. The Nazis have won this show of strength.
 
 @rfb_protect
 on-arrival: rfb_success = rfb_strength*rfb_militancy - sa_strength*sa_militancy; strife += 1
-go-to: rfb_protect_win if rb_success >= 0; rfb_protect_lose if rb_success < 0
+go-to: rfb_protect_win if rb_success >= 0; rfb_protect_lose if rfb_success < 0
 
 @rfb_protect_win
 go-to: main_rally
@@ -44,24 +28,6 @@ The Rotfrontkämpferbund has successfully protected our rally against the SA! Ou
 on-arrival: workers_nsdap += 3; rb_strength -= 50
 
 Unfortunately, the Rotfrontkämpferbund was not able to hold back the SA mob. The Nazis have won this show of strength.
-
-@both_protect
-view-if: spd_prussia
-choose-if: prussian_police_training > 0
-unavailable-subtitle: The loyal sections of the police have never coordinated with the Reichsbanner before.
-on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy + prussian_police_loyalty*prussian_police_militancy*prussian_police_strength*2; strife += 1
-go-to: both_protect_win if rb_success >= 0; both_protect_lose if rb_success < 0
-
-@both_protect_win
-go-to: main_rally
-
-The police and Reichsbanner have successfully protected our rally against the SA! Our meeting can go ahead as usual.
-
-@both_protect_lose
-on-arrival: workers_nsdap += 3; rb_strength -= 50
-
-Unfortunately, the police and Reichsbanner were not able to hold back the SA mob. The Nazis have won this show of strength.
-
 
 @cancel
 on-arrival: workers_nsdap += 3;
@@ -88,21 +54,18 @@ Our message of class struggle appeals to the left wing of the working class, whi
 @women
 on-arrival: workers_kpd += 3*(1-dissent); workers_kpd += 3*(1-dissent) if women_connection >= 3; unemployed_kpd += 3*(1-dissent) ; unemployed_kpd += 3*(1-dissent) if women_connection >= 3
 
-We give speeches supporting feminist causes. [? if women_connection > 1 : The increased number of women in our leadership and propaganda have bolstered their support for us. ?]
+We give speeches supporting feminist causes, carefully adjusting our rhetoric to be appealing to women. [? if women_connection > 3 : The increased number of women in our leadership and propaganda have bolstered their support for us. ?]
 
 @no_austerity
 view-if: welfare <=0
 on-arrival:  unemployed_kpd += 5*(1-dissent); unemployed_z -= 2 if z_in_government; unemployed_ddp -= 2 if ddp_in_government; unemployed_spd -= 2 if spd_in_government; unemployed_dvp -= 2 if dvp_in_government; unemployed_dnvp -= 2 if dnvp_in_government
 
-Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
-
-[? if democratization < 3 : Talk of democracy does not excite the workers as much as more practical issues. But that may change; part of our job is to provide political education to the proletariat. ?]
-[? if democratization >= 3 : Since we have consistently made democratization a theme of our campaign, the workers are enthusiastic about our message. ?]
+Our speakers harshly criticise the government's austerity and its dealing of the crises.
 
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
 
-Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War. No war but class war after all...
+Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War. The pacifist messaging also attracts women.
 
 [? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
@@ -110,7 +73,7 @@ Our speakers denounce the military establishment and all the spending entering t
 @anti_fascist
 view-if: nsdap_r >=20
 unavailable-subtitle: Thankfully, the Nazi threat is over for the time being.
-on-arrival: nazi_urgency += 1; workers_nsdap -= 2; unemployed_nsdap -= 2; rural_nsdap += 2; new_middle_nsdap -= 3*(1-dissent); old_middle_spd -= 2; catholics_nsdap -= 2
+on-arrival: nazi_urgency += 1; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); rural_nsdap += 2*(1-dissent); new_middle_nsdap -= 3*(1-dissent); old_middle_spd -= 2*(1-dissent); catholics_nsdap -= 2*(1-dissent)
 
 We rally hard against the Nazis, attacking them as violet thugs for capitalists.
 

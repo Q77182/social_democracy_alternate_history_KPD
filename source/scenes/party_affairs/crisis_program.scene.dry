@@ -57,8 +57,8 @@ on-arrival: marxist_leninist_dissent +=5; left_opposition_dissent +=5
 
 The Comintern's Third Period thesis does not allow for a united front, but times are quickly changing. [? if spd_relation >=75: The SPD's shift to its left wing has assuage some of the Comintern's doubt. ?]
 
--@build_anyways: Risking expulsion from the Comintern, we build the united front anyways
--@stop_build: We will tow the Comintern line
+-@build_anyways: Risking expulsion from the Comintern, we build the united front anyways.
+-@stop_build: We will tow the Comintern line.
 
 @build_anyways
 choose-if:conciliator_strength >= marxist_leninist_strength or nsdap_r <= 20

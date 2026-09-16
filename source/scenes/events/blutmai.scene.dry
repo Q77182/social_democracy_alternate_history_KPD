@@ -34,7 +34,7 @@ choose-if: spd_relation <=15
 unavailable-subtitle: The SPD finds this course of action excessive.
 on-arrival: spd_relation -= 10; rfb_strength -= 80; rfb_banned = 1
 
-Claiming that we had acted illegally, The Prussian coalition has banned the RFB. This will make any rallies in Prussia more difficult without the RFB to defend us.
+Claiming that we had acted illegally, The Prussian coalition has banned the RFB. This will make any rallies in Prussia more difficult without the RFB to defend us. [? if united_front_maintained == 0: We've previously downplayed the Comintern's social fascist narrative in our press in hopes of cooperation, but this event turns much of the party firmly against the SPD. ?]
 
 @no_fault
 
