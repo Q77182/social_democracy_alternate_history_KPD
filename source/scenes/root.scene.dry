@@ -6,11 +6,12 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Thalmann maxxing: An Alternate History Mod123
+= Thalmann maxxing: An Alternate History Mod
 
 @start_menu_2
 
 - @start: Start game
+- @modinfo: Mod Info (9/16/26)
 - @election_simulation: Election simulation
 - @credits: Credits
 - @game_over.achievements
