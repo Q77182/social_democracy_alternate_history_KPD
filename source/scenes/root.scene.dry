@@ -626,7 +626,7 @@ this.state.disableSaves = true;
 go-to: 1928_main
 
 @1928_main
-audio: shuffle music/1928_1930/Das_Banner_von_Marx_und_Lenin.mp3 music/1928_1930/Lied_der_KPDML.mp3 music/1928_1930/Bruder_ Zur_Sonne_Zur_Freiheit.mp3 
+audio: shuffle music/1928_1930/Das_Banner_von_Marx_und_Lenin.mp3 music/1928_1930/Lied_der_KPDML.mp3 music/1928_1930/Bruder_Zur_Sonne_Zur_Freiheit.mp3 
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
