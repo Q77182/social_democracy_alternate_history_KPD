@@ -1,0 +1,26 @@
+title: KPD expulsion from the Comintern
+new-page: true
+subtitle: We have deviated too far from the Comintern line!
+tags: event
+view-if: left_opposition_strength >= marxist_leninist_strength or left_opposition_strength >= conciliator_strength or right_opposition_strength >= marxist_leninist_strength or right_opposition_strength >= conciliator_strength
+max-visits: 1
+face-image: img/redfront.jpg
+
+= KPD expulsion from the Comintern
+
+To the suprise or both our party and the rest of the Comintern, our party has deviated significantly from the Comintern. So much so that we have been expelled. The Marxist Leninists and Conciliators are furious that this somehow happened(even if they are partially to blame).
+
+Rejoining the Comintern isn't an impossibility, though it will certainly be an uphill fight to regain their trust.
+
+-@rejoin: We must expel the dissident factions and reorginize the party to regain their trust
+-@break_away: To hell with the Comintern, a bunch of Stalinist puppets is what they are!
+
+@rejoin
+on-arrival: resources +=2
+
+text
+
+@break_away
+on-arrival:resources -=4
+
+text

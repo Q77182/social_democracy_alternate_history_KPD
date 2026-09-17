@@ -11,13 +11,13 @@ go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not ret
 
 The Nazi SA has disrupted our rally! Their street troops are preventing us from meeting.
 
-- @rfb_protect: Use the Reichsbanner to protect our rally.
+- @rfb_protect: Use the Rotfrontkämpferbund to protect our rally.
 - @cancel: Cancel the rally.
 
 
 @rfb_protect
 on-arrival: rfb_success = rfb_strength*rfb_militancy - sa_strength*sa_militancy; strife += 1
-go-to: rfb_protect_win if rb_success >= 0; rfb_protect_lose if rfb_success < 0
+go-to: rfb_protect_win if rfb_success >= 0; rfb_protect_lose if rfb_success < 0
 
 @rfb_protect_win
 go-to: main_rally
@@ -25,7 +25,7 @@ go-to: main_rally
 The Rotfrontkämpferbund has successfully protected our rally against the SA! Our meeting can go ahead as usual.
 
 @rfb_protect_lose
-on-arrival: workers_nsdap += 3; rb_strength -= 50
+on-arrival: workers_nsdap += 3; rfb_strength -= 15
 
 Unfortunately, the Rotfrontkämpferbund was not able to hold back the SA mob. The Nazis have won this show of strength.
 
@@ -36,11 +36,11 @@ The SA have won this show of strength.
 
 @main_rally
 
-Mass rallies are a common feature of political life, especially in the lead-up to an election. What is the primary theme of this rally?
+Mass rallies are a common feature of political life, both in and out of election seasons. What is the primary theme of this rally?
 
 - @class_struggle: The class struggle of the proletariat against the bourgeoisie.
 - @women: The struggle also expands to women, their liberation is linked with the proletariat's. 
-- @no_austerity: Expanding our nascent democracy and defending it against dictatorship and fascism.
+- @no_austerity: The government's handling of the crisis is opposed by all working class Germans.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
 - @anti_fascist: We must adress the rapid rise of fascism!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
@@ -57,7 +57,7 @@ on-arrival: workers_kpd += 3*(1-dissent); workers_kpd += 3*(1-dissent) if women_
 We give speeches supporting feminist causes, carefully adjusting our rhetoric to be appealing to women. [? if women_connection > 3 : The increased number of women in our leadership and propaganda have bolstered their support for us. ?]
 
 @no_austerity
-view-if: welfare <=0
+view-if: welfare <0
 on-arrival:  unemployed_kpd += 5*(1-dissent); unemployed_z -= 2 if z_in_government; unemployed_ddp -= 2 if ddp_in_government; unemployed_spd -= 2 if spd_in_government; unemployed_dvp -= 2 if dvp_in_government; unemployed_dnvp -= 2 if dnvp_in_government
 
 Our speakers harshly criticise the government's austerity and its dealing of the crises.
