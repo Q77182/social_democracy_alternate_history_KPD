@@ -1,0 +1,43 @@
+title: Ernst Thälmann
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/ThälmannErnst.jpg
+view-if: thalmann_advisor = 1
+new-page: true 
+
+= Ernst Thälmann
+
+Ernst Thälmann is our party's current chairman aswell as the chairman of the RFB.
+
+- @building_the_rfb
+- @kpd_cooperation
+- @against_toleration
+- @root: Return to main
+
+@building_the_rfb
+title: Building the RFB
+subtitle: Increase recruitment to the RFB.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; rfb_strength +=10
+
+We increase recruitment to the RFB
+
+@breitscheid_international
+title: Comintern networking
+subtitle:Thälmann is a member of the Comintern executive committee and can use his connections.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; international_relations_timer -= 12; last_advisor_action = 1
+go-to: international_relations
+
+@party_discipline
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; left_opposition_dissent -= 5; right_opposition_dissent -= 10; marxist_leninist_dissent -= 10; conciliator_dissent -= 10; marxist_leninist_strength += 10
+
+We have enforced party discipline to reduce dissent across all factions while strengthening the Marxist Leninists.
+
+New elections have been set for [+ next_election_month : month +] [+ next_election_year +].

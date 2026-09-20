@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: center_advisor, marxist_leninist_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -69,6 +69,15 @@ on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+
+# marxist Leninists
+
+@remove_thalmann
+title: Remove Thälmann
+view-if: thalmann_advisor = 1
+tags: remove_advisor
+on-arrival: thalmann_advisor = 0; center_dissent += 5; n_advisors -= 1
+go-to: rm_main
 
 # reformists
 
@@ -251,11 +260,12 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: center_advisor, marxist_leninist_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
 - @centrist: Add Centrists
+- @marxist_leninist: Add Marxist Leninists
 - @left: Add Leftists
 - @reformist: Add Reformists
 - @labor: Add Labor
@@ -268,6 +278,9 @@ frequency: 1
 view-if: n_advisors < 3
 
 - #center_advisor
+
+@marxist_leninist
+view-if: n_advisors < 3
 
 @reformist
 view-if: n_advisors < 3
@@ -341,6 +354,16 @@ go-to: advisor_menu
 tags: center_advisor
 
 Rudolf Breitscheid is now an advisor.
+
+# marxist leninists
+
+@add_thalmann
+title: Ernst Thälmann
+view-if: thalmann_advisor = 1
+tags: marxist_leninist
+on-arrival: thalmann_advisor = 0; marxist_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
 
 # reformist
 
