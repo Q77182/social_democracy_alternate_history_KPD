@@ -548,6 +548,9 @@ Q.muller_dead = 0;
 Q.crispien_advisor = 0; // Arthur Crispien
 Q.hilferding_advisor = 1; // Rudolf Hilferding
 
+//marxist leninist advisors
+q.thalmann_advisor = 0 // Ernst Thälmann
+
 // left advisors
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;

@@ -10,7 +10,7 @@ new-page: true
 Ernst Thälmann is our party's current chairman aswell as the chairman of the RFB.
 
 - @building_the_rfb
-- @kpd_cooperation
+- @thalmann_international
 - @against_toleration
 - @root: Return to main
 
@@ -23,7 +23,7 @@ on-arrival: advisor_action_timer = 6; rfb_strength +=10
 
 We increase recruitment to the RFB
 
-@breitscheid_international
+@thalmann_international
 title: Comintern networking
 subtitle:Thälmann is a member of the Comintern executive committee and can use his connections.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
