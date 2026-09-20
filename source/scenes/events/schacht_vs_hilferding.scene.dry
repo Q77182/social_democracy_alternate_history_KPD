@@ -11,19 +11,6 @@ Reichsbank president Hjalmar Schacht has criticized Finance Minister Hilferding 
 
 Of course, this criticism is unfounded, but the bourgeois establishment does not care.
 
-- @expose_him: Expose his reactionary dealings!
-- @work_with: Work with him to shape the budget.
-- @hilferding_resign: Hilferding must resign.
-
-@expose_him
-view-if: investigate_far_right >= 1
-
-We expose to the public Schacht's dealings with the Nazis. For better or worse, he is cowed, and refrains from taking further actions against us.
-
-
-@work_with
-
-After a second budget proposal, Schacht still considers Hilferding's budget to be unacceptable, despite more regressive taxes and expenditure cuts.
 
 - @hilferding_resign: Hilferding must resign.
 
@@ -31,4 +18,4 @@ After a second budget proposal, Schacht still considers Hilferding's budget to b
 @hilferding_resign
 on-arrival: finance_minister_party = "DVP" if in_grand_coalition; finance_minister_party = "I" if in_weimar_coalition or in_popular_front or in_left_front; finance_minister = "Moldenhauer"
 
-With no other choice, Hilferding has resigned as Finance Minister, to be replaced by a [? if in_grand_coalition: center-right ?][? if not in_grand_coalition: technocratic ?] candidate.
+With no other choice, Hilferding has resigned as Finance Minister, to be replaced by a [? if in_grand_coalition: center-right ?] candidate. This takover by rigtht wing forces over even mild social democrats is worrying to even us.
