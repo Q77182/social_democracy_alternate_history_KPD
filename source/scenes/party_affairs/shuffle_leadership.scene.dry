@@ -121,14 +121,6 @@ go-to: rm_main
 
 Leipart has been removed as an advisor. The Labor faction disapproves.
 
-@remove_aufhauser
-title: Remove Aufhäuser
-view-if: aufhauser_advisor = 1
-tags: remove_advisor
-on-arrival: aufhauser_advisor = 0; labor_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Aufhäuser has been removed as an advisor. The Labor faction disapproves.
 
 @remove_wissell
 title: Remove Wissell
@@ -140,15 +132,6 @@ go-to: rm_main
 Wissell has been removed as an advisor. The Labor faction disapproves.
 
 
-@remove_woytinsky
-title: Remove Woytinsky
-view-if: woytinsky_advisor = 1
-tags: remove_advisor
-on-arrival: woytinsky_advisor = 0; labor_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Woytinsky has been removed as an advisor. The Labor faction disapproves.
-
 # left
 
 @remove_levi
@@ -159,15 +142,6 @@ on-arrival: levi_advisor = 0; left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Levi has been removed as an advisor. The Leftist faction disapproves.
-
-@remove_sender
-title: Remove Sender
-view-if: sender_advisor = 1
-tags: remove_advisor
-on-arrival: sender_advisor = 0; left_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Sender has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_rosenfeld
 title: Remove Rosenfeld
@@ -435,18 +409,6 @@ tags: left_advisor
 
 Paul Levi is now an advisor.
 
-@add_sender
-title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/SenderToni.jpg
-view-if: sender_advisor = 0 and n_advisors < 3
-on-arrival: sender_advisor = 1; n_advisors += 1; left_strength += 5
-go-to: advisor_menu
-tags: left_advisor
-
-Toni Sender is now an advisor.
-
 @add_rosenfeld
 title: Kurt Rosenfeld
 subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD, Against Toleration ?]
@@ -499,18 +461,6 @@ go-to: advisor_menu
 
 Theodor Leipart is now an advisor.
 
-@add_aufhauser
-title: Siegfried Aufhäuser
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/AufhäuserSiegfried.jpg
-tags: labor_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
-on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5
-go-to: advisor_menu
-
-Siegfried Aufhäuser is now an advisor.
-
 @add_wissell
 title: Rudolf Wissell
 subtitle: Rudolf Wissell is an economist who has been the Labor Minister, and is an advocate for the interests of labor within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
@@ -523,18 +473,6 @@ go-to: advisor_menu
 
 Rudolf Wissell is now an advisor.
 
-
-@add_woytinsky
-title: Wladimir Woytinsky
-subtitle: Wladimir Woytinsky is a former Russian Menshevik who is now the lead trade union economist. {!<br><br>!}[? if difficulty < 0 : Actions - Addressing the Economic Crisis, Carrying Out the Economic Plan ?]
-is-card: true
-card-image: img/portraits/WoytinskyWladimir.jpg
-tags: labor_advisor
-view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: woytinsky_advisor = 1; n_advisors += 1; labor_strength += 3
-go-to: advisor_menu
-
-Wladimir Woytinsky is now an advisor.
 
 
 # neorevisionist leaders
