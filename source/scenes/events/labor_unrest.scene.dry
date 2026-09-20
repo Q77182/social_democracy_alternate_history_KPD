@@ -26,7 +26,7 @@ We vote with the SPD in the Reichstag to provide support to the workers.
 subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_kpd += 2(1-dissent); workers_kpd += 2(1-dissent)
+on-arrival: unemployed_kpd += 2*(1-dissent); workers_kpd += 2*(1-dissent)
 
 We vote with the SPD in the Reichstag to provide support to the workers and give aid to locked out workers. While straining on party finances, it greatly improves our image among the Ruhr workers.
 
