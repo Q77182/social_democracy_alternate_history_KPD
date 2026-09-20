@@ -369,6 +369,8 @@ on-arrival: thalmann_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: marxist_leninist_advisor
 
+Ernst Thälmann is now an advisor.
+
 
 # reformist
 
