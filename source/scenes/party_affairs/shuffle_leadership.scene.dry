@@ -361,7 +361,7 @@ Rudolf Breitscheid is now an advisor.
 
 @add_thalmann
 title: Ernst Thälmann
-subtitle: Ermst Thälmann is the chairman of both the KPD and RFB aswell as being on the Comintern's executive commitee.
+subtitle: Ernst Thälmann is the chairman of both the KPD and RFB aswell as being on the Comintern's executive commitee.
 is-card: true
 card-image: img/portraits/ThälmannErnst.jpg
 view-if: thalmann_advisor = 0 and n_advisors < 3
