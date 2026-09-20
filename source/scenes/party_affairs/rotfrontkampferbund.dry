@@ -58,7 +58,7 @@ Cutting resources to the Rotfrontkämpferbund causes a drop in the membership, a
 title: Expand our women's branch, the Roter Frauen und Mädchen Bund.
 subtitle: If they want to fight for us, we accept it with open arms. -1 resources
 choose-if: resources > 0
-view-if: womens_rights >= 4 and iron_front_formed == 1
+view-if: womens_connection >= 4
 on-arrival: resources -= 1; rfb_strength += 10; funded_rotfrontkampferbund -= 1
 max-visits: 1
 achievement: women_reichsbanner

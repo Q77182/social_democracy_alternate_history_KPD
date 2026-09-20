@@ -87,7 +87,7 @@ Q.economic_plan = 0;
 // have we officially adopted the WTB plan?
 Q.wtb_adopted = 0;
 // have we formed the iron front?
-Q.iron_front_formed = 0;
+Q.antifa_formed = 0;
 // people's party support
 Q.peoples_party_support = 0;
 // support for nationalizations
@@ -464,7 +464,7 @@ Q.n_advisors = 3;
 Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'fundraising', 'feminism', 'ideology',
             'inter_party_relationships', 'international_relations',
-            'iron_front', 'media', 'enemies',
+            'antifa', 'media', 'enemies',
             'party_organizations', 'rally', 'rotfrontkampferbund', 'rural_party',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
             'party_disunity',
@@ -493,7 +493,7 @@ Q.feminism_timer = 0;
 Q.ideology_timer = 0;
 Q.inter_party_relationships_timer = 0;
 Q.international_relations_timer = 0;
-Q.iron_front_timer = 0;
+Q.antifa_timer = 0;
 Q.media_timer = 0;
 Q.enemies_timer = 0;
 Q.party_organizations_timer =  0;
@@ -572,8 +572,6 @@ Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
 Q.wissell_advisor = 0; // Rudolf Wissell
 
 // Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
-
 Q.leber_advisor = 0; // Julius Leber (post-1930)
 Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 

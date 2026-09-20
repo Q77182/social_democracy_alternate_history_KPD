@@ -38,12 +38,12 @@ We have increased training and purchased more armaments for the Reichsbanner.
 [? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
 
 
-@if_training
-view-if: iron_front_formed == 1
+@antifa_training
+view-if: antifa_formed == 1
 on-arrival: rb_militancy += 0.03; rb_strength += 200; sa_strength += 50; 
 max-visits: 2
 
-As part of the Iron Front, we are increasing coordination between the Reichsbanner and the unions, and many union members want to become more involved.
+We expand Antifaschistische Aktion, recruiting more workers into it and our other defense organizations.
 
 @prussian_police_training
 view-if: spd_prussia == 1 and prussian_police_loyalty > 0.5

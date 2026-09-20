@@ -1,7 +1,7 @@
 title: Confronting Antisemitism
 new-page: true
 is-card: true
-view-if: iron_front_formed == 1 and nazi_urgency >= 3
+view-if: antifa_formed == 1 and nazi_urgency >= 3
 on-arrival: confronting_antisemitism += 1; month_actions += 1
 card-image: img/iron_front.png
 tags: party_affairs, antifascism
@@ -12,7 +12,7 @@ max-visits: 1
 Antisemitism has long been a latent feature of German society, but since the beginning of the economic depression, it has grown to a horrifying extent. The Nazis are the worst of it, but all the right-wing parties are deeply antisemitic. Regarding the SPD specifically, our right-wing enemies love to deploy their racist rhetoric against our many Jewish comrades, magnifying criticism of any minor transgression, and they call the entire SPD a Jewish party. We are a favorite target of their invectives.
 
 - @socialism_of_fools: Antisemitism is the "socialism of fools". We will defeat them with real socialism.
-- @if: Antisemitism is a crisis. Direct the full force of the Iron Front against antisemitism.
+- @if: Antisemitism is a crisis. Direct the full force of the Antifaschistische Aktion against antisemitism.
 - @all: All Germans will suffer from fascism, not just the Jews. We do not need a separate policy for them.
 
 @socialism_of_fools

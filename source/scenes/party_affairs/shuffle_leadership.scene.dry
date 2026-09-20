@@ -201,15 +201,6 @@ Siemsen has been removed as an advisor. The Leftist faction disapproves.
 
 # neorevisionists
 
-@remove_mierendorff
-title: Remove Mierendorff
-view-if: mierendorff_advisor = 1
-tags: remove_advisor
-on-arrival: mierendorff_advisor = 0; neorevisionist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Mierendorff has been removed as an advisor. The Neorevisionist faction disapproves.
-
 @remove_leber
 title: Remove Leber
 view-if: leber_advisor = 1
@@ -547,18 +538,6 @@ Wladimir Woytinsky is now an advisor.
 
 
 # neorevisionist leaders
-
-@add_mierendorff
-title: Carlo Mierendorff
-subtitle: Carlo Mierendorff is one of the youngest members of the Reichstag, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist. {!<br><br>!}[? if difficulty < 0 : Actions - Build the Iron Front, Warning About the Nazis ?]
-is-card: true
-card-image: img/portraits/MierendorffCarlo.jpg
-view-if: mierendorff_advisor = 0 and n_advisors < 3
-on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
-go-to: advisor_menu
-tags: neorev_advisor
-
-Carlo Mierendorff is now an advisor.
 
 @add_schumacher
 title: Kurt Schumacher
