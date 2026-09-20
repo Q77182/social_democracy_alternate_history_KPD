@@ -1,0 +1,15 @@
+title: Cell Organization
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: rally_timer <= 0
+on-arrival: month_actions += 1; rally_timer = 6
+card-image: img/red_saxony.jpg
+
+Factory and street cells are the base of our organization, helping the party establish local strongholds to spread propaganda and agitate.
+
+- @more_factory_cells: We must focus on creating more factory cells.
+
+@more_factory_cells
+
+Placeholder

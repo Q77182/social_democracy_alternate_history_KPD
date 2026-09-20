@@ -467,7 +467,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'antifa', 'media', 'enemies',
             'party_organizations', 'rally', 'rotfrontkampferbund', 'rural_party',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
-            'party_disunity',
+            'party_disunity', 'cell_organization',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
@@ -494,6 +494,7 @@ Q.ideology_timer = 0;
 Q.inter_party_relationships_timer = 0;
 Q.international_relations_timer = 0;
 Q.antifa_timer = 0;
+Q.cell_organization = 0;
 Q.media_timer = 0;
 Q.enemies_timer = 0;
 Q.party_organizations_timer =  0;
