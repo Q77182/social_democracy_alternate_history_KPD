@@ -79,6 +79,8 @@ tags: remove_advisor
 on-arrival: thalmann_advisor = 0; marxist_leninist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
+Thälmann has been removed as an advisor. The Marxist Leninist faction disapproves.
+
 # reformists
 
 
