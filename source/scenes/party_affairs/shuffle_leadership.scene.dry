@@ -76,7 +76,7 @@ Breitscheid has been removed as an advisor. The Centrist faction disapproves.
 title: Remove Thälmann
 view-if: thalmann_advisor = 1
 tags: remove_advisor
-on-arrival: thalmann_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: thalmann_advisor = 0; marxist_leninist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 # reformists
@@ -282,6 +282,8 @@ view-if: n_advisors < 3
 @marxist_leninist
 view-if: n_advisors < 3
 
+- #marxist_leninist_advisor
+
 @reformist
 view-if: n_advisors < 3
 
@@ -355,12 +357,12 @@ tags: center_advisor
 
 Rudolf Breitscheid is now an advisor.
 
-# marxist leninists
+# marxist_leninist
 
 @add_thalmann
 title: Ernst Thälmann
 view-if: thalmann_advisor = 1
-tags: marxist_leninist
+tags: marxist_leninist_advisor
 on-arrival: thalmann_advisor = 0; marxist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
