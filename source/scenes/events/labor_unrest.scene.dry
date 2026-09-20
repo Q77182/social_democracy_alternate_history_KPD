@@ -36,7 +36,7 @@ We vote with the SPD in the Reichstag to provide support to the workers and give
 choose-if: united_front_maintained == 0
 unavailable-subtitle: Or maybe it isn't?
 subtitle: This is the SPD's fault.
-on-arrival: conciliator_dissent += 5; right_opposition_dissent += 5 workers_spd -= 2; kpd_coalition_dissent += 1; spd_relation -= 5; workers_kpd += 2
+on-arrival: conciliator_dissent += 5; right_opposition_dissent += 5; workers_spd -= 2; kpd_coalition_dissent += 1; spd_relation -= 5; workers_kpd += 2
 
 We attack the SPD for refusing to help the workers aswell as criticising the state's obvious bourgeois bias. They're supposedly socialists, ones in government no less, but can't even use that power to help workers.
 
