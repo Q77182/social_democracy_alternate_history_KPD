@@ -39,5 +39,3 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; left_opposition_dissent -= 5; right_opposition_dissent -= 10; marxist_leninist_dissent -= 10; conciliator_dissent -= 10; marxist_leninist_strength += 10
 
 We have enforced party discipline to reduce dissent across all factions while strengthening the Marxist Leninists.
-
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].

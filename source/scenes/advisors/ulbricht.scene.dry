@@ -1,0 +1,48 @@
+title: Walter Ulbricht
+is-pinned-card: true
+tags: advisor, marxist_leninist
+card-image: img/portraits/ThälmannErnst.jpg
+view-if: ulbricht_advisor = 1
+new-page: true 
+
+= Walter Ulbricht
+
+Walter Ulbricht is a member of the KPD's Central Committee and a skilled organizer who has earned the trust of the party and Comintern for his talents.
+
+- @clear_agenda
+- @cell_building
+- @party_discipline
+- @root: Return to main
+
+@clear_agenda
+title: Clear the agenda
+subtitle: Removes all cards from the hand.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: {!
+Q.advisor_action_timer = 6;
+if (Q.difficulty >= 0) {
+    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
+} else {
+    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
+}
+!}
+
+All items from our agenda have been cleared.
+
+@cell_building
+title: Increase our street and factory cells
+subtitle: Increase recruitment to the RFB.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if:advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; international_relations_timer -= 12; last_advisor_action = 1
+go-toce
+
+@party_discipline
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; left_opposition_dissent -= 5; right_opposition_dissent -= 10; marxist_leninist_dissent -= 10; conciliator_dissent -= 10; marxist_leninist_strength += 10
+
+We have enforced party discipline to reduce dissent across all factions while strengthening the Marxist Leninists.

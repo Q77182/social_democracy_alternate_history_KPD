@@ -543,6 +543,7 @@ Q.hindenburg_dismissal_timer = 0;
 // all the initial advisors are centrists.
 //marxist leninist advisors
 Q.thalmann_advisor = 1 // Ernst Thälmann
+Q.ulbricht_advisor = 1 // Walter Ulbricht
 
 // left advisors
 Q.levi_advisor = 0; // Paul Levi

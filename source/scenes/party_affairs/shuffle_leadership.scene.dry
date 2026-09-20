@@ -44,6 +44,15 @@ go-to: rm_main
 
 Thälmann has been removed as an advisor. The Marxist Leninist faction disapproves.
 
+@remove_ulbricht
+title: Remove Ulbricht
+view-if: ulbricht_advisor = 1
+tags: remove_advisor
+on-arrival: ulbricht_advisor = 0; marxist_leninist_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Ulbricht has been removed as an advisor. The Marxist Leninist faction disapproves.
+
 # reformists
 
 
@@ -283,6 +292,18 @@ go-to: advisor_menu
 tags: marxist_leninist_advisor
 
 Ernst Thälmann is now an advisor.
+
+@add_ulbricht
+title: Walter Ulbricht
+subtitle: Walter Ulbricht our one our most talented organizers aswell as a member of the Reichstag.
+is-card: true
+card-image: img/portraits/UlbrichtWalter.jpg
+view-if: ulbricht_advisor = 0 and n_advisors < 3
+on-arrival: ulbricht_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: marxist_leninist_advisor
+
+Ulbricht is now an advisor.
 
 
 # reformist
