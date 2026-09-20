@@ -18,25 +18,30 @@ Many non-communists are afraid of the possibility of another violent uprising, a
 - @join: Let the SPD join?
 
 @ban
+choose-if: spd_relation <15
+unavailable-subtitle: The SPD finds this too extreme.
 on-arrival: blutmai = 1; spd_relation -= 25; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3; strife += 1
 face-image: img/blutmai.jpg
 
 Our demonstration has been banned, and  police are sent to enforce the ban. There was a confrontation between the police and our demonstrators, and violence erupted. Reports say that the Berlin police killed dozens of demonstrators and innocent bystanders. The SPD have really proven themselves as social fascist and we won't forget this bloody May incident.
 
-This may crush any hope of reconciliation or cooperation between our party. How are they going to explain themselves
+This may crush any hope of reconciliation or cooperation between our party. How are they going to explain themselves?
 
 - @communist_fault: Despite it being THEM who slaughter innocents, they blame us.
 - @no_fault: The incident is an unforunate tragedy, nobody is to blame and that includes us.
 
 
 @communist_fault
-choose-if: spd_relation <=15
+choose-if: spd_relation <=8
 unavailable-subtitle: The SPD finds this course of action excessive.
 on-arrival: spd_relation -= 10; rfb_strength -= 80; rfb_banned = 1
 
 Claiming that we had acted illegally, The Prussian coalition has banned the RFB. This will make any rallies in Prussia more difficult without the RFB to defend us. [? if united_front_maintained == 0: We've previously downplayed the Comintern's social fascist narrative in our press in hopes of cooperation, but this event turns much of the party firmly against the SPD. ?]
 
 @no_fault
+choose-if: spd_relation >8
+unavailable-subtitle: The SPD's reformist wing and coalition partners woudln't accept this.
+
 
 To our suprise, we aren't blamed for this. The RFB has remained untouched but we are still suspicous of the social fascists nonetheless. 
 
