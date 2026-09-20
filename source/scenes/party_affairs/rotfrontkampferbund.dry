@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 tags: party_affairs
 view-if: rotfrontkampferbund_timer <= 0
-card-image: img/reichsbanner.jpg
+card-image: img/redfront.jpg
 on-arrival: month_actions += 1; rotfrontkampferbund_timer +=6; rfb_militarization_cost = 2 if rfb_militancy > 0.1 else rfb_militarization_cost = 1; rfb_militarization_cost = 3 if rfb_militancy > 0.25
 max-visits: 6
 frequency: 100
