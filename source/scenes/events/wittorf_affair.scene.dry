@@ -1,14 +1,14 @@
 title: Wittorf Affair
 subtitle: A crisis in the KPD?
 new-page: true
-view-if: kpd_relation >= 30 and comintern_seen and year = 1928 and month >= 8 and month <= 10
+view-if: year = 1928 and month >= 8 and month <= 10
 max-visits: 1
 on-arrival: wittorf_affair_seen = 1
 tags: event
 
 = Wittorf Affair
 
-Our spies and contacts amongst the communists have brought news of a scandal engulfing the KPD leadership. An associate of KPD chairman Ernst Thälmann, a KPD official named John Wittorf, is accused of embezzling campaign funds, diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
+An associate and close personal friend of Ernst Thälmann, John Wittorf, is accused of embezzling campaign funds , diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
 
 The Conciliators in the KPD, a faction opposed to the party's present hard-line policy, are said to have leaked this information to aid them in the intra-party struggle. Dissident communists in the Leninbund also have information about this affair, and are planning to publish it.
 
