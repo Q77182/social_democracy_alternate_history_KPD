@@ -1,4 +1,4 @@
-title: Cell Organization
+title: Cell Organizations
 new-page: true
 is-card: true
 tags: party_affairs
@@ -7,13 +7,16 @@ on-arrival: month_actions += 1; rally_timer = 6
 card-image: img/red_saxony.jpg
 frequency: 100
 
+= Cell Organizations
+
 Factory and street cells are the base of our organization, individually cnosisting of a single factory, workplace, or neighborhood block that spreads propagand and agitates. Their highly localized nature lets them organize effectively even without direct orders from above.
 
 - @more_factory_cells: We should create new factory cells to increase our industrial influence.
 - @more_street_cells: To better connect with non-industrial workers, street cells should be our goal.
 - @cell_defense: Order our existing cells to focus on self defense.
-- @cell_propaganda: Order our cells to shift to propaganda spreading
-- @return
+- @cell_propaganda: Order our cells to shift to propaganda spreading and agitation.
+- @easy_discard
+- @cancel_advisor_action
 
 @more_factory_cells
 on-arrival: workers_kpd += 3*(1-dissent); workers_spd -= 3*(1-dissent); workers_kpd -= 2*(1-dissent) if workers_spd > workers_kpd; factory_cells += 1; workers_kpd += 3*(1-dissent) if factory_cells >= 4
@@ -28,7 +31,7 @@ Our street cells help distribute welfare and propaganda while also serving as a 
 @cell_defense
 on-arrival: rfb_strength += 10; rfb_militancy += 0.02; rfb_strength += 5 if street_cells >=4
 
-Our cells focus on self defense. [? if sa_strength >= 180: The growth of the SA has made this particularly important. ?]
+Our cells focus on self defense, bolstering our paramilitary. [? if sa_strength >= 180: The growth of the SA has made this particularly important. ?]
 
 @cell_propaganda
 on-arrival: workers_kpd += 3*(1-dissent); unemployed_kpd += 3*(1-dissent); new_middle_class_kpd += 2*(1-dissent)

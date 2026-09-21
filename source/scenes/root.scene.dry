@@ -548,6 +548,9 @@ Q.hindenburg_dismissal_timer = 0;
 Q.thalmann_advisor = 1 // Ernst Thälmann
 Q.ulbricht_advisor = 1 // Walter Ulbricht
 
+//right opposition advisors
+Q.zetkin_advisor = 1 // Clara Zetkin
+
 // left advisors
 Q.levi_advisor = 0; // Paul Levi
 Q.levi_dead = 0;

@@ -1,0 +1,30 @@
+title: Clara Zetkin
+is-pinned-card: true
+tags: advisor, marxist_leninist
+card-image: img/portraits/ZetkinClara.jpg
+view-if: zetkin_advisor = 1
+new-page: true 
+
+= Ernst Thälmann
+
+Clara Zetkin our one of our oldest members and our most senior female leader. She has been a pioneer in Marxist-feminism, having worked with the late Rosa Luxemburg, and chairwomen of Rote Hilfe. Though situated on our party's right wing and often comes into conflict with the Marxist Leninists, she has remained in the party as a highly valued member.
+
+- @feminism
+- @united_front_building
+- @root: Return to main
+
+@feminism
+title: Feminism within the party
+subtitle: Enact feminist changes in the party.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+go-to: communist_women
+
+@united_front_building
+title: Building a united front.
+subtitle:Thälmann is a member of the Comintern executive committee and can use his connections.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; feminism_timer -= 6; last_advisor_action = 1; spd_relation +=5; united_front_support += 1
+
+Zetkin believes fascism, notably the NSDAP, to be a thrat requiring a united front.

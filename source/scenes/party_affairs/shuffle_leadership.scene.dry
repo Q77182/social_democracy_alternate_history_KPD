@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: marxist_leninist_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -33,7 +33,7 @@ go-to: root
 tags: remove_advisor
 
 
-# marxist Leninists
+# marxist leninists
 
 @remove_thalmann
 title: Remove Thälmann
@@ -52,6 +52,17 @@ on-arrival: ulbricht_advisor = 0; marxist_leninist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Ulbricht has been removed as an advisor. The Marxist Leninist faction disapproves.
+
+# right oppositionists
+
+@add_zetkin
+title: Remove Zetkin
+view-if: zetkin_advisor = 0 and n_advisors < 3
+tags: right_opposition_advisor
+on-arrival: zetkin_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
+go-to: advisor_menu
+
+Zetkin has been removed as an advisor. The Right Opposition faction disapproves
 
 # reformists
 
@@ -234,11 +245,12 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: marxist_leninist_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
 - @marxist_leninist: Add Marxist Leninists
+- @right_opposition: Ad Right Oppositionists
 - @left: Add Leftists
 - @reformist: Add Reformists
 - @labor: Add Labor
@@ -252,6 +264,9 @@ frequency: 1
 view-if: n_advisors < 3
 
 - #marxist_leninist_advisor
+
+@right_opposition
+view-if: n_advisors < 3
 
 @reformist
 view-if: n_advisors < 3
@@ -305,6 +320,19 @@ tags: marxist_leninist_advisor
 
 Ulbricht is now an advisor.
 
+# right opposition
+
+@add_zetkin
+title: Clara Zetkin
+subtitle: Clara Zetkin is one our our party's most senior women and Marxist-feminist.
+is-card: true
+card-image: img/portraits/ZetkinClara.jpg
+view-if: zetkin_advisor = 0 and n_advisors < 3
+on-arrival: zetkin_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: right_opposition_advisor
+
+Zetkin is now an advisor.
 
 # reformist
 

@@ -52,7 +52,7 @@ The Italian Communist Party can educate us on fascism in their own country aswel
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources += 1; marxist_leninist_strength +=10; rfb_militancy +=0.3
+on-arrival: resources += 2; marxist_leninist_strength +=10; rfb_militancy +=0.3
 
 The soviets offer money and weapons to us, anticipating a revolution soon.
 
