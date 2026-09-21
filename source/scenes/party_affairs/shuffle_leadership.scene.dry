@@ -58,7 +58,7 @@ Ulbricht has been removed as an advisor. The Marxist Leninist faction disapprove
 @remove_zetkin
 title: Remove Zetkin
 view-if: zetkin_advisor = 0 and n_advisors < 3
-tags: right_opposition_advisor
+tags: remove_advisor
 on-arrival: zetkin_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
 go-to: advisor_menu
 
