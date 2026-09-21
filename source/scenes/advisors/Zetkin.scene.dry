@@ -22,7 +22,7 @@ go-to: communist_women
 
 @united_front_building
 title: Building a united front.
-subtitle:Thälmann is a member of the Comintern executive committee and can use his connections.
+subtitle:Zetkin is one of the main advocates for having a united front.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; feminism_timer -= 6; last_advisor_action = 1; spd_relation +=5; united_front_support += 1
