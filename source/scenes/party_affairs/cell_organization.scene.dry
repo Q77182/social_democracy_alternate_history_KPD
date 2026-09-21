@@ -5,11 +5,32 @@ tags: party_affairs
 view-if: rally_timer <= 0
 on-arrival: month_actions += 1; rally_timer = 6
 card-image: img/red_saxony.jpg
+frequency: 100
 
-Factory and street cells are the base of our organization, helping the party establish local strongholds to spread propaganda and agitate.
+Factory and street cells are the base of our organization, individually cnosisting of a single factory, workplace, or neighborhood block that spreads propagand and agitates. Their highly localized nature lets them organize effectively even without direct orders from above.
 
-- @more_factory_cells: We must focus on creating more factory cells.
+- @more_factory_cells: We should create new factory cells to increase our industrial influence.
+- @more_street_cells: To better connect with non-industrial workers, street cells should be our goal.
+- @cell_defense: Order our existing cells to focus on self defense.
+- @cell_propaganda: Order our cells to shift to propaganda spreading
+- @return
 
 @more_factory_cells
+on-arrival: workers_kpd += 3*(1-dissent), workers_spd -= 3*(1-dissent); workers_kpd -= 2*(1-dissent) if workers_spd > workers_kpd; factory_cells += 1;workers_kpd += 3(1-dissent) if factory_cells >= 4
 
-Placeholder
+Our factory cells agitate within their cell, leading people to join it instead of the SPD affiliated trade unions. [? if workers_spd > workers_kpd: The SPD controlled trade unions are still the dominant organization among workers, making our cells less effective. ?] [? if factory_cells >= 4: Our existing factory cells make creating additional cells much easier. ?]
+
+@more_street_cells
+on-arrival: workers_kpd += 2*(1-dissent); unemployed_kpd += 2*(1-dissent); old_middle_class_kpd += 1*(1-dissent); new_middle_class_kpd += 1*(1-dissent); street_cells += 1; rfb_strength += 5; workers_nsdap -= 2*(1-dissent) if street_cells <=4; unemployed_nsdap -= 2*(1-dissent) if street_cells <=4; old_middle_class_nsdap -= 2*(1-dissent) if street_cells <=4; new_middle_class_nsdap -= 2*(1-dissent) if street_cells <=4
+
+Our street cells help distribute welfare and propaganda while also serving as a local defense force for rallies and demonstrations. [? if nsdap_r >= 10: We unfourtunately have to compete with the street cells of the NSDAP. ?] [? if street_cells >= 4: Our street cells have become a dominant force in some areas, making it very difficult for the NSDAP to expand there. ?]
+
+@cell_defense
+on-arrival: rfb_strength += 10; rfb_militancy += 0.02; rfb_strength += 5 if street_cells >=4; rfb_strength
+
+Our cells focus on self defense. [if sa_strength >= 180: The growth of the SA has made this particularly important. ?]
+
+@cell_propaganda
+on-arrival: workers_kpd += 3*(1-dissent); unemployed_kpd += 3*(1-dissent); new_middle_class_kpd += 2*(1-dissent)
+
+Our cells focus on spreading propaganda among their cells and nearby. 

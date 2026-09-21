@@ -118,6 +118,8 @@ Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
 Q.united_front_maintained = 1;
 Q.women_connection = 0;
+Q.street_cells = 0;
+Q.factory_cells = 0;
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;

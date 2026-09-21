@@ -24,7 +24,7 @@ The KPD runs Die Rote Fahne. We could use the media for various purposes...
 
 @more_paper
 title: Increase funding for Die Rote Fahne.
-subtitle: By increasing funding, we can have higher quality and more available papers. -1 resources
+subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; rural_connection += 0.5; worker_kpd += 4*(1 - dissent); rural_kpd += 3*(1-dissent)
@@ -39,8 +39,7 @@ on-arrival: workers_kpd -= 2*(1 - dissent); unemployed_kpd += 2*(1-dissent); rur
 For whatever reason, we are forced to cut funding for our newspaper. This reduces our reach among the population.
 
 @ideological
-title: We push the Marxist Leninist party line.
-subtitle: Reduce the influence of the other factions to stay inline with the comintern.
+title: We push the Marxist Leninist party line, keeping factionalism to a minimum. 
 on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_dissent -= 6; conciliator_dissent -= 6;left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent)
 
 We will follow our Comintern comrades ideologically.
