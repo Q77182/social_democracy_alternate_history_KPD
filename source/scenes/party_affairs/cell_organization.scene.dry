@@ -16,7 +16,7 @@ Factory and street cells are the base of our organization, individually cnosisti
 - @return
 
 @more_factory_cells
-on-arrival: workers_kpd += 3*(1-dissent), workers_spd -= 3*(1-dissent); workers_kpd -= 2*(1-dissent) if workers_spd > workers_kpd; factory_cells += 1;workers_kpd += 3(1-dissent) if factory_cells >= 4
+on-arrival: workers_kpd += 3*(1-dissent); workers_spd -= 3*(1-dissent); workers_kpd -= 2*(1-dissent) if workers_spd > workers_kpd; factory_cells += 1;workers_kpd += 3(1-dissent) if factory_cells >= 4
 
 Our factory cells agitate within their cell, leading people to join it instead of the SPD affiliated trade unions. [? if workers_spd > workers_kpd: The SPD controlled trade unions are still the dominant organization among workers, making our cells less effective. ?] [? if factory_cells >= 4: Our existing factory cells make creating additional cells much easier. ?]
 
