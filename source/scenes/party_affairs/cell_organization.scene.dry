@@ -26,11 +26,11 @@ on-arrival: workers_kpd += 2*(1-dissent); unemployed_kpd += 2*(1-dissent); old_m
 Our street cells help distribute welfare and propaganda while also serving as a local defense force for rallies and demonstrations. [? if nsdap_r >= 10: We unfourtunately have to compete with the street cells of the NSDAP. ?] [? if street_cells >= 4: Our street cells have become a dominant force in some areas, making it very difficult for the NSDAP to expand there. ?]
 
 @cell_defense
-on-arrival: rfb_strength += 10; rfb_militancy += 0.02; rfb_strength += 5 if street_cells >=4; rfb_strength
+on-arrival: rfb_strength += 10; rfb_militancy += 0.02; rfb_strength += 5 if street_cells >=4
 
-Our cells focus on self defense. [if sa_strength >= 180: The growth of the SA has made this particularly important. ?]
+Our cells focus on self defense. [? if sa_strength >= 180: The growth of the SA has made this particularly important. ?]
 
 @cell_propaganda
 on-arrival: workers_kpd += 3*(1-dissent); unemployed_kpd += 3*(1-dissent); new_middle_class_kpd += 2*(1-dissent)
 
-Our cells focus on spreading propaganda among their cells and nearby. 
+Our cells focus on spreading propaganda among their cells and within their area. 
