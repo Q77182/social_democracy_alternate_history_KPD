@@ -1,0 +1,31 @@
+title: Heinz Neumann
+is-pinned-card: true
+tags: advisor, marxist_leninist
+card-image: img/portraits/NeumannHeinz.jpg
+view-if: neumann_advisor = 1
+new-page: true 
+
+= Heinz Neumann
+
+Heinz Neumann is the editor in cheief of Die Rote Fahne
+
+- @rote_fahne
+- @ideologist
+- @root: Return to main
+
+@rote_fahne
+title: Media
+subtitle: Manage our party's newspaper and media.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if:advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+go-to: media
+
+
+@ideologist
+title: Ideology 
+subtitle: Choose the party's ideological path.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if:advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+go-to: ideology

@@ -547,6 +547,7 @@ Q.hindenburg_dismissal_timer = 0;
 //marxist leninist advisors
 Q.thalmann_advisor = 1 // Ernst Thälmann
 Q.ulbricht_advisor = 1 // Walter Ulbricht
+Q.neumann_advisor = 1 // Heinz Neumann
 
 //right opposition advisors
 Q.zetkin_advisor = 1 // Clara Zetkin

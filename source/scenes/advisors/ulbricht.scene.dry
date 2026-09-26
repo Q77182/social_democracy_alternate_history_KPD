@@ -32,7 +32,7 @@ All items from our agenda have been cleared.
 
 @cell_building
 title: Increase our street and factory cells
-subtitle: More cells means more effectiive organizing on a local level
+subtitle: More cells means more effective organizing on a local level.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if:advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; international_relations_timer -= 12; last_advisor_action = 1

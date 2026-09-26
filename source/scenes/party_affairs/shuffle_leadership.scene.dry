@@ -53,6 +53,15 @@ go-to: rm_main
 
 Ulbricht has been removed as an advisor. The Marxist Leninist faction disapproves.
 
+@remove_neumann
+title: Remove Neumann
+view-if: neumann_advisor = 1
+tags: remove_advisor
+on-arrival: neumann_advisor = 0; marxist_leninist_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Neumann has been removed as an advisor. The Marxist Leninist faction disapproves.
+
 # right oppositionists
 
 @remove_zetkin
@@ -268,6 +277,8 @@ view-if: n_advisors < 3
 @right_opposition
 view-if: n_advisors < 3
 
+- #right_opposition_advisor
+
 @reformist
 view-if: n_advisors < 3
 
@@ -319,6 +330,18 @@ go-to: advisor_menu
 tags: marxist_leninist_advisor
 
 Ulbricht is now an advisor.
+
+@add_neumann
+title: Heinz Neumann
+subtitle: Heinz Neumann is editor in chief of Rit Rote Fahne and our main ideologist.
+is-card: true
+card-image: img/portraits/NeumannHeinz.jpg
+view-if: neumann_advisor = 0 and n_advisors < 3
+on-arrival: neumann_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: marxist_leninist_advisor
+
+Neumann is now an advisor.
 
 # right opposition
 
