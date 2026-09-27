@@ -2,7 +2,7 @@ title: Wilhelm Pieck
 is-pinned-card: true
 tags: advisor, marxist_leninist
 card-image: img/portraits/PieckWilhelm.jpg
-view-if: pieck_advisor_advisor = 1
+view-if: pieck_advisor = 1
 new-page: true 
 
 = Wilhelm Pieck
