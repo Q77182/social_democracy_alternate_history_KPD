@@ -19,6 +19,7 @@ The KPD is dominatated by Marxist Leninist, considered the "center" of the party
 - @right_opposition: Work councils and a non-authoritarian socialist government will be more effective that our vanguard party.
 - @conciliators: It is necessary to work with trade unions and the SPD to stop fascism.
 - @easy_discard
+- @cancel_advisor_action
 
 @left_opposition
 on-arrival: {!
