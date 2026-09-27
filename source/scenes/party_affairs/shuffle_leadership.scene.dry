@@ -332,7 +332,7 @@ Zetkin is now an advisor.
 
 @add_brandler
 title: Heinrich Brandler
-subtitle: Heinrich Brandler was the head of the KPD during teh failed March Action and German October. {!<br><br>!}[? if difficulty < 0 : Actions - Building Communist Trade Unions, Pushing the Party Right ?]
+subtitle: Heinrich Brandler was the head of the KPD during the failed March Action and German October. {!<br><br>!}[? if difficulty < 0 : Actions - Building Communist Trade Unions, Pushing the Party Right ?]
 is-card: true
 card-image: img/portraits/BrandlerHeinrich.jpg
 view-if: brandler_advisor = 0 and n_advisors < 3
