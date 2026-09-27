@@ -550,8 +550,12 @@ Q.ulbricht_advisor = 1 // Walter Ulbricht
 Q.neumann_advisor = 0 // Heinz Neumann
 Q.pieck_advisor = 0 // Wilhelm Pieck
 
+//left opposition advisors
+
 //right opposition advisors
 Q.zetkin_advisor = 1 // Clara Zetkin
+
+//conciliator advisors
 
 // left advisors
 Q.levi_advisor = 0; // Paul Levi
