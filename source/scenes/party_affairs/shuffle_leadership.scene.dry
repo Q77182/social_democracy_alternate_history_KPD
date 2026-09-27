@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, neorev_advisor, nonfactional_advisor 
+tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -161,29 +161,6 @@ go-to: rm_main
 Siemsen has been removed as an advisor. The Leftist faction disapproves.
 
 
-
-
-# neorevisionists
-
-@remove_leber
-title: Remove Leber
-view-if: leber_advisor = 1
-tags: remove_advisor
-on-arrival: leber_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Leber has been removed as an advisor. The Neorevisionist faction disapproves.
-
-@remove_schumacher
-title: Remove Schumacher
-view-if: schumacher_advisor = 1
-tags: remove_advisor
-on-arrival: schumacher_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Schumacher has been removed as an advisor. The Neorevisionist faction disapproves.
-
-
 ## nonfactional
 
 # tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
@@ -241,7 +218,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, neorev_advisor, nonfactional_advisor
+tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, nonfactional_advisor
 frequency: 1
 
 
@@ -249,7 +226,6 @@ frequency: 1
 - @right_opposition: Ad Right Oppositionists
 - @left: Add Leftists
 - @reformist: Add Reformists
-- @neorev: Add Neorevisionists
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
@@ -448,34 +424,6 @@ tags: left_advisor
 
 Anna Siemsen is now an advisor.
 
-
-
-
-# neorevisionist leaders
-
-@add_schumacher
-title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors reformist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Reichsbanner, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/SchumacherKurt.jpg
-tags: neorev_advisor
-view-if: schumacher_advisor = 0 and n_advisors < 3
-on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
-go-to: advisor_menu
-
-Kurt Schumacher is now an advisor.
-
-@add_leber
-title: Julius Leber
-subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Democracy, Military Affairs, Building a People's Party ?]
-is-card: true
-card-image: img/portraits/LeberJulius.jpg
-view-if: leber_advisor = 0 and n_advisors < 3
-on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
-go-to: advisor_menu
-tags: neorev_advisor
-
-Julius Leber is now an advisor.
 
 # Nonfactional advisors
 
