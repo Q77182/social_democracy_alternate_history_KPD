@@ -556,6 +556,7 @@ Q.pieck_advisor = 0 // Wilhelm Pieck
 Q.zetkin_advisor = 1 // Clara Zetkin
 Q.brandler_advisor = 0 // Heinrich Brandler
 Q.thalheimer_advisor = 0 // August Thalheimer
+Q.frolich_advisor = 0 // Paul Frölich 
 
 //conciliator advisors
 

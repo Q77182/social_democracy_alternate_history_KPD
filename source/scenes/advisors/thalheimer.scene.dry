@@ -10,23 +10,23 @@ new-page: true
 August Thalheimer is one of our party's foremost right-wing theoreticians and has connections with the Right Opposition in the Comintern. His position in government during teh crisis of 1923 has led to a sidelining of the party's right generally.
 
 - @rote_fahne_editing
-- @cooperation_spd
+- @criticize_comintern
 - @root: Return to main
 
 @rote_fahne_editing
-title: Edit Die Rote Fahne to favor the right, strengthning the righist factions and inadvertantly attracting the left of the SPD.
-subtitle: Favor the right in our newspapers.
+title: Favor the right in our newspapers.
+subtitle: Edit Die Rote Fahne to favor the right, strengthening the righist factions and inadvertantly attracting the left of the SPD.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; workers_kpd += 3*(1-dissent); right_opposition_strength += 7; conciliator_strength += 7; workers_spd -= 3*(1-dissent)
 
 Die Rote Fahne has taken a more rightist position which has also managed to attract the left of the SPD.
 
-@cooperation_spd
-title: Push for cooperation with the spd.
-subtitle: As a major rightist figure, Thalheimer can push the party towards the right.
+@criticize_comintern
+title: Criticize the Comintern and its influence.
+subtitle: As a major rightist figure, Thalheimer criticises the current Stalinist leadership.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 5; united_front_building += 1; conciliator_strength += 5; marxist_leninist_dissent += 5; left_opposition_dissent += 5
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=3; right_opposition_strength += 5; conciliator_strength += 5; marxist_leninist_strength -= 8; left_opposition_strength -= 8
 
-Cooperating with the SPD may be neccessary, their reformist faction notwithstanding.
+The Comintern does not appriciate this, but may reduce their influnce over us.

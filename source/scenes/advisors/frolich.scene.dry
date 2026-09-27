@@ -1,0 +1,32 @@
+title: Paul Frölich
+is-pinned-card: true
+tags: advisor, right_opposition
+card-image: img/portraits/FrölichPaul.jpg
+view-if: frolich_advisor = 1
+new-page: true 
+
+= Paul Frölich
+
+Paul Frölich is one of the founders of Die Rote Fahne and the KPD itself.
+
+- @rote_fahne
+- @cooperation_spd
+- @root: Return to main
+
+@rote_fahne
+title: Expand our newspapers' reach.
+subtitle: Use existing resources to bolster Die Rote Fahne.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; workers_kpd += 2*(1-dissent); unemployed_kpd += 3*(1-dissent); rural_connection +=1; rural_kpd += 2*(1-dissent)
+
+We expand our newspapers' reach with what we have already invested, costing us nothing in the end.
+
+@cooperation_spd
+title: Push for cooperation with the spd.
+subtitle: As a major rightist figure, Thalheimer can push the party towards the right.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 5; united_front_building += 1; conciliator_strength += 5; marxist_leninist_dissent += 5; left_opposition_dissent += 5
+
+Cooperating with the SPD may be neccessary, their reformist faction notwithstanding.

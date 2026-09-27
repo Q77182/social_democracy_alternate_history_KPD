@@ -91,6 +91,15 @@ go-to: rm_main
 
 Brandler has been removed as an advisor. The Right Opposition faction disapproves
 
+@remove_frolich
+title: Remove Frölich
+view-if: frolichr_advisor = 1
+tags: remove_advisor
+on-arrival: frolich_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
+go-to: rm_main
+
+Frölich has been removed as an advisor. The Right Opposition faction disapproves
+
 # reformists
 
 
@@ -341,6 +350,30 @@ go-to: advisor_menu
 tags: right_opposition_advisor
 
 Brandler is now an advisor.
+
+@add_thalheimer
+title: August Thalheimer
+subtitle: August Thalheimer is one of our party's right-wing theoreticians and a vocal critic of the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Editing Die Rote Fahne, Cooperation with the SPD ?]
+is-card: true
+card-image: img/portraits/ThalheimerAugust.jpg
+view-if: thalheimer_advisor = 0 and n_advisors < 3
+on-arrival: thalheimer_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: right_opposition_advisor
+
+Thalheimer is now an advisor.
+
+@add_frolich
+title: Paul Frölich
+subtitle: Paul Frölich . {!<br><br>!}[? if difficulty < 0 : Actions - Pushing the ?]
+is-card: true
+card-image: img/portraits/FrölichPaul.jpg
+view-if: frolich_advisor = 0 and n_advisors < 3
+on-arrival: frolich_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: right_opposition_advisor
+
+Frölich is now an advisor.
 
 # reformist
 
