@@ -554,6 +554,7 @@ Q.pieck_advisor = 0 // Wilhelm Pieck
 
 //right opposition advisors
 Q.zetkin_advisor = 1 // Clara Zetkin
+Q.brandler_advisor = 0 // Heinrich Brandler
 
 //conciliator advisors
 

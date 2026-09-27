@@ -1,0 +1,32 @@
+title: Heinrich Brandler
+is-pinned-card: true
+tags: advisor, right_opposition
+card-image: img/portraits/BrandlerHeinrich.jpg
+view-if: brandler_advisor = 1
+new-page: true 
+
+= Heinrich Brandler
+
+Heinrich Brandler was the head of the party during the March Action and German October, both of which failed. He has taken a backseat to party politics as a result of this, but remain active in certain roles.
+
+- @profintern
+- @pushing_right
+- @root: Return to main
+
+@profintern
+title: Work with the Red International of Labour Unions.
+subtitle: Enact feminist changes in the party.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: workers_kpd += 3; workers_spd -=3; factory_cells +=1
+
+The Profintern serves as a counter influence to the social democratic trade union and brings workers to us rather than them.
+
+@pushing_right
+title: Push the party right.
+subtitle:Zetkin is one of the main advocates for having a united front.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 7; conciliator_strength +=7; marxist_leninist_dissent += 5; left_opposition_dissent += 5
+
+Pushing the party right encourages cooperation with the SPD but faces backlast with the left of the party

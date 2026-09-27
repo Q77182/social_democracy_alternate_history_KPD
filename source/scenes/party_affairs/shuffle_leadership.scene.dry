@@ -82,6 +82,15 @@ go-to: rm_main
 
 Zetkin has been removed as an advisor. The Right Opposition faction disapproves
 
+@remove_brandler
+title: Remove Brandler
+view-if: brandler_advisor = 1
+tags: remove_advisor
+on-arrival: brandler_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
+go-to: rm_main
+
+Brandler has been removed as an advisor. The Right Opposition faction disapproves
+
 # reformists
 
 
@@ -320,6 +329,18 @@ go-to: advisor_menu
 tags: right_opposition_advisor
 
 Zetkin is now an advisor.
+
+@add_brandler
+title: Heinrich Brandler
+subtitle: Heinrich Brandler was the head of the KPD during teh failed March Action and German October. {!<br><br>!}[? if difficulty < 0 : Actions - Building Communist Trade Unions, Pushing the Party Right ?]
+is-card: true
+card-image: img/portraits/BrandlerHeinrich.jpg
+view-if: brandler_advisor = 0 and n_advisors < 3
+on-arrival: brandler_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: right_opposition_advisor
+
+Brandler is now an advisor.
 
 # reformist
 
