@@ -257,12 +257,13 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, nonfactional_advisor
+tags: marxist_leninist_advisor, right_opposition_advisor, conciliator_advisor left_advisor, reformist_advisor, nonfactional_advisor
 frequency: 1
 
 
 - @marxist_leninist: Add Marxist Leninists
-- @right_opposition: Ad Right Oppositionists
+- @right_opposition: Add Right Oppositionists
+- @conciliator: Add Conciliators
 - @left: Add Leftists
 - @reformist: Add Reformists
 - @nonfactional: Add non-factional advisors
@@ -279,6 +280,11 @@ view-if: n_advisors < 3
 view-if: n_advisors < 3
 
 - #right_opposition_advisor
+
+@conciliator
+view-if: n_advisors < 3
+
+- #conciliator_advisor
 
 @reformist
 view-if: n_advisors < 3
