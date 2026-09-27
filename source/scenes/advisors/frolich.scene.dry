@@ -7,7 +7,7 @@ new-page: true
 
 = Paul Frölich
 
-Paul Frölich is one of the founders of Die Rote Fahne and the KPD itself.
+Paul Frölich is one of the founders of Die Rote Fahne and the KPD itself while also serving as a KPD deputy in the Riechstag.
 
 - @rote_fahne
 - @cooperation_spd
@@ -23,8 +23,8 @@ on-arrival: advisor_action_timer = 6; last_advisor_action = 1; workers_kpd += 2*
 We expand our newspapers' reach with what we have already invested, costing us nothing in the end.
 
 @cooperation_spd
-title: Push for cooperation with the spd.
-subtitle: As a major rightist figure, Thalheimer can push the party towards the right.
+title: Cooperation with the SPD
+subtitle: Could we build closer ties with the SPD?
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 5; united_front_building += 1; conciliator_strength += 5; marxist_leninist_dissent += 5; left_opposition_dissent += 5

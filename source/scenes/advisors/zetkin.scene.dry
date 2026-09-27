@@ -11,6 +11,7 @@ Clara Zetkin our one of our oldest members and our most senior female leader. Sh
 
 - @feminism
 - @united_front_building
+- @paficism_rally
 - @root: Return to main
 
 @feminism
@@ -28,3 +29,11 @@ choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; feminism_timer -= 6; last_advisor_action = 1; spd_relation +=5; united_front_support += 1
 
 Zetkin believes fascism, notably the NSDAP, to be a thrat requiring a united front.
+
+@pacifism_rallu
+on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
+
+Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War. The pacifist messaging also attracts women.
+
+[? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
+[? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]

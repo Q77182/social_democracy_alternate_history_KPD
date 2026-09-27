@@ -339,7 +339,7 @@ Pieck is now an advisor.
 
 @add_zetkin
 title: Clara Zetkin
-subtitle: Clara Zetkin is one of our party's most senior women and Marxist-feminist. {!<br><br>!}[? if difficulty < 0 : Actions - Feminism, Building a United Front ?]
+subtitle: Clara Zetkin is one of our party's most senior women and Marxist-feminist. {!<br><br>!}[? if difficulty < 0 : Actions - Feminism, Building a United Front, Rally for Paficism ?]
 is-card: true
 card-image: img/portraits/ZetkinClara.jpg
 view-if: zetkin_advisor = 0 and n_advisors < 3
@@ -351,7 +351,7 @@ Zetkin is now an advisor.
 
 @add_brandler
 title: Heinrich Brandler
-subtitle: Heinrich Brandler was the head of the KPD during the failed March Action and German October. {!<br><br>!}[? if difficulty < 0 : Actions - Building Communist Trade Unions, Pushing the Party Right ?]
+subtitle: Heinrich Brandler was the head of the KPD during the failed March Action and German October. {!<br><br>!}[? if difficulty < 0 : Actions - Building Communist Trade Unions, Pushing the Party Right, Learning from 1921 and 1923 ?]
 is-card: true
 card-image: img/portraits/BrandlerHeinrich.jpg
 view-if: brandler_advisor = 0 and n_advisors < 3
@@ -363,7 +363,7 @@ Brandler is now an advisor.
 
 @add_thalheimer
 title: August Thalheimer
-subtitle: August Thalheimer is one of our party's right-wing theoreticians and a vocal critic of the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Editing Die Rote Fahne, Criticizing the Comintern ?]
+subtitle: August Thalheimer is one of our party's right-wing theoreticians and a vocal critic of the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Editorial Line, Criticizing the Comintern ?]
 is-card: true
 card-image: img/portraits/ThalheimerAugust.jpg
 view-if: thalheimer_advisor = 0 and n_advisors < 3
@@ -375,7 +375,7 @@ Thalheimer is now an advisor.
 
 @add_frolich
 title: Paul Frölich
-subtitle: Paul Frölich . {!<br><br>!}[? if difficulty < 0 : Actions - Expanding Die Rote Fahne, Cooperation with the SPD ?]
+subtitle: Paul Frölich was a founder of Die Rote Fahne and the party itself. {!<br><br>!}[? if difficulty < 0 : Actions - Expanding Die Rote Fahne, Cooperation with the SPD ?]
 is-card: true
 card-image: img/portraits/FrölichPaul.jpg
 view-if: frolich_advisor = 0 and n_advisors < 3
