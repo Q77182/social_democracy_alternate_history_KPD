@@ -26,12 +26,16 @@ title: Building a united front.
 subtitle:Zetkin is one of the main advocates for having a united front.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; feminism_timer -= 6; last_advisor_action = 1; spd_relation +=5; united_front_support += 1
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; united_front_support += 1
 
 Zetkin believes fascism, notably the NSDAP, to be a thrat requiring a united front.
 
 @pacifism_rally
-on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
+title: Rally for paficism.
+subtitle: Paficism is a message that attracts a more female audience.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1 ;pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
 
 Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War. The pacifist messaging also attracts women.
 
