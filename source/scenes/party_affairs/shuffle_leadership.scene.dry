@@ -62,6 +62,15 @@ go-to: rm_main
 
 Neumann has been removed as an advisor. The Marxist Leninist faction disapproves.
 
+@remove_pieck
+title: Remove Pieck
+view-if: pieck_advisor = 1
+tags: remove_advisor
+on-arrival: pieck_advisor = 0; marxist_leninist_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Pieck has been removed as an advisor. The Marxist Leninist faction disapproves.
+
 # right oppositionists
 
 @remove_zetkin
@@ -342,6 +351,18 @@ go-to: advisor_menu
 tags: marxist_leninist_advisor
 
 Neumann is now an advisor.
+
+@add_pieck
+title: Wilhelm Pieck
+subtitle: Wilhelm Pieck was a founder of the International Red Aid and former advisor to the Ruhr Red Army.
+is-card: true
+card-image: img/portraits/PieckWilhelm.jpg
+view-if: pieck_advisor = 0 and n_advisors < 3
+on-arrival: pieck_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: marxist_leninist_advisor
+
+Pieck is now an advisor.
 
 # right opposition
 

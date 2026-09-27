@@ -75,7 +75,7 @@ view-if: nsdap_r >=20
 unavailable-subtitle: Thankfully, the Nazi threat is over for the time being.
 on-arrival: nazi_urgency += 1; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); rural_nsdap += 2*(1-dissent); new_middle_nsdap -= 3*(1-dissent); old_middle_spd -= 2*(1-dissent); catholics_nsdap -= 2*(1-dissent)
 
-We rally hard against the Nazis, attacking them as violet thugs for capitalists.
+We rally against the Nazis, attacking them as violet thugs for capitalists.
 
 
 @local

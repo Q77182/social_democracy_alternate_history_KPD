@@ -548,6 +548,7 @@ Q.hindenburg_dismissal_timer = 0;
 Q.thalmann_advisor = 1 // Ernst Thälmann
 Q.ulbricht_advisor = 1 // Walter Ulbricht
 Q.neumann_advisor = 0 // Heinz Neumann
+Q.pieck_advisor = 0 // Wilhelm Pieck
 
 //right opposition advisors
 Q.zetkin_advisor = 1 // Clara Zetkin
