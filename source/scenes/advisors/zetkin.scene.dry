@@ -30,7 +30,7 @@ on-arrival: advisor_action_timer = 6; feminism_timer -= 6; last_advisor_action =
 
 Zetkin believes fascism, notably the NSDAP, to be a thrat requiring a united front.
 
-@pacifism_rallu
+@pacifism_rally
 on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_spd += 4*(1 - dissent) if pacifism >= 3; unemployed_spd += 3*(1-dissent) if pacifism >= 3; nationalism -= 3*(1-dissent) if pacifism >= 3; new_middle_spd += 4*(1-dissent) if pacifism >= 3
 
 Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War. The pacifist messaging also attracts women.
