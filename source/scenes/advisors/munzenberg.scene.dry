@@ -19,7 +19,7 @@ subtitle: Münzenberg has direct control over several organizations.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6
-go-to: party_organization
+go-to: party_organizations
 
 @emergency_fundraising
 title: Emergency Fundraising
