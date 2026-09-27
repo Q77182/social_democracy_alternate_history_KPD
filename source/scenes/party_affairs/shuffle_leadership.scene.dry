@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -120,28 +120,6 @@ on-arrival: pfulf_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Pfülf has been removed as an advisor. The Reformist faction disapproves.
-
-
-# labor
-
-@remove_leipart
-title: Remove Leipart
-view-if: leipart_advisor = 1
-tags: remove_advisor
-on-arrival: leipart_advisor = 0; labor_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Leipart has been removed as an advisor. The Labor faction disapproves.
-
-
-@remove_wissell
-title: Remove Wissell
-view-if: wissell_advisor = 1
-tags: remove_advisor
-on-arrival: wissell_advisor = 0; labor_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Wissell has been removed as an advisor. The Labor faction disapproves.
 
 
 # left
@@ -263,7 +241,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: marxist_leninist_advisor, right_opposition_advisor, left_advisor, reformist_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
@@ -271,7 +249,6 @@ frequency: 1
 - @right_opposition: Ad Right Oppositionists
 - @left: Add Leftists
 - @reformist: Add Reformists
-- @labor: Add Labor
 - @neorev: Add Neorevisionists
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
@@ -298,16 +275,6 @@ view-if: n_advisors < 3
 
 - #left_advisor
 
-@labor
-view-if: n_advisors < 3
-
-- #labor_advisor
-
-@neorev
-view-if: neorevisionism > 0 and n_advisors < 3
-
-- #neorev_advisor
-
 @nonfactional
 view-if: n_advisors < 3
 
@@ -330,7 +297,7 @@ Ernst Thälmann is now an advisor.
 
 @add_ulbricht
 title: Walter Ulbricht
-subtitle: Walter Ulbricht is one our most talented organizers and a member of the Reichstag. {!<br><br>!}[? if difficulty < 0 : Actions - Clear the Agenda, Cell Organizing, Party Discipline ?]
+subtitle: Walter Ulbricht is one of our most talented organizers and a member of the Reichstag. {!<br><br>!}[? if difficulty < 0 : Actions - Clear the Agenda, Cell Organizing, Party Discipline ?]
 is-card: true
 card-image: img/portraits/UlbrichtWalter.jpg
 view-if: ulbricht_advisor = 0 and n_advisors < 3
@@ -481,33 +448,6 @@ tags: left_advisor
 
 Anna Siemsen is now an advisor.
 
-
-
-# labor
-
-@add_leipart
-title: Theodor Leipart
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/LeipartTheodor.jpg
-tags: labor_advisor
-view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
-go-to: advisor_menu
-
-Theodor Leipart is now an advisor.
-
-@add_wissell
-title: Rudolf Wissell
-subtitle: Rudolf Wissell is an economist who has been the Labor Minister, and is an advocate for the interests of labor within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
-is-card: true
-card-image: img/portraits/WissellRudolf.jpg
-tags: labor_advisor
-view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: wissell_advisor = 1; n_advisors += 1; labor_strength += 3
-go-to: advisor_menu
-
-Rudolf Wissell is now an advisor.
 
 
 
