@@ -71,6 +71,17 @@ go-to: rm_main
 
 Pieck has been removed as an advisor. The Marxist Leninist faction disapproves.
 
+# conciliators
+
+@remove_munzenberg
+title: Remove Münzenberg
+view-if: munzenberg_advisor = 1
+tags: remove_advisor
+on-arrival: munzenberg_advisor = 0; conciliator_dissent +=5; n_advisors -= 1
+go-to: rm_main
+
+Münzenberg has been removed as an advisor. The Conciliator faction disapproves
+
 # right oppositionists
 
 @remove_zetkin
@@ -334,6 +345,20 @@ go-to: advisor_menu
 tags: marxist_leninist_advisor
 
 Pieck is now an advisor.
+
+# conciliator
+
+@add_munzenberg
+title: Wilhelm Münzenberg
+subtitle: Wilhelm Münzenberg is a leading figure in many of our organizations, ranging from mutual aid to newspapers, and a leading propagandist.(Reduces the cost of certain party actions as advisor) {!<br><br>!}[? if difficulty < 0 : Actions - Party Organizations, Emergency Fundraising ?]
+is-card: true
+card-image: img/portraits/MünzenbergWilhelm.jpg
+view-if: munzenberg_advisor = 0 and n_advisors < 3
+on-arrival: munzenberg_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: conciliator_advisor
+
+Münzenberg is now an advisor.
 
 # right opposition
 

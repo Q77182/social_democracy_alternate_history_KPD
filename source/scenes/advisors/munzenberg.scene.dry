@@ -1,0 +1,32 @@
+title: Wilhelm Münzenberg
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/MünzenbergWilhelm.jpg
+view-if: munzenberg_advisor = 1
+new-page: true 
+
+= Wilhelm Münzenberg
+
+Wilhelm Münzenberg is our party's best propagandists and has control over many organizations part of and independent of the KPD. Münzenberg is sometimes called the "Red Millionare", a title that Münzenberg has seemingly taken a liking to.
+
+- @party_organizations_muzenberg
+- @emergency_fundraising
+- @root: Return to main
+
+@party_organizations_muzenberg
+title: Party Organizations
+subtitle: Münzenberg has direct control over several organizations.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6
+go-to: party_organization
+
+@emergency_fundraising
+title: Emergency Fundraising
+subtitle: An emergency infusion of resources.
+view-if: difficulty < 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; resources += dues
+
+We have gained +[+ dues +] resources.
