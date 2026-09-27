@@ -353,7 +353,7 @@ Brandler is now an advisor.
 
 @add_thalheimer
 title: August Thalheimer
-subtitle: August Thalheimer is one of our party's right-wing theoreticians and a vocal critic of the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Editing Die Rote Fahne, Cooperation with the SPD ?]
+subtitle: August Thalheimer is one of our party's right-wing theoreticians and a vocal critic of the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Editing Die Rote Fahne, Criticizing the Comintern ?]
 is-card: true
 card-image: img/portraits/ThalheimerAugust.jpg
 view-if: thalheimer_advisor = 0 and n_advisors < 3
@@ -365,7 +365,7 @@ Thalheimer is now an advisor.
 
 @add_frolich
 title: Paul Frölich
-subtitle: Paul Frölich . {!<br><br>!}[? if difficulty < 0 : Actions - Pushing the ?]
+subtitle: Paul Frölich . {!<br><br>!}[? if difficulty < 0 : Actions - Expanding Die Rote Fahne, Cooperation with the SPD ?]
 is-card: true
 card-image: img/portraits/FrölichPaul.jpg
 view-if: frolich_advisor = 0 and n_advisors < 3
