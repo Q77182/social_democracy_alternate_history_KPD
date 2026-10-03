@@ -1,0 +1,25 @@
+title: Reintegration of the Left-Communists
+tags: event
+is-card: true
+on-arrival: leftcom_back = 1
+view-if: left_opposition_strength > marxist_leninist_strength and left_opposition_strength > conciliator_strength and leftcom_back = 0
+new-page: true
+face-image: img/comintern.jpg
+
+= Bringing back the left-communists?
+
+Quite miraculously, the previously dead left-communist wing of our party has been revitalized. Some of our expelled leaders and members have expressed interest in rejoining. IF this is allowed, it will mean almost certain expulsion from the Comintern and factional infighting may become nearly unmanagable. 
+
+- @reintegrate: We will allow them back in.
+- @reject: Our party cannot be led by these Trotskyists, purge the party a second time!
+
+@reintegrate
+on-arrival: left_opposition_dissent += 10; marxist_leninist_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10; left_split_fixed = 1; workers_kpd += 2; unemployed_kpd += 2
+
+Through our influence, the united front is retained. Many are opposed to this but democratic centralism puts them in line soon enough.
+
+
+@reject
+on-arrival: left_opposition_strength -= 40; left_opposition_dissent += 100; marxist_leninist_dissent -=10; right_opposition_dissent -= 10; conciliator_dissent -= 10
+
+We reject any notion of reintegrating the expelled left-communists. We purge the party again to ensure such a sentiment doesn't rise again.
