@@ -400,7 +400,7 @@ Pieck is now an advisor.
 
 @add_urbahns
 title: Hugo Urbahns
-subtitle: Hugo Urbahns {!<br><br>!}[? if difficulty < 0 : Actions - Building the RFB, Cooperation with the SPD ?]
+subtitle: Hugo Urbahns was the leader of the Leninbund and a KPD leader during the hamburg Uprising. {!<br><br>!}[? if difficulty < 0 : Actions - Building the RFB, Cooperation with the SPD ?]
 is-card: true
 card-image: img/portraits/UrbahnsHugo.jpg
 view-if: urbahns_advisor = 0 and n_advisors < 3
