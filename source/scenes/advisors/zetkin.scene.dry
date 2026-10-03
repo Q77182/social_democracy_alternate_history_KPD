@@ -7,7 +7,7 @@ new-page: true
 
 = Clara Zetkin
 
-Clara Zetkin our one of our oldest members and our most senior female leader. She has been a pioneer in Marxist-feminism, having worked with the late Rosa Luxemburg, and chairwomen of Rote Hilfe. Though situated on our party's right wing and often comes into conflict with the Marxist Leninists, she has remained in the party as a highly valued member.
+Clara Zetkin our one of our oldest members and our most senior female leader. She has been a pioneer in Communist women's movement, having worked with the late Rosa Luxemburg, and is the chairwomen of Rote Hilfe. Though situated on our party's right wing and often comes into conflict with the Marxist Leninists, she has remained in the party as a highly valued member.
 
 - @feminism
 - @united_front_building
@@ -15,20 +15,20 @@ Clara Zetkin our one of our oldest members and our most senior female leader. Sh
 - @root: Return to main
 
 @feminism
-title: Feminism within the party
-subtitle: Enact feminist changes in the party.
+title: Women's liberation
+subtitle: Appeal to working women.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
 go-to: communist_women
 
 @united_front_building
 title: Building a united front.
-subtitle:Zetkin is one of the main advocates for having a united front.
+subtitle: Zetkin is one of the main advocates for having a united front.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; united_front_support += 1
 
-Zetkin believes fascism, notably the NSDAP, to be a thrat requiring a united front.
+Zetkin believes fascism, notably the NSDAP, to be a threat requiring a united front to defeat.
 
 @pacifism_rally
 title: Rally for paficism.

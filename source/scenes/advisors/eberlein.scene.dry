@@ -7,7 +7,7 @@ new-page: true
 
 = Hugo Eberlein
 
-Hugo Eberlein is a member of the Politiburo and Comintern and is responsible for receiving financial aid from the Soviet Union.
+Hugo Eberlein is a member of the Politiburo and Comintern and is responsible for receiving financial aid from the Soviet Union. He was also one of the first to support the KPD joining the Comintern.
 
 - @eberlein_international
 - @soviet_eber
@@ -15,7 +15,7 @@ Hugo Eberlein is a member of the Politiburo and Comintern and is responsible for
 
 @eberlein_international
 title: Comintern networking
-subtitle:Thälmann is a member of the Comintern executive committee and can use his connections.
+subtitle:Eberlein can use his conenctions in the Comintern.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; international_relations_timer -= 12; last_advisor_action = 1
@@ -23,7 +23,7 @@ go-to: international_relations
 
 @soviet_eber
 title: Soviet Aid
-subtitle:Eberlein can use his conenctions to get a little extra aid.
+subtitle:Eberlein can use his connections to get a little extra aid.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; resources += 2; rfb_militancy +=0.02; 

@@ -11,10 +11,11 @@ card-image: img/rote_fahne.jpg
 
 The KPD runs Die Rote Fahne. We could use the media for various purposes...
 
-- @more_paper
+- @more_paper_munzenburg
 - @less_paper
 - @ideological
 - @radio
+- @radio_munzenberg
 - @radio_2
 - @radio_3
 - @radio_4
@@ -26,7 +27,16 @@ The KPD runs Die Rote Fahne. We could use the media for various purposes...
 title: Increase funding for Die Rote Fahne.
 subtitle: -1 resources
 choose-if: resources >= 1
+view-if: munzenberg_advisor = 0
 unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; rural_connection += 0.5; worker_kpd += 4*(1 - dissent); rural_kpd += 3*(1-dissent)
+
+Our subsidizations lets us reduce the price of our papers, expanding their reach in urban and rural areas.
+
+@more_paper_munzenberg
+title: Increase funding for Die Rote Fahne.
+subtitle: Munzenberg's organizations have made this free
+view-if: munzenberg_advisor = 1
 on-arrival: resources -= 1; rural_connection += 0.5; worker_kpd += 4*(1 - dissent); rural_kpd += 3*(1-dissent)
 
 Our subsidizations lets us reduce the price of our papers, expanding their reach in urban and rural areas.
@@ -34,12 +44,13 @@ Our subsidizations lets us reduce the price of our papers, expanding their reach
 @less_paper
 title: We cut funding for Die Rote Fahn.
 subtitle: +1 resources
-on-arrival: workers_kpd -= 2*(1 - dissent); unemployed_kpd += 2*(1-dissent); rural_kpd -= 1*(1-dissent); resources +=1
+on-arrival: workers_kpd -= 2*(1 - dissent); unemployed_kpd += 2*(1-dissent); rural_kpd -= 1*(1-dissent); resources += 1
 
 For whatever reason, we are forced to cut funding for our newspaper. This reduces our reach among the population.
 
 @ideological
 title: We push the Marxist Leninist party line, keeping factionalism to a minimum. 
+subtitle: Maintaining the Comintern line is required for membership.
 on-arrival: left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_dissent -= 6; conciliator_dissent -= 6;left_opposition_strength -= 6; right_opposition_strength -= 6; marxist_leninist_strength += 6; conciliator_strength -= 6; workers_kpd += 2*(1 - dissent)
 
 We will follow our Comintern comrades ideologically.
@@ -49,7 +60,17 @@ title: Why not fund a radio station?
 subtitle: -2 resources
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-view-if: radio = 0
+view-if: radio = 0 and munzenberg_advisor = 0
+on-arrival: radio += 1; resources -= 2; new_middle_kpd += 4*(1 - dissent); old_middle_kpd += 3*(1 - dissent); workers_kpd += 2*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1
+
+Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the new middle class(the old middle class still opposes us), a fact of which our comrades are painfully aware. Still, not taking advantage of this new medium would be giving the reactionaries who do a free victory.
+
+@radio_munzenberg
+title: Why not fund a radio station?
+subtitle: Munzenberg's propaganda outlets have reduced the cost. -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: radio = 0 and munzenberg_advisor
 on-arrival: radio += 1; resources -= 2; new_middle_kpd += 4*(1 - dissent); old_middle_kpd += 3*(1 - dissent); workers_kpd += 2*(1 - dissent); socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1
 
 Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the new middle class(the old middle class still opposes us), a fact of which our comrades are painfully aware. Still, not taking advantage of this new medium would be giving the reactionaries who do a free victory.

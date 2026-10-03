@@ -15,7 +15,7 @@ August Thalheimer is one of our party's foremost right-wing theoreticians and ha
 
 @rote_fahne_editing
 title: Favor the right in our newspapers.
-subtitle: Edit Die Rote Fahne to favor the right, strengthening the rightist factions and inadvertantly attracting the left of the SPD.
+subtitle: Edit Die Rote Fahne to favor the the rightist factions.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; workers_kpd += 3*(1-dissent); right_opposition_strength += 7; conciliator_strength += 7; workers_spd -= 3*(1-dissent)

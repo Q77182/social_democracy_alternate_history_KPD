@@ -14,11 +14,12 @@ In addition to being a political party, KPD has many associated organizations. M
 
 - @newspapers: Fund more newspapers and journalists.
 - @welfare: Fund more mutual aid and welfare programs.
-- @culture: Fund sports leagues, educational, and cultural programs.
+- @welfare_munzenberg: Fund more newspapers and journalists.
 - @rfb: Fund the Rotfrontkämpferbund, our self-defense organization.
 - @youth: Fund our youth and women organizations.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
+- @cancel_advisor_action
 
 @newspapers
 choose-if: resources > 0
@@ -38,15 +39,11 @@ on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent);
 
 We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
-@culture
-choose-if: resources > 0
-unavailable-subtitle: Not enough resources.
-subtitle: -1 resources
-on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
+@welfare_munzenberg
+subtitle: Munzenberg's organization has made this free.
+on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent);
 
-It is not enough for the SPD to solely be a political party. The Worker Singer's League, Worker's Sports, and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
-
-[? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
+We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
 @rfb
 choose-if: resources > 0
@@ -62,10 +59,10 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; rfb_strength += 25; young_socialists += 1; workers_kpd += 3; new_middle_kpd += 2
 
-The youth, generally more radical compared to the rest of the population, are quite receptive of our messaging. [? if women_connection <3: Unfourtunately, our propaganda struggles to resonate with women. ?] [? if women_connection >=3: Our changed rhetoric, unpopular in the more orthodox leadership, have been successful in attracting women. ?]
+The youth, generally more radical compared to the rest of the population, are quite receptive of our messaging.
 
 @nothing
 
-We do not fund any party organizations. I'm sure Münzenberg will pick up the slack...
+We do not fund any party organizations. [ if munzenberg_advisor = 0: I'm sure Münzenberg will pick up the slack...]
 
 - @return: Continue...
