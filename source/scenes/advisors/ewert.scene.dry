@@ -21,7 +21,7 @@ choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; last_advisor_action = 1
 
 - @media
-- @Campaigning
+- @campaigning
 - @ideology
 - @rally
 - @cell_organization
