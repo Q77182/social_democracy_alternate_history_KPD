@@ -82,6 +82,15 @@ go-to: rm_main
 
 Urbahns has been removed as an advisor. The Left Opposition faction disapproves.
 
+@remove_fischer
+title: Remove Fischer
+view-if: fischer_advisor = 1
+tags: remove_advisor
+on-arrival: fischer_advisor = 0; left_opposition_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Fischer has been removed as an advisor. The Left Opposition faction disapproves.
+
 # conciliators
 
 @remove_munzenberg
@@ -409,6 +418,18 @@ go-to: advisor_menu
 tags: left_opposition_advisor
 
 Urbahns is now an advisor.
+
+@add_fischer
+title: Ruth Fischer
+subtitle: Ruth Fischer was the chairwomen of the KPD and adamantly against the social democrats before her expulsion.(Has reduced advisor action timer) {!<br><br>!}[? if difficulty < 0 : Actions - Pushnig the Party Left, Attacking the SPD ?]
+is-card: true
+card-image: img/portraits/FischerRuth.jpg
+view-if: fischer_advisor = 0 and n_advisors < 3
+on-arrival: fischer_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: left_opposition_advisor
+
+Fischer is now an advisor.
 
 # conciliator
 

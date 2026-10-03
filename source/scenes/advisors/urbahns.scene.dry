@@ -20,13 +20,13 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; rfb_strength +=15; rfb_militancy += 0.05
 
-We increase recruitment to the RFB and increase training.
+We increase recruitment and training for the RFB.
 
 @cooperation_spd
 title: Cooperation with the SPD
 subtitle: Could we build closer ties with the SPD?
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 5; conciliator_strength += 5; marxist_leninist_dissent += 5; left_opposition_dissent += 5
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 5; united_front_building += 1; conciliator_strength += 5; marxist_leninist_dissent += 5; left_opposition_dissent += 5
 
 Cooperating with the SPD may be neccessary, their reformist faction notwithstanding.

@@ -1,0 +1,32 @@
+title: Ruth Fischer
+is-pinned-card: true
+tags: advisor, left_opposition
+card-image: img/portraits/FischerRuth.jpg
+view-if: urbahns_advisor = 1
+new-page: true 
+
+= Ruth Fischer
+
+Ruth Fischer was the chairwoman of the KPD before her expulsion and later joined the Leninbund. The new centralization of the party around the left has allowed her to act more boldly.
+
+- @pushing_left
+- @attack_spd
+- @root: Return to main
+
+@pushing_left
+title: Push the party left
+subtitle: Strengthen the left in our party
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 3; left_opposition_strength += 10; left_opposition_dissent -= 5
+
+The left of our party has been strengthened.
+
+@attack_spd
+title: Attack the SPD
+subtitle: The KPD won't deal with revisionist social democrats.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 3; last_advisor_action = 1; spd_relation -=5; right_opposition_strength -= 5; conciliator_strength -= 5; left_opposition_dissent -= 5; workers_spd -= 0.1*(left_opposition_strength); unemployed_spd -= 0.1*(left_opposition_strength)
+
+We attack teh SPD in our media as social fascists, their attempts to reform capitalism strengthem it just as the fascists use force to strengthen capitalism.
