@@ -423,7 +423,7 @@ Eberlein is now an advisor.
 
 @add_ewert
 title: Arthur Ewert
-subtitle: Arthur Ewert has extensive influence over the party, even rivaling Thälmann, and has had several positions in the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Soviet Aid ?]
+subtitle: Arthur Ewert has extensive influence over the party, even rivaling Thälmann, and has had several positions in the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Influence the party's actions directly, Pull some strings to get things done... ?]
 is-card: true
 card-image: img/portraits/EwertArthur.jpg
 view-if: ewert_advisor = 0 and n_advisors < 3

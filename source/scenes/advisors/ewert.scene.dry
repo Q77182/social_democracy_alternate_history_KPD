@@ -31,6 +31,6 @@ title: Pull some strings to get things done...
 subtitle: Set advisor action timer to 0.
 unavailable-subtitle: [? if ewert_action_timer > 0 : [+ ewert_action_timer +] months before this action. ?]
 choose-if: ewert_action = 0
-on-arrival: advisor_action_timer = 0; marxist_leninist_dissent +=7; left_opposition_dissent += 7; conciliator_dissent += 7; right_opposition += 7
+on-arrival: advisor_action_timer = 0; marxist_leninist_dissent +=10; left_opposition_dissent += 10; conciliator_dissent += 10; right_opposition_dissent += 10; ewert_action_timer += 6
 
 Many aren't very happy about this, but our party leaders will be able to act due to Ewert's backing.
