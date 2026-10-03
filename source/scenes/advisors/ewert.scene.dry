@@ -18,7 +18,7 @@ title: Influence the party's actions directly
 subtitle: Use Ewert's influence to push the party to action.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1; last_advisor_action = 1
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 
 - @media_ewert: Media
 - @campaigning_ewert: Campaigning
@@ -45,7 +45,7 @@ go-to: cell_organization
 title: Pull some strings to get things done...
 subtitle: Set advisor action timer to 0.
 unavailable-subtitle: [? if ewert_action_timer > 0 : [+ ewert_action_timer +] months before this action. ?]
-choose-if: ewert_action = 0
-on-arrival: advisor_action_timer = 0; marxist_leninist_dissent +=10; left_opposition_dissent += 10; conciliator_dissent += 10; right_opposition_dissent += 10; ewert_action_timer = 6
+choose-if: ewert_action_timer = 0
+on-arrival: advisor_action_timer = 0; last_advisor_action = 1; marxist_leninist_dissent +=10; left_opposition_dissent += 10; conciliator_dissent += 10; right_opposition_dissent += 10; ewert_action_timer = 6
 
 Many aren't very happy about this, but our party leaders will be able to act due to Ewert's backing.

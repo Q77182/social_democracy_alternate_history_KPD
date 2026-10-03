@@ -45,6 +45,7 @@ Mass rallies are a common feature of political life, both in and out of election
 - @anti_fascist: We must adress the rapid rise of fascism!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
+- @cancel_advisor_action
 
 @class_struggle
 on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; old_middle_spd -= 3; new_middle_spd -= 2;
