@@ -20,17 +20,32 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; last_advisor_action = 1
 
-- @media
-- @campaigning
-- @ideology
-- @rally
-- @cell_organization
+- @media_ewert: Media
+- @campaigning_ewert: Campaigning
+- @ideology_ewert: Question of Ideology
+- @rally_ewert: Political Rally
+- @cell_organization_ewert: Cell Organizations
+
+@media_ewert
+go-to: media
+
+@campaigning_ewert
+go-to: campaign
+
+@ideology_ewert
+go-to: ideology
+
+@rally_ewert
+go-to: rally
+
+@cell_organization_ewert
+go-to: cell_organization
 
 @ewert_mog
 title: Pull some strings to get things done...
 subtitle: Set advisor action timer to 0.
 unavailable-subtitle: [? if ewert_action_timer > 0 : [+ ewert_action_timer +] months before this action. ?]
 choose-if: ewert_action = 0
-on-arrival: advisor_action_timer = 0; marxist_leninist_dissent +=10; left_opposition_dissent += 10; conciliator_dissent += 10; right_opposition_dissent += 10; ewert_action_timer += 6
+on-arrival: advisor_action_timer = 0; marxist_leninist_dissent +=10; left_opposition_dissent += 10; conciliator_dissent += 10; right_opposition_dissent += 10; ewert_action_timer = 6
 
 Many aren't very happy about this, but our party leaders will be able to act due to Ewert's backing.
