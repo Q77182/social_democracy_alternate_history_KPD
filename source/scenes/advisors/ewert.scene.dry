@@ -30,7 +30,7 @@ on-arrival: advisor_action_timer = 6; last_advisor_action = 1; last_advisor_acti
 go-to: media
 
 @campaigning_ewert
-go-to: campaign
+go-to: campaigning
 
 @ideology_ewert
 go-to: ideology
