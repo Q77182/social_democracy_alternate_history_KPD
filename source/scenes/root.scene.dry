@@ -469,7 +469,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'antifa', 'media', 'enemies',
             'party_organizations', 'rally', 'rotfrontkampferbund', 'rural_party',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
-            'party_disunity', 'cell_organization',
+            'party_disunity', 'cell_organization', 'ewert_action',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
@@ -497,6 +497,7 @@ Q.inter_party_relationships_timer = 0;
 Q.international_relations_timer = 0;
 Q.antifa_timer = 0;
 Q.cell_organization = 0;
+Q.ewert_action = 0 ;
 Q.media_timer = 0;
 Q.enemies_timer = 0;
 Q.party_organizations_timer =  0;
@@ -567,6 +568,7 @@ Q.frolich_advisor = 0 // Paul Frölich
 Q.munzeberg_advisor = 0 // Wilhelm Münzenberg
 Q.meyer_advisor = 0 // Ernst Meyer
 Q.eberlein_advisor = 0 // Hugo Eberlein
+Q.ewert_advisor = 0 // Arthur Ewert
 
 //National Bolshivism
 Q.scheringer = 0 // Richard Scheringer

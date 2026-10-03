@@ -1,0 +1,36 @@
+title: Arthur Ewert
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/EwertArthur.jpg
+view-if: ewert_advisor = 1
+new-page: true 
+
+= Arthur Ewert
+
+Arthur Ewert has extensive influence over the party, even rivaling Thälmann. He is also serving as a Riechstag member and functionary of the Comintern.
+
+- @party_action_choice
+- @ewert_mog
+- @root: Return to main
+
+@party_action_choice
+title: Influence the party's actions directly
+subtitle: Use Ewert's influence to push the party to action.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; last_advisor_action = 1
+
+- @media
+- @Campaigning
+- @ideology
+- @rally
+- @cell_organization
+
+@ewert_mog
+title: Pull some strings to get things done...
+subtitle: Set advisor action timer to 0.
+unavailable-subtitle: [? if ewert_action_timer > 0 : [+ ewert_action_timer +] months before this action. ?]
+choose-if: ewert_action = 0
+on-arrival: advisor_action_timer = 0; marxist_leninist_dissent +=7; left_opposition_dissent += 7; conciliator_dissent += 7; right_opposition += 7
+
+Many aren't very happy about this, but our party leaders will be able to act due to Ewert's backing.

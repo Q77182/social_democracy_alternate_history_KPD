@@ -80,7 +80,7 @@ tags: remove_advisor
 on-arrival: munzenberg_advisor = 0; conciliator_dissent +=5; n_advisors -= 1
 go-to: rm_main
 
-Münzenberg has been removed as an advisor. The Conciliator faction disapproves
+Münzenberg has been removed as an advisor. The Conciliator faction disapproves.
 
 @remove_meyer
 title: Remove Meyer
@@ -89,7 +89,7 @@ tags: remove_advisor
 on-arrival: meyer_advisor = 0; conciliator_dissent +=5; n_advisors -= 1
 go-to: rm_main
 
-Meyer has been removed as an advisor. The Conciliator faction disapproves
+Meyer has been removed as an advisor. The Conciliator faction disapproves.
 
 @remove_eberlein
 title: Remove Eberlein
@@ -98,7 +98,16 @@ tags: remove_advisor
 on-arrival: eberlein_advisor = 0; conciliator_dissent +=5; n_advisors -= 1
 go-to: rm_main
 
-Eberlein has been removed as an advisor. The Conciliator faction disapproves
+Eberlein has been removed as an advisor. The Conciliator faction disapproves.
+
+@remove_Ewert
+title: Remove Ewert
+view-if: ewert_advisor = 1
+tags: remove_advisor
+on-arrival: ewert_advisor = 0; conciliator_dissent +=5; n_advisors -= 1
+go-to: rm_main
+
+Ewert has been removed as an advisor. The Conciliator faction disapproves.
 
 # right oppositionists
 
@@ -109,7 +118,7 @@ tags: remove_advisor
 on-arrival: zetkin_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
 go-to: rm_main
 
-Zetkin has been removed as an advisor. The Right Opposition faction disapproves
+Zetkin has been removed as an advisor. The Right Opposition faction disapproves.
 
 @remove_brandler
 title: Remove Brandler
@@ -118,7 +127,7 @@ tags: remove_advisor
 on-arrival: brandler_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
 go-to: rm_main
 
-Brandler has been removed as an advisor. The Right Opposition faction disapproves
+Brandler has been removed as an advisor. The Right Opposition faction disapproves.
 
 @remove_thalheimer
 title: Remove Thalheimer
@@ -127,7 +136,7 @@ tags: remove_advisor
 on-arrival: thalheimer_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
 go-to: rm_main
 
-Thalheimer has been removed as an advisor. The Right Opposition faction disapproves
+Thalheimer has been removed as an advisor. The Right Opposition faction disapproves.
 
 
 @remove_frolich
@@ -137,7 +146,7 @@ tags: remove_advisor
 on-arrival: frolich_advisor = 0; right_opposition_dissent +=5; n_advisors -= 1
 go-to: rm_main
 
-Frölich has been removed as an advisor. The Right Opposition faction disapproves
+Frölich has been removed as an advisor. The Right Opposition faction disapproves.
 
 # reformists
 
@@ -294,8 +303,11 @@ frequency: 1
 view-if: n_advisors < 3
 
 - #marxist_leninist_advisor
+
 @left_opposition
 view-if: n_advisors < 3
+
+- #left_opposition_advisor
 
 @right_opposition
 view-if: n_advisors < 3
@@ -410,6 +422,18 @@ go-to: advisor_menu
 tags: conciliator_advisor
 
 Eberlein is now an advisor.
+
+@add_ewert
+title: Arthur Ewert
+subtitle: Arthur Ewert has extensive influence over the party, even rivaling Thälmann, and has had several positions in the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Soviet Aid ?]
+is-card: true
+card-image: img/portraits/EwertArthur.jpg
+view-if: ewert_advisor = 0 and n_advisors < 3
+on-arrival: ewert_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: conciliator_advisor
+
+Ewert is now an advisor.
 
 # right opposition
 

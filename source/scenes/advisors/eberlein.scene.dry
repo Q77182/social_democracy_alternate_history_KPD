@@ -2,7 +2,7 @@ title: Hugo Eberlein
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/EberleinHugo.jpg
-view-if: meyer_advisor = 1
+view-if: eberlein_advisor = 1
 new-page: true 
 
 = Hugo Eberlein
