@@ -294,6 +294,8 @@ frequency: 1
 view-if: n_advisors < 3
 
 - #marxist_leninist_advisor
+@left_opposition
+view-if: n_advisors < 3
 
 @right_opposition
 view-if: n_advisors < 3
