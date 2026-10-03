@@ -20,6 +20,6 @@ Through our influence, the united front is retained. Many are opposed to this bu
 
 
 @reject
-on-arrival: left_opposition_strength -= 40; left_opposition_dissent += 100; marxist_leninist_dissent -=10; right_opposition_dissent -= 10; conciliator_dissent -= 10
+on-arrival: left_opposition_strength -= 80; left_opposition_dissent += 100; marxist_leninist_dissent -=10; right_opposition_dissent -= 10; conciliator_dissent -= 10
 
 We reject any notion of reintegrating the expelled left-communists. We purge the party again to ensure such a sentiment doesn't rise again.

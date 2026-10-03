@@ -553,8 +553,10 @@ Q.neumann_advisor = 0 // Heinz Neumann
 Q.pieck_advisor = 0 // Wilhelm Pieck
 
 //left opposition advisors
-Q.urbahns = 0 // Hugo Urbahns
-
+Q.urbahns_advisor = 0 // Hugo Urbahns
+Q.fischer_advisor = 0 // Ruth Fischer
+Q.scholem_advisor = 0 // Werner Scholem
+Q.maslow_advisor = 0 // Arkadi Maslow
 
 //right opposition advisors
 Q.zetkin_advisor = 1 // Clara Zetkin

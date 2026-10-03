@@ -71,6 +71,17 @@ go-to: rm_main
 
 Pieck has been removed as an advisor. The Marxist Leninist faction disapproves.
 
+# left opposition
+
+@remove_urbahns
+title: Remove Urbahns
+view-if: urbahns_advisor = 1
+tags: remove_advisor
+on-arrival: urbahns_advisor = 0; left_opposition_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Urbahns has been removed as an advisor. The Left Opposition faction disapproves.
+
 # conciliators
 
 @remove_munzenberg
@@ -284,7 +295,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: marxist_leninist_advisor, right_opposition_advisor, conciliator_advisor left_advisor, reformist_advisor, nonfactional_advisor
+tags: marxist_leninist_advisor, right_opposition_advisor, left_opposition_advisor, conciliator_advisor left_advisor, reformist_advisor, nonfactional_advisor
 frequency: 1
 
 
@@ -306,6 +317,8 @@ view-if: n_advisors < 3
 
 @left_opposition
 view-if: n_advisors < 3 and left_split_fixed = 1
+
+- #left_opposition_advisor
 
 @right_opposition
 view-if: n_advisors < 3
@@ -382,6 +395,20 @@ go-to: advisor_menu
 tags: marxist_leninist_advisor
 
 Pieck is now an advisor.
+
+# left opposition
+
+@add_urbahns
+title: Hugo Urbahns
+subtitle: Hugo Urbahns {!<br><br>!}[? if difficulty < 0 : Actions - Building the RFB, Cooperation with the SPD ?]
+is-card: true
+card-image: img/portraits/UrbahnsHugo.jpg
+view-if: urbahns_advisor = 0 and n_advisors < 3
+on-arrival: urbahns_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: left_opposition_advisor
+
+Urbahns is now an advisor.
 
 # conciliator
 

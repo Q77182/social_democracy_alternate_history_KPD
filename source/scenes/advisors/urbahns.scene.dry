@@ -1,0 +1,33 @@
+title: Hugo Urbahns
+is-pinned-card: true
+tags: advisor, left_opposition
+card-image: img/portraits/UrbahnsHugo.jpg
+view-if: urbahns_advisor = 1
+new-page: true 
+
+= Hugo Urbahns
+
+Hugo Urbahns was a KPD leader during the Hamburg Uprising and formerly the leader of the Leninbund. Of course, many former Leninbund members have come ot our party after our shift in ideology. He is also one of the few on our left who supports working with the SPD.
+
+- @building_the_rfb_left
+- @cooperation_spd
+- @party_discipline
+- @root: Return to main
+
+@building_the_rfb_left
+title: Building the RFB
+subtitle: Increase recruitment to the RFB.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; rfb_strength +=15; rfb_militancy += 0.05
+
+We increase recruitment to the RFB and increase training.
+
+@cooperation_spd
+title: Cooperation with the SPD
+subtitle: Could we build closer ties with the SPD?
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 5; conciliator_strength += 5; marxist_leninist_dissent += 5; left_opposition_dissent += 5
+
+Cooperating with the SPD may be neccessary, their reformist faction notwithstanding.
