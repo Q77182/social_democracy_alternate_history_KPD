@@ -307,8 +307,6 @@ view-if: n_advisors < 3
 @left_opposition
 view-if: n_advisors < 3
 
-- #left_opposition_advisor
-
 @right_opposition
 view-if: n_advisors < 3
 
