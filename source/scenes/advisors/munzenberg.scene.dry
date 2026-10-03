@@ -11,6 +11,7 @@ Wilhelm Münzenberg is our party's best propagandists and has control over many 
 
 - @party_organizations_muzenberg
 - @emergency_fundraising
+- @propaganda
 - @root: Return to main
 
 @party_organizations_muzenberg
@@ -24,6 +25,16 @@ go-to: party_organizations
 @emergency_fundraising
 title: Emergency Fundraising
 subtitle: An emergency infusion of resources.
+view-if: difficulty < 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; resources += dues
+
+We have gained +[+ dues +] resources.
+
+@propaganda
+title: Münzenberg's Propaganda
+subtitle: Münzenberg's propaganda aims to attract non-communists.
 view-if: difficulty < 1
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]

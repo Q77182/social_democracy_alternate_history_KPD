@@ -551,6 +551,9 @@ Q.neumann_advisor = 0 // Heinz Neumann
 Q.pieck_advisor = 0 // Wilhelm Pieck
 
 //left opposition advisors
+Q.urbahns = 0 // Hugo Urbahns
+
+//right opposition advisors
 
 //right opposition advisors
 Q.zetkin_advisor = 1 // Clara Zetkin
@@ -559,7 +562,14 @@ Q.thalheimer_advisor = 0 // August Thalheimer
 Q.frolich_advisor = 0 // Paul Frölich 
 
 //conciliator advisors
+
+//conciliator advisors
 Q.munzeberg_advisor = 0 // Wilhelm Münzenberg
+Q.meyer_advisor = 0 // Ernst Meyer
+Q.eberlein_advisor = 0 // Hugo Eberlein
+
+//National Bolshivism
+Q.scheringer = 0 // Richard Scheringer
 
 // left advisors
 Q.levi_advisor = 0; // Paul Levi

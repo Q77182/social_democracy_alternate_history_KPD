@@ -1,48 +1,50 @@
-title: Feminism
+title: Women's Liberation
 new-page: true
-on-arrival: month_actions += 1; feminism_timer +=6
+on-arrival: month_actions += 1; feminism_timer +=9
 is-card: true
 card-image: img/kpd_women.jpg
 frequency: 100
 tags: party_affairs
 view-if: feminism_timer <=0
 
-= Feminism
+= Women's Liberation
 
-A Marxist party that excludes women is no Marxist party at all. Still, the dominance of men in both leadership and representation alienate women. How will we deal with this?
+A Marxist party that excludes women is no Marxist party at all. Still, the fact that we, one of the most vocal in our support of women's liberation, struggle to connect with them is problematic . How will we deal with this?
 
 - @leadership: Push for more women in local and national leadership.
-- @campaign_women: Include and acknowledge the voices of women within our media and propaganda
+- @campaign_women: Include and acknowledge the voices of women within our media and propaganda.
 - @message_change: Change our rhetoric to appeal to the new women.
-- @nothing: We can pospone this matter
+- @bourgeois_feminism: Argue against the currently dominant bourgeois feminism.
+- @nothing: We can postpone this matter for later.
 - @easy_discard
 - @cancel_advisor_action
 
 @leadership
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; women_connection += 2; left_opposition_dissent += 6; right_opposition_dissent += 6; marxist_leninist_dissent += 6; conciliator_dissent += 6
+on-arrival: resources -= 1; women_connection += 1; left_opposition_dissent += 6; right_opposition_dissent += 6; marxist_leninist_dissent += 6; conciliator_dissent += 6; advisor_action_timer -= 1 if zetkin_advisor == 1
 
-We have increased leadership positions for women. Some of them replaced male leaders, leaving some discontent.
+We have increased leadership positions for women. Some of them have replaced male leaders, leaving some discontent.
 
 @campaign_women
-title: Include and acknowledge the voices of women within our media and propaganda
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; women_connection += 1; new_middle_kpd += 4*(1-dissent); workers_kpd -= 4*(1-dissent); new_middle_kpd -= 2 if message_change <2; workers_kpd -= 2 if message_change <2; 
+on-arrival: resources -= 1; women_connection += 0.5; new_middle_kpd += 1*(1-dissent); workers_kpd += 3*(1-dissent); new_middle_kpd -= 1 if message_change <2; workers_kpd -= 1 if message_change <2; 
 
-We change and create newspapers and posters to address women specifically. Some of these are even written by women. [? if women_connection <2: Our current messaging does not particularly appeal to women, especially those of the new middle class. ?] [? if message_change >=2: Our change in rhetoric attracts even the women of the new middle class.?]
+We change and create newspapers and posters to address women specifically, while connecting their struggle with the communist cause.  [? if women_connection <2: Our current messaging does not particularly appeal to women, especially those of the working class. ?] [? if message_change >=2: Our attempts at atracting women have finally bore fruit.?]
 
 @message_change
-subtitle: This may anger our more hardline communists.
-on-arrival: women_connection += 1; left_opposition_dissent += 10; marxist_leninist_dissent += 10; message_change +=1
+subtitle: This may anger women currently in our own party.
+view-if: women_connection > 2
+on-arrival: women_connection += 2; left_opposition_dissent += 10; marxist_leninist_dissent += 10; conciliator_dissent += 10; new_middle_kpd += 4*(1-dissent); workers_kpd += 4*(1-dissent);
 
-We try to target the women of the new middle class, also known as "new women". While effective at expanding our base, many believe to be dilluting our class character.
+We try to target the women of the new middle class, also known as "new women" and expands our base. Zetkin and the other women of the party beleive our messaging now to be dangerously close bourgeois feminism. 
+
+@bourgeois_feminism
+on-arrival: women_connection += 1; workers_dnvp -= 2; workers_spd -= 2; workers_ddp -=2; socialism += 2*(1-dissent)
+
+We attack bourgeois feminism as serving of the bourgeois while doing nothing to truely liberate working class women. Socialism is the only thing capable of doing so.
 
 @nothing
-title: We can pospone this matter
 
 We have decided to postpone this matter for later, hopefully it doesn't backfire...
 

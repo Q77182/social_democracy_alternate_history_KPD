@@ -82,6 +82,24 @@ go-to: rm_main
 
 Münzenberg has been removed as an advisor. The Conciliator faction disapproves
 
+@remove_meyer
+title: Remove Meyer
+view-if: meyer_advisor = 1
+tags: remove_advisor
+on-arrival: meyer_advisor = 0; conciliator_dissent +=5; n_advisors -= 1
+go-to: rm_main
+
+Meyer has been removed as an advisor. The Conciliator faction disapproves
+
+@remove_eberlein
+title: Remove Eberlein
+view-if: Eberlein_advisor = 1
+tags: remove_advisor
+on-arrival: eberlein_advisor = 0; conciliator_dissent +=5; n_advisors -= 1
+go-to: rm_main
+
+Eberlein has been removed as an advisor. The Conciliator faction disapproves
+
 # right oppositionists
 
 @remove_zetkin
@@ -262,6 +280,7 @@ frequency: 1
 
 
 - @marxist_leninist: Add Marxist Leninists
+- @left_opposition: Add Left Oppositionists
 - @right_opposition: Add Right Oppositionists
 - @conciliator: Add Conciliators
 - @left: Add Leftists
@@ -365,6 +384,30 @@ go-to: advisor_menu
 tags: conciliator_advisor
 
 Münzenberg is now an advisor.
+
+@add_meyer
+title: Ernst Meyer
+subtitle: Ernst Meyer is a former chairman of the KPD. He is currently a member of Central Commitee and Politiburo. {!<br><br>!}[? if difficulty < 0 : Actions - Cooperation with the SPD, Strengthening the Conciliators ?]
+is-card: true
+card-image: img/portraits/MeyerErnst.jpg
+view-if: meyer_advisor = 0 and n_advisors < 3
+on-arrival: meyer_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: conciliator_advisor
+
+Meyer is now an advisor.
+
+@add_eberlein
+title: Hugo Eberlein
+subtitle: Hugo Eberlein is a member of the Politiburo and Comintern and is responsible for receiving financial aid from the Soviet Union. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Soviet Aid ?]
+is-card: true
+card-image: img/portraits/EberleinHugo.jpg
+view-if: eberlein_advisor = 0 and n_advisors < 3
+on-arrival: eberlein_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: conciliator_advisor
+
+Eberlein is now an advisor.
 
 # right opposition
 

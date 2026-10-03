@@ -1,0 +1,33 @@
+title: Ernst Meyer
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/MeyerErnst.jpg
+view-if: meyer_advisor = 1
+new-page: true 
+
+= Ernst Meyer
+
+Ernst Meyer was the chairman of the KPD but has since been replaced. He has managed to regain influence and is now a member of the Central Commitee and Politiburo
+
+- @cooperation_spd
+- @conciliator_influence
+- @root: Return to main
+
+@cooperation_spd
+title: Cooperation with the SPD
+subtitle: Could we build closer ties with the SPD?
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; spd_relation +=5; right_opposition_strength += 5; conciliator_strength += 5; marxist_leninist_dissent += 5; left_opposition_dissent += 5
+
+Cooperating with the SPD may be neccessary, their reformist faction notwithstanding.
+
+@conciliator_influence
+title: Grow the influence of the Conciliators
+subtitle: Push against the ultra left and center of the party.
+view-if: difficulty < 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; conciliator_strength += 10; marxist_leninist_dissent += 5; united_front_building += 1
+
+Increasing the influence of the conciliator angers Thälmann and other Marxist Leninist leaders but makes SPD cooperation a more likely possibility.
