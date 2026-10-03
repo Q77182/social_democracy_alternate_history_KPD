@@ -305,7 +305,7 @@ view-if: n_advisors < 3
 - #marxist_leninist_advisor
 
 @left_opposition
-view-if: n_advisors < 3
+view-if: n_advisors < 3 and left_split_fixed = 1
 
 @right_opposition
 view-if: n_advisors < 3

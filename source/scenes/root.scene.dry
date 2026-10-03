@@ -120,6 +120,7 @@ Q.united_front_maintained = 1;
 Q.women_connection = 0;
 Q.street_cells = 0;
 Q.factory_cells = 0;
+Q.left_split_fixed = 0;
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -554,15 +555,12 @@ Q.pieck_advisor = 0 // Wilhelm Pieck
 //left opposition advisors
 Q.urbahns = 0 // Hugo Urbahns
 
-//right opposition advisors
 
 //right opposition advisors
 Q.zetkin_advisor = 1 // Clara Zetkin
 Q.brandler_advisor = 0 // Heinrich Brandler
 Q.thalheimer_advisor = 0 // August Thalheimer
 Q.frolich_advisor = 0 // Paul Frölich 
-
-//conciliator advisors
 
 //conciliator advisors
 Q.munzeberg_advisor = 0 // Wilhelm Münzenberg
