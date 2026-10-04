@@ -1,0 +1,32 @@
+title: Walter Scholem
+is-pinned-card: true
+tags: advisor, left_opposition
+card-image: img/portraits/UrbahnsHugo.jpg
+view-if: urbahns_advisor = 1
+new-page: true 
+
+= Walter Scholem
+
+Werner Scholem came from a bourgeois-Jewish family but has since become an editor at Die Rote Fahne aswell as becoming a major party leader and organizer.
+
+- @party_discipline_scholem
+- @party_organizations_scholem
+- @root: Return to main
+
+
+@party_discipline_scholem
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; left_opposition_dissent -= 10; right_opposition_dissent -= 10; marxist_leninist_dissent -= 5; conciliator_dissent -= 10; left_opposition_strength += 10
+
+We have enforced party discipline to reduce dissent across all factions while strengthening the Left.
+
+@party_organizations_scholem
+title: Party Organizations
+subtitle: Scholem has direct control over party organizations.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6
+go-to: party_organizations

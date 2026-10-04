@@ -91,6 +91,15 @@ go-to: rm_main
 
 Fischer has been removed as an advisor. The Left Opposition faction disapproves.
 
+@remove_scholem
+title: Remove Scholem
+view-if: scholem_advisor = 1
+tags: remove_advisor
+on-arrival: scholem_advisor = 0; left_opposition_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Scholem has been removed as an advisor. The Left Opposition faction disapproves.
+
 # conciliators
 
 @remove_munzenberg
@@ -430,6 +439,18 @@ go-to: advisor_menu
 tags: left_opposition_advisor
 
 Fischer is now an advisor.
+
+@add_scholem
+title: Werner Scholem
+subtitle: Werner Scholem was an editor at Die Rote Fahne and a former party leader. {!<br><br>!}[? if difficulty < 0 : Actions - Party Discipline, Party Organizations ?]
+is-card: true
+card-image: img/portraits/ScholemWerner.jpg
+view-if: scholem_advisor = 0 and n_advisors < 3
+on-arrival: scholem_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: left_opposition_advisor
+
+Scholem is now an advisor.
 
 # conciliator
 
