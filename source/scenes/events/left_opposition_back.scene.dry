@@ -4,7 +4,7 @@ is-card: true
 on-arrival: leftcom_back = 1
 view-if: left_opposition_strength > marxist_leninist_strength and left_opposition_strength > conciliator_strength and leftcom_back = 0
 new-page: true
-face-image: img/comintern.jpg
+face-image: img/rus_left_opp.jpg
 
 = Bringing back the left-communists?
 
@@ -14,12 +14,13 @@ Quite miraculously, the previously dead left-communist wing of our party has bee
 - @reject: Our party cannot be led by these Trotskyists, purge the party a second time!
 
 @reintegrate
-on-arrival: left_opposition_dissent += 10; marxist_leninist_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10; left_split_fixed = 1; workers_kpd += 2; unemployed_kpd += 2
+on-arrival: left_opposition_dissent += 10; marxist_leninist_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10; left_split_fixed = 1; workers_kpd += 2; unemployed_kpd += 2; zetkin_advisor = 0; brandler_advisor = 0; thalheimer_advisor = 0; frolich_advisor = 0; munzeberg_advisor = 0; meyer_advisor = 0; eberlein_advisor = 0; ewert_advisor = 0
 
-Through our influence, the united front is retained. Many are opposed to this but democratic centralism puts them in line soon enough.
+Through our influence, the united front is retained. Many are opposed to this but democratic centralism puts them in line soon enough. Much of the Conciliators and Right Oppositions have either been expelled or removed from leadership.
 
 
 @reject
 on-arrival: left_opposition_strength -= 80; left_opposition_dissent += 100; marxist_leninist_dissent -=10; right_opposition_dissent -= 10; conciliator_dissent -= 10
 
 We reject any notion of reintegrating the expelled left-communists. We purge the party again to ensure such a sentiment doesn't rise again.
+

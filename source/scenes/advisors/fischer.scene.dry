@@ -2,7 +2,7 @@ title: Ruth Fischer
 is-pinned-card: true
 tags: advisor, left_opposition
 card-image: img/portraits/FischerRuth.jpg
-view-if: urbahns_advisor = 1
+view-if: fischer_advisor = 1
 new-page: true 
 
 = Ruth Fischer
