@@ -565,7 +565,7 @@ Q.thalheimer_advisor = 0 // August Thalheimer
 Q.frolich_advisor = 0 // Paul Frölich 
 
 //conciliator advisors
-Q.munzeberg_advisor = 0 // Wilhelm Münzenberg
+Q.munzenberg_advisor = 0 // Wilhelm Münzenberg
 Q.meyer_advisor = 0 // Ernst Meyer
 Q.eberlein_advisor = 0 // Hugo Eberlein
 Q.ewert_advisor = 0 // Arthur Ewert
