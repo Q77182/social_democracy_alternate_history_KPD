@@ -1,8 +1,8 @@
 title: Reintegration of the Left-Communists
 tags: event
 is-card: true
-on-arrival: leftcom_back = 1
-view-if: left_opposition_strength > marxist_leninist_strength and left_opposition_strength > conciliator_strength and leftcom_back = 0
+on-arrival: leftcom_back_seen = 1
+view-if: left_opposition_strength > marxist_leninist_strength and left_opposition_strength > conciliator_strength and leftcom_back_seen = 0
 new-page: true
 face-image: img/rus_left_opp.jpg
 
@@ -14,12 +14,12 @@ Quite miraculously, the previously dead left-communist wing of our party has bee
 - @reject: Our party cannot be led by these Trotskyists, purge the party a second time!
 
 @reintegrate
-on-arrival: left_opposition_dissent += 10; marxist_leninist_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation +=10; left_split_fixed = 1; workers_kpd += 2; unemployed_kpd += 2; zetkin_advisor = 0; n_advisors -=1 if zetkin_advisor == 0; brandler_advisor = 0; n_advisors -=1 if brandler_advisor == 0; thalheimer_advisor = 0; n_advisors -=1 if thalheimer_advisor == 0; frolich_advisor = 0; n_advisors -=1 if frolich_advisor == 0; munzenberg_advisor = 0; n_advisors -=1 if munzenberg_advisor == 0; meyer_advisor = 0; n_advisors -=1 if meyer_advisor == 0; eberlein_advisor = 0; n_advisors -=1 if eberlein_advisor == 0; ewert_advisor = 0; n_advisors -=1 if ewert_advisor == 0;
+on-arrival: left_opposition_dissent += 10; marxist_leninist_dissent += 10; conciliators_strength += 10; right_opposition_strength -= 10; spd_relation += 10; left_split_fixed = 1; workers_kpd += 2; unemployed_kpd += 2; zetkin_advisor = 0; n_advisors -= 1 if zetkin_advisor == 1; brandler_advisor = 0; n_advisors -= 1 if brandler_advisor == 1; thalheimer_advisor = 0; n_advisors -= 1 if thalheimer_advisor == 1; frolich_advisor = 0; n_advisors -= 1 if frolich_advisor == 1; munzenberg_advisor = 0; n_advisors -= 1 if munzenberg_advisor == 1; meyer_advisor = 0; n_advisors -= 1 if meyer_advisor == 1; eberlein_advisor = 0; n_advisors -= 1 if eberlein_advisor == 1; ewert_advisor = 0; n_advisors -= 1 if ewert_advisor == 1;
 
 Through our influence, the united front is retained. Many are opposed to this but democratic centralism puts them in line soon enough. Much of the Conciliators and Right Oppositions have either been expelled or removed from leadership.
 
 @reject
-on-arrival: left_opposition_strength -= 80; left_opposition_dissent += 100; marxist_leninist_dissent -=10; right_opposition_dissent -= 10; conciliator_dissent -= 10
+on-arrival: left_opposition_strength -= 80; left_opposition_dissent += 100; marxist_leninist_dissent -= 10; right_opposition_dissent -= 10; conciliator_dissent -= 10
 
 We reject any notion of reintegrating the expelled left-communists. We purge the party again to ensure such a sentiment doesn't rise again.
 
