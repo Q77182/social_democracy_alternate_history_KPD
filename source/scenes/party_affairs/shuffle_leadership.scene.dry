@@ -100,6 +100,15 @@ go-to: rm_main
 
 Scholem has been removed as an advisor. The Left Opposition faction disapproves.
 
+@remove_maslow
+title: Remove Maslow
+view-if: maslow_advisor = 1
+tags: remove_advisor
+on-arrival: maslow_advisor = 0; left_opposition_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Maslow has been removed as an advisor. The Left Opposition faction disapproves.
+
 # conciliators
 
 @remove_munzenberg
@@ -451,6 +460,18 @@ go-to: advisor_menu
 tags: left_opposition_advisor
 
 Scholem is now an advisor.
+
+@add_maslow
+title: Arkadi Maslow
+subtitle: Arkadi Maslow was a Jewish Russian and former chairman of the KPD. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle , Emergency Fundraising ?]
+is-card: true
+card-image: img/portraits/MaslowArkadi.jpg
+view-if: maslow_advisor = 0 and n_advisors < 3
+on-arrival: maslow_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: left_opposition_advisor
+
+Maslow is now an advisor.
 
 # conciliator
 
