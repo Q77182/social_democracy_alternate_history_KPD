@@ -81,7 +81,7 @@ var total_strength = Q.left_opposition_strength + Q.marxist_leninist_strength + 
 // normalize strength for the different factions
 Q.left_opposition_strength = 100*Q.left_opposition_strength/total_strength;
 Q.marxist_leninist_strength = 100*Q.marxist_leninist_strength/total_strength;
-Q.conciliator_strength = 100*Q.Q.conciliator_strength/total_strength;
+Q.conciliator_strength = 100*Q.conciliator_strength/total_strength;
 Q.right_opposition_strength = 100*Q.right_opposition_strength/total_strength;
 
 var total_dissent = Q.left_opposition_strength*Q.left_opposition_dissent + Q.marxist_leninist_strength*Q.marxist_leninist_dissent + Q.conciliator_strength*Q.conciliator_dissent + Q.right_opposition_strength*Q.right_opposition_dissent;
