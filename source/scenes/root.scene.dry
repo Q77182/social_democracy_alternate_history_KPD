@@ -11,7 +11,7 @@ go-to: start_menu_2
 @start_menu_2
 
 - @start: Start game
-- @modinfo: Mod Info (10/05/26)
+- @modinfo: Mod Info (10/10/26)
 - @election_simulation: Election simulation
 - @credits: Credits
 - @game_over.achievements
@@ -121,6 +121,7 @@ Q.women_connection = 0;
 Q.street_cells = 0;
 Q.factory_cells = 0;
 Q.left_split_fixed = 0;
+Q.comintern_influence = 40;
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
