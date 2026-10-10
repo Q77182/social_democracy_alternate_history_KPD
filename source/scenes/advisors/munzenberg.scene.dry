@@ -38,6 +38,6 @@ subtitle: Münzenberg's propaganda aims to attract non-communists.
 view-if: difficulty < 1
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; resources += dues
+on-arrival: advisor_action_timer = 6; new_middle_kpd += 3*(1-dissent); workers_kpd += 2*(1-dissent); unemployed_kpd += 2*(1-dissent)
 
-We have gained +[+ dues +] resources.
+Münzenberg's propaganda style maybe be controversial among our hardliners, but are nonetheless effective.
