@@ -348,7 +348,7 @@ view-if: n_advisors < 3 and left_split_fixed = 1
 - #left_opposition_advisor
 
 @right_opposition
-view-if: n_advisors < 3 and left_split_fixed = 0 party_purged
+view-if: n_advisors < 3 and left_split_fixed = 0 party_purged = 0
 
 - #right_opposition_advisor
 
