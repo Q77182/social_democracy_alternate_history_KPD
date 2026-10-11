@@ -27,6 +27,6 @@ title: Soviet Aid
 subtitle:Eberlein can use his connections to get a little extra aid.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1; (rfb_militancy +=0.02 and resources += 2) if (comintern_influence >=20 and comintern_influence <30) ; (resources += 3 and rfb_militancy +=0.03) if (comintern_influence >=30 and comintern_influence <40); (resources += 4 and rfb_militancy +=0.04) if (comintern_influence >=40 and comintern_influence <50);(resources += 5 and rfb_militancy +=0.05) if (comintern_influence >= 50) 
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; resources += 2 if (comintern_influence >=20 and comintern_influence <30); rfb_militancy += 0.02 if (comintern_influence >=20 and comintern_influence <30); resources += 3 if (comintern_influence >=30 and comintern_influence <40); rfb_militancy += 0.03 if (comintern_influence >=30 and comintern_influence <40); resources += 4 if (comintern_influence >=40 and comintern_influence <50); rfb_militancy += 0.04 if (comintern_influence >=40 and comintern_influence <50); resources += 5 if (comintern_influence >=50); rfb_militancy += 0.06 if (comintern_influence >= 50)
 
 Eberlein is able to convince the Soviets to give a a little more aid.
