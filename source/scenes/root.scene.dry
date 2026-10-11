@@ -129,8 +129,8 @@ Q.hindenburg_relation = 25;
 Q.hindenburg_enabled = 0;
 
 
-// Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
+// Does the KPD lead in Prussia?
+Q.kpd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
 Q.prussian_government = "SPD";
 

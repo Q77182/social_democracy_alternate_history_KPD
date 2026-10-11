@@ -1,5 +1,5 @@
 title: Wittorf Affair
-subtitle: A crisis in the KPD?
+subtitle: Embezzlment scheme?
 new-page: true
 view-if: year = 1928 and month >= 8 and month <= 10
 max-visits: 1
@@ -8,35 +8,36 @@ tags: event
 
 = Wittorf Affair
 
-An associate and close personal friend of Ernst Thälmann, John Wittorf, is accused of embezzling campaign funds , diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
+An associate and close personal friend of Ernst Thälmann, John Wittorf, is accused of embezzling campaign funds, diverting thousands of Reichsmarks for personal use, and Thälmann is accused of covering up the affair. The party's central committee considers this charge serious.
 
-The Conciliators in the KPD, a faction opposed to the party's present hard-line policy, are said to have leaked this information to aid them in the intra-party struggle. Dissident communists in the Leninbund also have information about this affair, and are planning to publish it.
+The information has already leaked to the press and the party's leadership is infuriated by Thälmann's coverup.
 
-What should we do with this information?
+What should we do?
 
-- @publicize
-- @nothing
+- @expel_thalmann
+- @broke_lmao
 - @secret
 
-@publicize
-title: We will publicize the scandal to damage the KPD and Thälmann.
-on-arrival: kpd_relation -= 10; workers_kpd -= 4; unemployed_kpd -= 4
+@expel_thalmann
+title: Expel Thälmann and the others from their positions, corruption will not be tolerated.
+choose-if: resources >= 1
+unavailable-subtitle: If the party have no resources, what could Wittorf have embezzled?
+on-arrival: n_advisors -= 1 if thalmann_advisor = 1; thalmann_advisor = 0; workers_kpd -= 4; unemployed_kpd -= 4
 
-Our newspapers are among the first to publicize the affair, bringing a torment of criticism to the hypocrisy of the communists. We have damaged the KPD's standing among the workers, but also perhaps closed the door on further cooperation.
+Thälmann and other implicated officials are expelled from their positions. The Comintern, and Stalin in particular, are carefully watching us.
 
-In the end, Stalin's pressure helps to keep Thälmann from facing much in the way of consequences.
+@broke_lmao
+title: Embezzle what?! We have no money...
+view-if: resources <= 0
+on-arrival: conciliator_dissent += 5; marxist_leninist_dissent += 5
 
-@nothing
-title: Do nothing with the information.
-on-arrival: workers_kpd -= 2; unemployed_kpd -= 2
-
-The information spreads without our help, leading to some loss of KPD support among the workers.
-
+Upon closer inspection, it is discovered that Wittorf could not have embezzeled that much money because the party didn't have it in the first place. The people who made these false accusations are penalized accordingly, and Thälmann is found innocent.
 
 @secret
-title: It is best to keep this information secret. Prevent the Leninbund and dissident KPD members from spreading this.
-choose-if: levi_advisor or rosenfeld_advisor
-unavailable-subtitle: We do not have contacts among the dissident communists.
-on-arrival: wittorf_secret = 1; reformist_dissent += 5; left_dissent += 5
+title: The press... hasn't published anything?
+view-if: spd_relation >=30
+choose-if: resources >= 1
+unavailable-subtitle: They can't publish anything if we have no money to embezzle, genius...
+on-arrival: wittorf_secret = 1; n_advisors -= 1 if thalmann_advisor = 1; thalmann_advisor = 0;
 
-Some among our leadership consider it unsavory to engage in cloak-and-dagger scheming. However, keeping this secret might be necessary to work with the KPD, and the information might become useful later.
+For whatever reason, the SPD and Leninbund have not published anything about the scandal. This leaves the conflict as a purely internal matter, away from the eyes of workers.
