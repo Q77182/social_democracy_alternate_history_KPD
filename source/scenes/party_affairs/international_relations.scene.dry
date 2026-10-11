@@ -2,7 +2,7 @@ title: International Relations
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: international_relations_timer <= 0
+view-if: international_relations_timer <= 0 and comintern_influence >= 15
 on-arrival: month_actions += 1; international_relations_timer += 6;
 card-image: img/comintern_rally.jpg
 max-visits: 4
@@ -17,6 +17,7 @@ At the Comintern, we can forge contacts with our fraternal socialist parties in 
 - @italy: Learn from the experince of the Italian communists with the fascists.
 - @soviet: Expand relations with the Comintern's biggest country, the Soviet Union.
 - @lsi: Embed a spy in the labor and socialist international.
+- @independent: Maintain our independence from the Comintern.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -33,7 +34,7 @@ learning from the counterproductive levels of sectarianism that plagues the CPGB
 subtitle: -1 resources [? if year <=1928 and month <=9: - Maintaining the united front will allow a broarder defense. ?]
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: left_opposition_strength -= 5; radicalization += 1; spd_relation +=5; united_front_support +=1
+on-arrival: left_opposition_strength -= 5; radicalization += 1; spd_relation +=5; united_front_support += 1
 
 Though capitalism has suffered recent crises, its collaspe is not terminal just yet. We must convince the comintern to maintain the united front.
 
@@ -51,9 +52,9 @@ The Italian Communist Party can educate us on fascism in their own country aswel
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources += 1; marxist_leninist_strength +=10; rfb_militancy +=0.03
+on-arrival: resources += 1; marxist_leninist_strength +=10; rfb_militancy +=0.03; comintern_influence += 5
 
-The soviets offer money and weapons to us, anticipating a revolution soon.
+The soviets offer money and weapons to us as they usually have, though at the cost of making us more dependant.
 
 @lsi
 subtitle: -1 resources
@@ -63,6 +64,9 @@ on-arrival: resources -= 1 ; spd_relation += 5*(1-dissent)
 
 By observing the moderate socialists, we can understand them better and possibly argue for cooperation in the Comintern if we beleive it to be reasonable. 
 
-@reduce
+@independent
+on-arrival: comintern_influence -= 5; comintern_influence -= 2 if zetkin_advisor = 1; comintern_influence -= 2 if brandler_advisor = 1; comintern_influence -= 2 if thalheimer_advisor = 1; comintern_influence -= 2 if frolich_advisor = 1
+
+While we greatly appriciate the help our Comintern comrades have given us, we should avoid becoming dependent on them. The Comintern is dispelased, however...
 
 We do not need the international contacts at the moment.

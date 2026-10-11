@@ -26,8 +26,8 @@ We increase recruitment to the RFB
 @thalmann_international
 title: Comintern networking
 subtitle:Thälmann is a member of the Comintern executive committee and can use his connections.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if comintern_influence < 15 : The Comintern beleives he have deviated too far from them. ?]
+choose-if: advisor_action_timer == 0 and comintern_influence >= 15
 on-arrival: advisor_action_timer = 6; international_relations_timer -= 12; last_advisor_action = 1
 go-to: international_relations
 

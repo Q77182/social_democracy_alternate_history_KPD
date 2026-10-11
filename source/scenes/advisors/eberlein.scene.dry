@@ -16,16 +16,17 @@ Hugo Eberlein is a member of the Politiburo and Comintern and is responsible for
 @eberlein_international
 title: Comintern networking
 subtitle:Eberlein can use his conenctions in the Comintern.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if comintern_influence < 15 : The Comintern beleives he have deviated too far from them. ?]
+choose-if: advisor_action_timer == 0 and comintern_influence >= 15
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; international_relations_timer -= 12; last_advisor_action = 1
 go-to: international_relations
+
 
 @soviet_eber
 title: Soviet Aid
 subtitle:Eberlein can use his connections to get a little extra aid.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1; resources += 2; rfb_militancy +=0.02; 
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; (rfb_militancy +=0.02 and resources += 2) if (comintern_influence >=20 and comintern_influence <30) ; (resources += 3 and rfb_militancy +=0.03) if (comintern_influence >=30 and comintern_influence <40); (resources += 4 and rfb_militancy +=0.04) if (comintern_influence >=40 and comintern_influence <50);(resources += 5 and rfb_militancy +=0.05) if (comintern_influence >= 50) 
 
 Eberlein is able to convince the Soviets to give a a little more aid.
