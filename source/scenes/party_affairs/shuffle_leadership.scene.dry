@@ -348,7 +348,7 @@ view-if: n_advisors < 3 and left_split_fixed = 1
 - #left_opposition_advisor
 
 @right_opposition
-view-if: n_advisors < 3 and left_split_fixed = 0
+view-if: n_advisors < 3 and left_split_fixed = 0 party_purged
 
 - #right_opposition_advisor
 
@@ -380,7 +380,7 @@ title: Ernst Thälmann
 subtitle: Ernst Thälmann is the chairman of both the KPD and RFB as well as being on the Comintern's executive commitee. {!<br><br>!}[? if difficulty < 0 : Actions - Building the RFB, International Relations, Party Discipline ?]
 is-card: true
 card-image: img/portraits/ThälmannErnst.jpg
-view-if: thalmann_advisor = 0 and n_advisors < 3
+view-if: thalmann_advisor = 0 and n_advisors < 3 and expel_thalmann = 0
 on-arrival: thalmann_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: marxist_leninist_advisor
@@ -492,7 +492,7 @@ title: Ernst Meyer
 subtitle: Ernst Meyer is a former chairman of the KPD. He is currently a member of Central Commitee and Politiburo. {!<br><br>!}[? if difficulty < 0 : Actions - Cooperation with the SPD, Strengthening the Conciliators ?]
 is-card: true
 card-image: img/portraits/MeyerErnst.jpg
-view-if: meyer_advisor = 0 and n_advisors < 3
+view-if: meyer_advisor = 0 and n_advisors < 3 and party_purged = 0
 on-arrival: meyer_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: conciliator_advisor
@@ -504,7 +504,7 @@ title: Hugo Eberlein
 subtitle: Hugo Eberlein is a member of the Politiburo and Comintern and is responsible for receiving financial aid from the Soviet Union. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Soviet Aid ?]
 is-card: true
 card-image: img/portraits/EberleinHugo.jpg
-view-if: eberlein_advisor = 0 and n_advisors < 3
+view-if: eberlein_advisor = 0 and n_advisors < 3 and party_purged = 0
 on-arrival: eberlein_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: conciliator_advisor
@@ -516,7 +516,7 @@ title: Arthur Ewert
 subtitle: Arthur Ewert has extensive influence over the party, even rivaling Thälmann, and has had several positions in the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Influence the party's actions directly, Pull some strings to get things done... ?]
 is-card: true
 card-image: img/portraits/EwertArthur.jpg
-view-if: ewert_advisor = 0 and n_advisors < 3
+view-if: ewert_advisor = 0 and n_advisors < 3 and party_purged = 0
 on-arrival: ewert_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: conciliator_advisor

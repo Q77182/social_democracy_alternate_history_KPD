@@ -22,7 +22,7 @@ What should we do?
 title: Expel Thälmann and the others from their positions, corruption will not be tolerated.
 choose-if: resources >= 1
 unavailable-subtitle: If the party have no resources, what could Wittorf have embezzled?
-on-arrival: n_advisors -= 1 if thalmann_advisor = 1; thalmann_advisor = 0; workers_kpd -= 4; unemployed_kpd -= 4
+on-arrival: n_advisors -= 1 if thalmann_advisor = 1; thalmann_advisor = 0; workers_kpd -= 4; unemployed_kpd -= 4; expel_thalmann = 1
 
 Thälmann and other implicated officials are expelled from their positions. The Comintern, and Stalin in particular, are carefully watching us.
 
