@@ -42,7 +42,7 @@ if (Q.rfb_strength >= Q.sh_strength) {
     Q.sh_strength *= 0.93
     Q.sh_militancy *= 0.95
 }
-}
+!}
 
 We have won against the Stahlhelm and our forces remain strong. [? if rfb_strength < sh_strength: Our RFB's victory against the larger Stahlhelm has invigorated support for us. ?]
 
@@ -91,11 +91,11 @@ if (Q.rb_militancy < 0.5) {
     Q.rb_strength *= 0.94
     Q.rb_militancy *= 1.15
 }
-}
+!}
 
 We have won against the Reichsbanner and our forces remain strong. [? if rb_militancy <= 0.5: Unfortunately, they have began militarizing as a result. ?]
 
 @rfb_rb_lose
 on-arrival: rfb_strength *= 0.95; rfb_militancy *= 0.95; rb_strength *= 0.97; rb_militancy *= 0.96
 
-We have lost against the Reichsbanner and the RFB suffers as a result. [? if rb_militancy >= 0.5: It is extra humiliating that we also lost to the least militarized paramilitary. ?]
+We have lost against the Reichsbanner and the RFB suffers as a result. [? if rb_militancy <= 0.5: It is extra humiliating that we also lost to the least militarized paramilitary. ?]
