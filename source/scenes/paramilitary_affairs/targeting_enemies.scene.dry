@@ -27,7 +27,7 @@ on-arrival: {!
 
 if (Q.rfb_strength < Q.sh_strength) {
 
-    Q.rfb_strength *= 0.97
+    Q.rfb_strength *= 1.05
     Q.rfb_militancy *= 0.97
 
     Q.sh_militancy *= 0.95
@@ -36,7 +36,7 @@ if (Q.rfb_strength < Q.sh_strength) {
 
 if (Q.rfb_strength >= Q.sh_strength) {
 
-    Q.rfb_strength *= 1.05
+    Q.rfb_strength *= 0.95
     Q.rfb_militancy *= 0.98
 
     Q.sh_strength *= 0.93
