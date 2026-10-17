@@ -18,6 +18,7 @@ max-cards: 3
 
 - @party
 - @govt
+- @paramilitary
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -41,6 +42,7 @@ max-cards: 4
 
 - @party
 - @govt
+- @paramilitary
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -59,3 +61,10 @@ card-image: img/reichstag_2.jpg
 is-deck: true
 
 - #govt_affairs
+
+@paramilitary
+title: Party Affairs
+card-image: img/rfb.jpg
+is-deck: true
+
+- #paramilitaries
