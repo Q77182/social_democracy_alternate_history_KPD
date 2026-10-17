@@ -50,7 +50,7 @@ As part of normalizing relations with the us, the SPD have to acknowledge the wr
 This was a suprise to everyone in the party and has made even the more hardline "social fascist" believers more accepting of cooperation.
 
 @no_history
-choose-if: spd_relation >= 60
+choose-if: spd_relation <= 60
 unavailable-subtitle: Wait, they're actually going to apologize?!.
 on-arrival: spd_relation -= 5
 

@@ -121,7 +121,7 @@ on-arrival: war_choices += 1
 
 There are [+ rb_strength +] thousand fighters with the Reichsbanner, led primarily by the SPD. There is a significant chance that the centrists and liberals in Riechsbanner will also join the fight
 
-[? if spd_relation >= 60 : The SPD is entirely on our side, owing to our good relations.. ?][? if spd_relation < 60 and spd_relation >= 45 : Most of the SPD is on our side, due to their good relations with us. ?][? if kpd_relation < 45 : The SPD will fight the nazis seperately from us. ?] [? if z_relation > 5 and ddp_relation > 5: The bourgeois parties will help defeat the Nazis. ?] [? if z_relation > 5 and ddp_relation > 5: The bourgeois parties are unwilling to side with us, even against the nazis. ?]
+[? if spd_relation >= 60 : The SPD is entirely on our side, owing to our good relations.. ?][? if spd_relation < 60 and spd_relation >= 45 : Most of the SPD is on our side, due to their good relations with us. ?][? if spd_relation < 45 : The SPD will fight the nazis seperately from us. ?] [? if z_relation > 5 and ddp_relation > 5: The bourgeois parties will help defeat the Nazis. ?] [? if z_relation > 5 and ddp_relation > 5: The bourgeois parties are unwilling to side with us, even against the nazis. ?]
 
 @general_strike
 max-visits: 1
@@ -160,7 +160,7 @@ go-to: defeat if total_defeat = 1; long_war if long_war = 1; republic_victory if
 
 Our forces are no match for those of the reactionaries. Reichsbanner fighters are quickly overpowered by the forces of the Stahlhelm, SA, and Reichswehr. Many are killed before the rest surrender. Our remaining leaders flee the country or face execution, as the reactionaries take absolute power over Germany.
 
-Our resistance will be recorded in the history books, and in the future, our names will be honored. But for now, all is lost.
+Our resistance will be recorded in the history books, and in the future, our names will be honored. But for now, all is lost. [+ total_power +], [+ enemy power +]
 
 - @game_over: Game over.
 
