@@ -25,7 +25,7 @@ go-to: rfb_sh_win if rfb_success >= 0; rfb_sh_lose if rfb_success < 0
 @rfb_sh_win
 on-arrival: {?
 
-if (rfb_strength < sh_strength) {
+if (Q.rfb_strength < Q.sh_strength) {
 
     Q.rfb_strength *= 0.97
     Q.rfb_militancy *= 0.97
@@ -34,7 +34,7 @@ if (rfb_strength < sh_strength) {
     Q.sh_strength *= 0.95
 }
 
-if (rfb_strength >= sh_strength) {
+if (Q.rfb_strength >= Q.sh_strength) {
 
     Q.rfb_strength *= 1.05
     Q.rfb_militancy *= 0.98
@@ -74,7 +74,7 @@ unavailable_subtitle: We have already made a truce with the Reichsbanner.
 @rfb_rb_win
 on-arrival: {?
 
-if rb_militancy >= 0.5 {
+if (Q.rb_militancy >= 0.5) {
 
     Q.rfb_strength *= 0.97
     Q.rfb_militancy *= 0.97
@@ -83,7 +83,7 @@ if rb_militancy >= 0.5 {
     Q.rb_militancy *= 0.96
 }
 
-if rb_militancy < 0.5 {
+if (Q.rb_militancy < 0.5) {
 
     Q.rfb_strength *= 0.97
     Q.rfb_militancy *= 0.98
