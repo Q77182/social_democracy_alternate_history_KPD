@@ -66,7 +66,7 @@ on-arrival: rfb_strength *= 0.95; rfb_militancy *= 0.95; sa_strength *= 0.97; sa
 We have lost against the SA and the RFB suffers as a result.
 
 @attack_reichsbanner
-on-arrival: rfb_success = rfb_strength*rfb_militancy; sa_strength*sa_militancy; strife += 1
+on-arrival: rfb_success = rfb_strength*rfb_militancy - rb_strength*rb_militancy; strife += 1
 go-to: rfb_rb_win if rfb_success >= 0; rfb_rb_lose if rfb_success < 0
 choose-if: kpd_truce ==0
 unavailable_subtitle: We have already made a truce with the Reichsbanner.
