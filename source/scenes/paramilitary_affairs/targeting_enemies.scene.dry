@@ -23,7 +23,7 @@ on-arrival: rfb_success = rfb_strength*rfb_militancy - sh_strength*sh_militancy;
 go-to: rfb_sh_win if rfb_success >= 0; rfb_sh_lose if rfb_success < 0
 
 @rfb_sh_win
-on-arrival: {
+on-arrival: {!
 
 if (Q.rfb_strength < Q.sh_strength) {
 
@@ -72,7 +72,7 @@ choose-if: kpd_truce ==0
 unavailable_subtitle: We have already made a truce with the Reichsbanner.
 
 @rfb_rb_win
-on-arrival: {
+on-arrival: {!
 
 if (Q.rb_militancy >= 0.5) {
 
