@@ -23,7 +23,26 @@ on-arrival: rfb_success = rfb_strength*rfb_militancy - sh_strength*sh_militancy;
 go-to: rfb_sh_win if rfb_success >= 0; rfb_sh_lose if rfb_success < 0
 
 @rfb_sh_win
-on-arrival: (rfb_strength *= 0.97; rfb_militancy *= 0.98; sh_strength *= 0.93; sh_militancy *= 0.95) if rfb_strength < sh_strength; (rfb_strength *= 1.05; rfb_militancy *= 0.98; sh_strength *= 0.93; sh_militancy *= 0.95) if rfb_strength >= sh_strength
+on-arrival: {?
+
+if (rfb_strength < sh_strength) {
+
+    Q.rfb_strength *= 0.97
+    Q.rfb_militancy *= 0.97
+
+    Q.sh_militancy *= 0.95
+    Q.sh_strength *= 0.95
+}
+
+if (rfb_strength >= sh_strength) {
+
+    Q.rfb_strength *= 1.05
+    Q.rfb_militancy *= 0.98
+
+    Q.sh_strength *= 0.93
+    Q.sh_militancy *= 0.95
+}
+}
 
 We have won against the Stahlhelm and our forces remain strong. [? if rfb_strength < sh_strength: Our RFB's victory against the larger Stahlhelm has invigorated support for us. ?]
 
@@ -53,7 +72,26 @@ choose-if: kpd_truce ==0
 unavailable_subtitle: We have already made a truce with the Reichsbanner.
 
 @rfb_rb_win
-on-arrival: (rfb_strength *= 0.97; rfb_militancy *= 0.97; rb_strength *= 0.97; rb_militancy *= 0.96) if rb_militancy >= 0.5; (rfb_strength *= 0.95; rfb_militancy *= 0.95; rb_strength *= 0.94; rb_militancy *= 1.15) if rb_militancy < 0.5
+on-arrival: {?
+
+if rb_militancy >= 0.5 {
+
+    Q.rfb_strength *= 0.97
+    Q.rfb_militancy *= 0.97
+
+    Q.rb_strength *= 0.97
+    Q.rb_militancy *= 0.96
+}
+
+if rb_militancy < 0.5 {
+
+    Q.rfb_strength *= 0.97
+    Q.rfb_militancy *= 0.98
+
+    Q.rb_strength *= 0.94
+    Q.rb_militancy *= 1.15
+}
+}
 
 We have won against the Reichsbanner and our forces remain strong. [? if rb_militancy <= 0.5: Unfortunately, they have began militarizing as a result. ?]
 
