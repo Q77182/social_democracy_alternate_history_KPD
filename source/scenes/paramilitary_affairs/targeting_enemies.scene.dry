@@ -98,4 +98,4 @@ We have won against the Reichsbanner and our forces remain strong. [? if rb_mili
 @rfb_rb_lose
 on-arrival: rfb_strength *= 0.95; rfb_militancy *= 0.95; rb_strength *= 0.97; rb_militancy *= 0.96
 
-We have lost against the Reichsbanner and the RFB suffers as a result. [? if rb_militancy <= 0.5: It is extra humiliating that we also lost to the least militarized paramilitary. ?]
+We have lost against the Reichsbanner and the RFB suffers as a result. [? if rb_militancy >= 0.5: It is extra humiliating that we also lost to the least militarized paramilitary. ?]
