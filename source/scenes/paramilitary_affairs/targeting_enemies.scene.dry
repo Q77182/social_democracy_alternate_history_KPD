@@ -1,0 +1,63 @@
+title: Targeting our Enemies
+new-page: true
+is-card: true
+tags: paramilitaries
+view-if: targeting_enemies_timer <= 0
+card-image: img/blutmai_2.jpg
+on-arrival: month_actions += 1; targeting_enemies_timer +=6
+frequency: 100
+
+= Targeting our Enemies
+
+The Weimar republic has always had a problem with paramilitary violence. We often come into conflict with the Nazi SA, Stahlhelm, and occasionally the Reichsbanner. We must protect our supporters and our rallies but sometimes a more "proactive* approach can help.
+
+- @attack_stahlhelm: Attack the Stahlhelm
+- @attack_sa: Attack the SA
+- @attack_reichsbanner: Attack the Reichsbanner
+- @easy_discard
+- @cancel_advisor_action
+
+
+@attack_stahlhelm
+on-arrival: rfb_success = rfb_strength*rfb_militancy - sh_strength*sh_militancy; strife += 1
+go-to: rfb_sh_win if rfb_success >= 0; rfb_sh_lose if rfb_success < 0
+
+@rfb_sh_win
+on-arrival: (rfb_strength *= 0.97; rfb_militancy *= 0.98; sh_strength *= 0.93; sh_militancy *= 0.95) if rfb_strength < sh_strength; (rfb_strength *= 1.05; rfb_militancy *= 0.98; sh_strength *= 0.93; sh_militancy *= 0.95) if rfb_strength >= sh_strength
+
+We have won against the Stahlhelm and our forces remain strong. [? if rfb_strength < sh_strength: Our RFB's victory against the larger Stahlhelm has invigorated support for us. ?]
+
+@rfb_sh_lose
+on-arrival: rfb_strength *= 0.95; rfb_militancy *= 0.95; sh_strength *= 0.97; sh_militancy *= 0.96
+
+We have lost against the Stahlhelm and the RFB suffers as a result.
+
+@attack_sa
+on-arrival: rfb_success = rfb_strength*rfb_militancy - sa_strength*sa_militancy; strife += 1
+go-to: rfb_sa_win if rfb_success >= 0; rfb_sa_lose if rfb_success < 0
+
+@rfb_sa_win
+on-arrival: rfb_strength *= 0.98; rfb_militancy *= 0.97; sa_strength *= 0.95; sa_militancy *= 0.96
+
+We have won against the SA and our forces remain strong.
+
+@rfb_sa_lose
+on-arrival: rfb_strength *= 0.95; rfb_militancy *= 0.95; sa_strength *= 0.97; sa_militancy *= 0.96
+
+We have lost against the SA and the RFB suffers as a result.
+
+@attack_reichsbanner
+on-arrival: rfb_success = rfb_strength*rfb_militancy; sa_strength*sa_militancy; strife += 1
+go-to: rfb_rb_win if rfb_success >= 0; rfb_rb_lose if rfb_success < 0
+choose-if: kpd_truce ==0
+unavailable_subtitle: We have already made a truce with the Reichsbanner.
+
+@rfb_rb_win
+on-arrival: (rfb_strength *= 0.97; rfb_militancy *= 0.97; rb_strength *= 0.97; rb_militancy *= 0.96) if rb_militancy >= 0.5; (rfb_strength *= 0.95; rfb_militancy *= 0.95; rb_strength *= 0.94; rb_militancy *= 1.15) if rb_militancy < 0.5
+
+We have won against the Reichsbanner and our forces remain strong. [? if rb_militancy <= 0.5: Unfortunately, they have began militarizing as a result. ?]
+
+@rfb_rb_lose
+on-arrival: rfb_strength *= 0.95; rfb_militancy *= 0.95; rb_strength *= 0.97; rb_militancy *= 0.96
+
+We have lost against the Reichsbanner and the RFB suffers as a result. [if rb_militancy <= 0.5: It is extra humiliating that we also lost to the least militarized paramilitary. ?]
