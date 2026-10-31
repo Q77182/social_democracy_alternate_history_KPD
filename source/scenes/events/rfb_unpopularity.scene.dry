@@ -1,0 +1,18 @@
+title: Rotfrontkämpferbund Membership Dwindles
+subtitle: Our unpopularity has impaired the Rotfrontkämpferbund's recruitment ability.
+view-if: rfb_militancy >= 0.1 and workers_kpd_normalized + unemployed_kpd_normalized < ( workers_nsdap_normalized + workers_dnvp_normalized) and rfb_unpopularity_timer <= 0
+new-page: true
+tags: event
+face-image: img/redfront.jpg
+on-arrival: rfb_unpopularity_timer += 6
+
+= Reichsbanner Membership Dwindles
+
+Unfortunately, the RFB's effectiveness is dragged down by the KPD's unpopularity, as the workers aren't particularly enthusiastic about joining.
+
+- @rfb_joever: Unfortunate.
+
+@rfb_joever
+on-arrival: rfb_strength *= 0.9
+
+This will continue to be a problem if our popularity continues to flag.
