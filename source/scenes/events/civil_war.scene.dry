@@ -6,7 +6,7 @@ Q.sh_strength = Math.round(Q.sh_strength);
 Q.sa_strength = Math.round(Q.sa_strength);
 // re-calculate dissent, in case we transitioned from, say, the KPD support that raised reformist dissent.
 var total_strength = Q.left_opposition_strength + Q.marxist_leninist_strength + Q.conciliator_strength + Q.right_opposition_strength;
-var total_dissent = Q.left_opposition_strength*Q.left_opposition_dissent + Q.marxist_leninist_strength*Q.marxist_leninist_dissent + Q.conciliator_strength_strength*Q.conciliator_strength_dissent + Q.right_opposition_strength*Q.right_opposition_dissent;
+var total_dissent = Q.left_opposition_strength*Q.left_opposition_dissent + Q.marxist_leninist_strength*Q.marxist_leninist_dissent + Q.conciliator_strength*Q.conciliator_dissent + Q.right_opposition_strength*Q.right_opposition_dissent;
 
 Q.dissent = 0.01*total_dissent/total_strength;
 console.log('new dissent: ' + Q.dissent);
@@ -41,9 +41,9 @@ if (Q.spd_in_government && Q.chancellor_party == "SPD") {
     Q.total_power += Q.loyal_reichswehr_power/4;
 }
 Q.rb_power = Q.rb_strength*Q.rb_militancy;
-if (Q.spd_relation >= 60) {
+if (Q.spd_relation <= 60) {
     Q.total_power += Q.rb_power;
-} else if (Q.kpd_relation >= 45) {
+} else if (Q.spd_relation > 60) {
     Q.total_power += Q.rb_power*0.5;
 }
 // general strike strength
@@ -52,12 +52,12 @@ if (Q.spd_relation >= 60) {
 Q.normalized_workers_spd = 100*Q.workers_spd/(Q.workers_spd + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
 Q.normalized_workers_kpd = 100*Q.workers_kpd/(Q.workers_spd + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
 Q.normalized_workers_total = Q.normalized_workers_kpd;
-if (Q.spd_relation >= 0) {
+if (Q.spd_relation >= 45) {
     Q.normalized_workers_total += Q.normalized_workers_spd;
-} else if (Q.spd_relation >= 45) {
+} else if (Q.spd_relation < 45) {
     Q.normalized_workers_total += Q.normalized_workers_spd*0.5;
 }
-Q.total_power += (2 - Q.total_dissent/100)*Q.normalized_workers_total*(2 - Q.unemployed/100)*2.5;
+Q.total_power += (2 - total_dissent/100)*Q.normalized_workers_total*(2 - Q.unemployed/100)*2.5;
 console.log("Supporter strength:", Q.total_power);
 
 // our enemies
@@ -160,7 +160,7 @@ go-to: defeat if total_defeat = 1; long_war if long_war = 1; republic_victory if
 
 Our forces are no match for those of the reactionaries. Reichsbanner fighters are quickly overpowered by the forces of the Stahlhelm, SA, and Reichswehr. Many are killed before the rest surrender. Our remaining leaders flee the country or face execution, as the reactionaries take absolute power over Germany.
 
-Our resistance will be recorded in the history books, and in the future, our names will be honored. But for now, all is lost. [+ total_power +], [+ enemy_power +]
+Our resistance will be recorded in the history books, and in the future, our names will be honored. But for now, all is lost. [+ total_power +], [+ enemy_power +], [+ rfb_power +], [+ prussian_police_power +],  [+  +], [+  +]
 
 - @game_over: Game over.
 
