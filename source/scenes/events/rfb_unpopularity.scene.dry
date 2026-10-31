@@ -1,6 +1,6 @@
 title: Rotfrontkämpferbund Membership Dwindles
 subtitle: Our unpopularity has impaired the Rotfrontkämpferbund's recruitment ability.
-view-if: rfb_militancy >= 0.1 and workers_kpd_normalized + unemployed_kpd_normalized < ( workers_nsdap_normalized + workers_dnvp_normalized) and rfb_unpopularity_timer <= 0
+view-if: rfb_militancy >= 0.1 and ((workers_kpd + unemployed_kpd) < ( workers_nsdap + workers_dnvp)) and rfb_unpopularity_timer <= 0
 new-page: true
 tags: event
 face-image: img/redfront.jpg
