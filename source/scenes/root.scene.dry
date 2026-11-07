@@ -545,7 +545,6 @@ Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 Q.hindenburg_dismissal_timer = 0;
-Q.rfb_unpopularity_timer = 0;
 
 
 // all the initial advisors are centrists.
