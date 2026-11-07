@@ -39,7 +39,7 @@ on-arrival: spd_relation -= 10; rfb_strength -= 80; rfb_banned = 1
 Claiming that we had acted illegally, The Prussian coalition has banned the RFB. This will make any rallies in Prussia more difficult without the RFB to defend us. [? if united_front_maintained == 0: We've previously downplayed the Comintern's social fascist narrative in our press in hopes of cooperation, but this event turns much of the party firmly against the SPD. ?]
 
 @no_fault
-choose-if: spd_relation >8
+choose-if: spd_relation > 8
 unavailable-subtitle: The SPD's reformist wing and coalition partners woudln't accept this.
 
 
@@ -68,4 +68,4 @@ unavailable-subtitle: The SPD has no reason to join.
 on-arrival: kpd_relation += 15; workers_kpd += 5; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; coalition_dissent += 2; communist_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50; marxist_leninist_dissent +=5; left_opposition_dissent +=10
 achievement: die_rote_fahne
 
-After some convincing, are leadership accepts the SPD's participation with some grumbling. The display of proletarian unity inspires the workers and terrifies the bourgeoisie and middle class along with the SPD's coalition partners. The far-right paramilitaries increase their recruitment to counter us.
+After some convincing, our leadership accepts the SPD's participation with some grumbling. The display of proletarian unity inspires the workers, especially among both oru and the SPD's rank and file, and terrifies the bourgeoisie along with the SPD's coalition partners. The far-right paramilitaries increase their recruitment to counter us.

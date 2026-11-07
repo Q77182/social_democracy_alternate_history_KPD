@@ -8,13 +8,13 @@ tags: party_affairs; antifascism
 
 = Streetfighting
 
-Battles rage on the streets between the Nazi SA, nationalist Stahlhelm, communist Rotfrontkämpferbund (RFB), and our own Reichsbanner. In some parts of the country, conditions are nearing civil war levels, as dozens of people are killed each month.
+Battles rage on the streets between the Nazi SA, nationalist Stahlhelm, communist Rotfrontkämpferbund (RFB), and the Reichsbanner. In some parts of the country, conditions are nearing civil war levels, as dozens of people are killed each month.
 
 We must do something to protect the workers against these predations.
 
 - @battle: Test our defense units in battle against the fascists!
-- @arm_rfb: Increase training and armaments for the Reichsbanner.
-- @antifa_training: Train union members to fight as part of the Iron Front.
+- @arm_rfb: Increase training and armaments for the Rotfrontkämpferbund.
+- @antifa_training: Increase cooperation between Antifaschistische Aktion and our paramilitaries.
 - @peace: Try to avoid all militant confrontations, as much as possible.
 - @truce_rfb: Try to make peace with the RFB.
 - @easy_discard
@@ -27,10 +27,10 @@ max-visits: 1
 Our forces have taken some loses with some even quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the Nazi SA.
 
 @arm_rfb
-subtitle: -[+ rb_militarization_cost +] resource
-choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
-on-arrival: resources -= rb_militarization_cost; rb_militancy += 0.06; rb_strength += 50; sa_strength += 50; z_relation -= 5 if historical_mode 
+subtitle: -[+ rfb_militarization_cost +] resource
+choose-if: resources >= rfb_militarization_cost
+unavailable-subtitle: Not enough resources ([+ rfb_militarization_cost +] needed).
+on-arrival: resources -= rfb_militarization_cost; rb_militancy += 0.06; rfb_strength += 50; sa_strength += 50
 
 We have increased training and purchased more armaments for the Rotfrontkämpferbund.
 
@@ -48,7 +48,7 @@ on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
 By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the party are gaining the upper hand.
 
 @truce_rfb
-choose-if: kpd_relation >= 45
+choose-if: spd_relation >= 45
 view-if: kpd_truce == 0
 unavailable-subtitle: The KPD is not interested.
 on-arrival: kpd_truce = 1; spd_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;

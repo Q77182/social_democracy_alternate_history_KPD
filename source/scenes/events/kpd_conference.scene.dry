@@ -18,12 +18,12 @@ Stalin and the Comintern is heavily favoring Thälmann despite his coverup durin
 
 @conciliator_success
 title: The Conciliators are the new leadership of the KPD.
-choose-if: comintern_influence <= 15 
-unavailable-subtitle:  The Comintern has vetoed this action.
-on-arrival: kpd_party_leader = "Conciliators"; communist_coalition += 3; spd_relation += 10
+choose-if: comintern_influence <= 15 or conciliator_strength > marxist_leninist_strength
+unavailable-subtitle  [? if comintern_influence <= 15:The Comintern has vetoed this action. ?] [? if marxist_leninist_strength > conciliator_strength: The faction around Thälmann is too powerful to allow this. ?]
+on-arrival: kpd_party_leader = "Conciliators"; communist_coalition += 3; spd_relation += 10; conciliator_strength += 15
 achievement: versohnler
 
-With our support, the Conciliators have won the leadership contest! The new leadership is a group of Conciliators, including Arthur Ewert, Hugo Eberlein, and Ernst Meyer. Thälmann remains, but with reduced influence. Cooperation with the SPD  seems to be a more real possibility.
+With our support, the Conciliators have won the leadership contest! The new leadership is a group of Conciliators, including Arthur Ewert, Hugo Eberlein, and Ernst Meyer. Thälmann remains, but with reduced influence. Cooperation with the SPD is a very real possibility.
 
 
 @conciliator_fail

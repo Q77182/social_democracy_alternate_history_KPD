@@ -14,7 +14,7 @@ In addition to being a political party, KPD has many associated organizations. M
 
 - @newspapers: Fund more newspapers and journalists.
 - @welfare: Fund more mutual aid and welfare programs.
-- @welfare_munzenberg: Fund more newspapers and journalists.
+- @welfare_munzenberg: Fund more mutual aid and welfare programs.
 - @rfb: Fund the Rotfrontkämpferbund, our self-defense organization.
 - @youth: Fund our youth and women organizations.
 - @nothing: Do not increase funding for any program.
@@ -32,18 +32,19 @@ go-to: media
 
 
 @welfare
-choose-if: resources > 0
+choose-if: resources > 0 and munzenberg_advisor == 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; workers_aid += 1; unemployed_kpd += 5*(1 - dissent);
 
-We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
+We have increased funding to our welfare organizations. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
 @welfare_munzenberg
+choose-if: resources > 0 and munzenberg_advisor == 1
 subtitle: Munzenberg's organization has made this free.
 on-arrival: resources -= 1; workers_aid += 1; unemployed_kpd += 5*(1 - dissent);
 
-We have increased funding to Workers' Welfare. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
+We have increased funding to welfare organizations, with Munzenberg's assistance. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
 @rfb
 choose-if: resources > 0
@@ -63,6 +64,6 @@ The youth, generally more radical compared to the rest of the population, are qu
 
 @nothing
 
-We do not fund any party organizations. [ if munzenberg_advisor = 0: I'm sure Münzenberg will pick up the slack...]
+We do not fund any party organizations. [? if munzenberg_advisor = 0: I'm sure Münzenberg will pick up the slack... ?]
 
 - @return: Continue...
