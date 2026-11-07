@@ -1,7 +1,7 @@
 title: Streetfighting
 new-page: true
 is-card: true
-on-arrival: streetfighting_timer = 6; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25; strife += 1
+on-arrival: streetfighting_timer = 6; month_actions += 1; rfb_militarization_cost = 2 if rfb_militancy > 0.1 else rfb_militarization_cost = 1; rfb_militarization_cost = 3 if rfb_militancy > 0.25; strife += 1
 view-if: year >= 1930 and sa_strength >= 150 and streetfighting_timer == 0 and not return_to_normalcy
 card-image: img/blutmai_2.jpg
 tags: party_affairs; antifascism
@@ -15,13 +15,12 @@ We must do something to protect the workers against these predations.
 - @battle: Test our defense units in battle against the fascists!
 - @arm_rfb: Increase training and armaments for the Rotfrontkämpferbund.
 - @antifa_training: Increase cooperation between Antifaschistische Aktion and our paramilitaries.
-- @peace: Try to avoid all militant confrontations, as much as possible.
 - @truce_rfb: Try to make peace with the RFB.
 - @easy_discard
 
 @battle
 view-if: rfb_militancy > 0.5
-on-arrival: rb_militancy += 0.1; sa_strength += 40; rfb_strength -= 10; 
+on-arrival: rfb_militancy += 0.1; sa_strength += 40; rfb_strength -= 10; 
 max-visits: 1
 
 Our forces have taken some loses with some even quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the Nazi SA.
@@ -30,22 +29,17 @@ Our forces have taken some loses with some even quit. However, the remainder are
 subtitle: -[+ rfb_militarization_cost +] resource
 choose-if: resources >= rfb_militarization_cost
 unavailable-subtitle: Not enough resources ([+ rfb_militarization_cost +] needed).
-on-arrival: resources -= rfb_militarization_cost; rb_militancy += 0.06; rfb_strength += 50; sa_strength += 50
+on-arrival: resources -= rfb_militarization_cost; rfb_militancy += 0.06; rfb_strength += 50; sa_strength += 50
 
 We have increased training and purchased more armaments for the Rotfrontkämpferbund.
 
 
 @antifa_training
 view-if: antifa_formed == 1
-on-arrival: rb_militancy += 0.03; rfb_strength += 25; sa_strength += 15; 
+on-arrival: rfb_militancy += 0.03; rfb_strength += 25; sa_strength += 15; 
 max-visits: 2
 
 We expand Antifaschistische Aktion, recruiting more workers into it and our other defense organizations.
-
-@peace
-on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
-
-By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the party are gaining the upper hand.
 
 @truce_rfb
 choose-if: spd_relation >= 45

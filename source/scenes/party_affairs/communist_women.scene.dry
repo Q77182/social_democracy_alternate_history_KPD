@@ -21,7 +21,7 @@ A Marxist party that excludes women is no Marxist party at all. Still, the fact 
 @female_organization
 on-arrival: resources -= 1; women_connection += 0.5;
 
-We increase funding to our women organizations.
+We increase funding to our women organizations and agitation.
 
 @campaign_women
 subtitle: -1 resources
@@ -29,7 +29,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; women_connection += 0.25; new_middle_kpd += (1*(1-dissent)+(women_connection)); workers_kpd += 3*(1*(1-dissent)+(women_connection)); unemployed_kpd += 3*(1*(1-dissent)+(women_connection))
 
-We change and create newspapers and posters to address women specifically, while connecting their struggle with the communist cause.  [? if women_connection <2: Our current messaging does not particularly appeal to women, especially those of the working class. ?] [? if message_change >=2: Our attempts at atracting women have finally bore fruit.?] 
+We change and create newspapers and posters to address women specifically, while connecting their struggle with the communist cause.  [? if women_connection <2: Our outreach to women isn't particularly strong. More agitation and organizing among women may be necessary. ?] [? if women_connection >=2: Our attempts at atracting women have finally bore fruit.?] 
 
 @bourgeois_feminism
 on-arrival: women_connection += 0.25; workers_dnvp -= 2; workers_spd -= 2; workers_ddp -=2; socialism += 2*(1-dissent)

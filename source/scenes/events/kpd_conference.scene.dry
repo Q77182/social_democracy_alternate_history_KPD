@@ -19,7 +19,7 @@ Stalin and the Comintern is heavily favoring Thälmann despite his coverup durin
 @conciliator_success
 title: The Conciliators are the new leadership of the KPD.
 choose-if: comintern_influence <= 15 or conciliator_strength > marxist_leninist_strength
-unavailable-subtitle  [? if comintern_influence <= 15:The Comintern has vetoed this action. ?] [? if marxist_leninist_strength > conciliator_strength: The faction around Thälmann is too powerful to allow this. ?]
+unavailable-subtitle: [? if comintern_influence >= 15:The Comintern has vetoed this action. ?] [? if marxist_leninist_strength > conciliator_strength: The faction around Thälmann is too powerful to allow this. ?]
 on-arrival: kpd_party_leader = "Conciliators"; communist_coalition += 3; spd_relation += 10; conciliator_strength += 15
 achievement: versohnler
 
