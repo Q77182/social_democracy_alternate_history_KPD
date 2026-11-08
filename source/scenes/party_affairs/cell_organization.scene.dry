@@ -4,12 +4,12 @@ is-card: true
 tags: party_affairs
 view-if: rally_timer <= 0
 on-arrival: month_actions += 1; rally_timer = 6
-card-image: img/red_saxony.jpg
+card-image: img/kpd_demonstration.jpg
 frequency: 100
 
 = Cell Organizations
 
-Factory and street cells are the base of our organization, individually cnosisting of a single factory, workplace, or neighborhood block that spreads propagand and agitates. Their highly localized nature lets them organize effectively even without direct orders from above.
+Factory and street cells are the base of our organization, individually consisting of a single factory, workplace, or neighborhood block that spreads propaganda and agitates. Their highly localized nature lets them organize effectively even without direct orders from above.
 
 - @more_factory_cells: We should create new factory cells to increase our industrial influence.
 - @more_street_cells: To better connect with non-industrial workers, street cells should be our goal.

@@ -58,7 +58,7 @@ We have increased recruiting to the Rotfrontkämpferbund.
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
-audio: music/FDJ_IFA.mp3
+audio: shuffle music/FDJ_IFA.mp3
 on-arrival: resources -= 1; rfb_strength += 25; young_socialists += 1; workers_kpd += 3; new_middle_kpd += 2
 
 The youth, generally more radical compared to the rest of the population, are quite receptive of our messaging.
