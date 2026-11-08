@@ -59,7 +59,7 @@ choose-if: (spd_votes + kpd_votes) >= z_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
 Q.z_support_braun = 0;
-if ((in_weimar_coalition == 0 or in_grand_coalition == 0 or in_popular_front == 0) || ( Q.z_party_leader == "Joos")) {
+if ((in_weimar_coalition == 0 || in_grand_coalition == 0 || in_popular_front == 0) || ( Q.z_party_leader == "Joos")) {
     Q.z_support_braun = 1;
 } else if (Q.z_relation <= 35) {
     Q.z_support_braun = 0;
