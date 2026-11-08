@@ -32,7 +32,7 @@ go-to: media
 
 
 @welfare
-choose-if: resources > 0 and munzenberg_advisor == 0
+view-if: resources > 0 and munzenberg_advisor == 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; workers_aid += 1; unemployed_kpd += 5*(1 - dissent);
@@ -40,7 +40,7 @@ on-arrival: resources -= 1; workers_aid += 1; unemployed_kpd += 5*(1 - dissent);
 We have increased funding to our welfare organizations. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
 @welfare_munzenberg
-choose-if: resources > 0 and munzenberg_advisor == 1
+view-if: resources > 0 and munzenberg_advisor == 1
 subtitle: Munzenberg's organization has made this free.
 on-arrival: resources -= 1; workers_aid += 1; unemployed_kpd += 5*(1 - dissent);
 

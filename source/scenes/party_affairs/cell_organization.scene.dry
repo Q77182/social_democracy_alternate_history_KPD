@@ -2,8 +2,8 @@ title: Cell Organizations
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: rally_timer <= 0
-on-arrival: month_actions += 1; rally_timer = 6
+view-if: cell_organization_timer
+on-arrival: month_actions += 1; cell_organization_timer += 6
 card-image: img/kpd_demonstration.jpg
 frequency: 100
 
