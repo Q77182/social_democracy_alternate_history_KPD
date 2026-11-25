@@ -38,7 +38,7 @@ Supporting Braun is rather unpopular, even despite our good relations with the S
 
 @run_thalmann
 
-The expected outcome
+The expected outcome.
 
 @support_braun_2
 on-arrival: kpd_support_braun = 1
@@ -218,7 +218,6 @@ There is no majority in this round. In the second round, any candidate who wins 
 @round2_menu
 
 - @round2_convince_z: Convince the Center to switch their support to us.
-- @round2_convince_kpd: Convince the KPD to switch their support to us. 
 - @round2_thalmann: Switch our support to Otto Braun of the SPD.
 - @round2_vote: Let the second round voting begin.
 
