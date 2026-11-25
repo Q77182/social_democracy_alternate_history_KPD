@@ -34,11 +34,11 @@ unavailable-subtitle: We do not support the SPD and they will not accept our sup
 Supporting Braun is rather unpopular, even despite our good relations with the SPD, given his anti-communism. Are we sure?
 
 - @run_thalmann: We will run Thälmann instead.
-- @support_braun_2: Support Braun.
+- @support_braun_2: Support Braun
 
 @run_thalmann
 
-The expected outcome.
+The expected outcome
 
 @support_braun_2
 on-arrival: kpd_support_braun = 1
